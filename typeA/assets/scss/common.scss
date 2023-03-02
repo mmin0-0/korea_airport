@@ -1,6 +1,9 @@
+@import "responsive";
 $white: #fff;
 $black: #000;
 $gothic: 'KoddiUD OnGothic';
+$mainC: #D6E2FF;
+
 @mixin flexbox($direction, $justfy, $align){
 	display:flex;
     flex-direction: $direction;
@@ -55,12 +58,12 @@ body{
         // overflow: hidden;
         .hd-top{
             width: 100%;
-            border-bottom: 1px solid #D6E2FF;
+            border-bottom: 1px solid $mainC;
             height: 10rem;
             border: 1px solid #000;
             &:hover, &.on{
                 .hd-inner{
-                    padding: 1.2rem 3rem;
+                    padding: 1.2rem 1.6rem;
                     nav{
                         .depth1-list{
                             > li{
@@ -78,6 +81,10 @@ body{
                         }
                     }
                     .lang{
+                        img{
+                            width: 4rem;
+                            height: 4rem;
+                        }
                         .lang-wrap{
                             display: block;
                         }
@@ -87,7 +94,7 @@ body{
             .hd-inner{
                 position: relative;
                 height: 100%;
-                padding: 2.2rem 3rem;
+                padding: 1.2rem 3rem;
                 transition: all .35s;
                 @include flexbox(row, space-between, center);
                 // .logo{
@@ -109,11 +116,9 @@ body{
                     }
                     .lang-wrap{
                         display: none;
-                        // a{
-                        //     opacity: 0;
-                        //     visibility: hidden;
-                            
-                        // }
+                        a{
+                            line-height: 3.4rem;
+                        }
                     }
                 }
                 nav{
@@ -225,50 +230,101 @@ body{
                     padding: 4rem 3rem 0;
                     > div{
                         @include flexbox(row, space-between, flex-start);
+                        display: none;
+                        &.on{display: flex}
                         border: 1px solid #000;
                         min-height: 29rem;
                         max-height: 29rem;
                         position: relative;
                         border: 1px solid red;
                         padding: 0 2.6rem;
-                        @me
-                        .main-tit{
-                            // width: 18rem;
-                            font-size: 5.8rem;
-                            font-weight: bold;
-                            color: #D6E2FF;
-                            // padding-left: 9.6%;
-                            border: 1px solid #000;
-                        }
-                        .sub-cont{
-                            // width: 41.2rem;
-                            width: 18%;
-                            border: 1px solid #000;
-                            // padding-right: 9.6rem;
-                        }
+                        @include notebook{padding: 0;}
                         .depth2-list-wrap{
                             @include flexbox(row, flex-start, flex-start);
                             width: 50%;
                             max-width: 81.8rem;
                             border: 1px solid red;
-                            // gap: 26rem;
-                            // margin-left: 25.6%;
-                            // position: absolute;
-                            // left: 50%;
-                            // top: 0;
-                            // transform: translateX(-50%);
+                        }
+                        .main-tit{
+                            // width: 18rem;
+                            // font-size: 5.8rem;
+                            font-size: 3vw;
+                            font-weight: bold;
+                            color: $mainC;
+                            border: 1px solid #000;
+                        }
+                        .sub-cont{
+                            // width: 41.2rem;
+                            width: 22%;
+                            border: 1px solid #000;
+                            position: relative;
+                            .icon-motion{
+                                border: 1px solid #000;
+                                // width: 50%;
+                                // overflow: hidden;
+                                width: 17.6rem;
+                                height: 17.6rem;
+                                margin: 0 auto;
+                                @include flexbox(row, center, center);
+                                position: relative;
+                            }
+                            p{
+                                line-height: 3.4rem;
+                                text-align: center;
+                            }
+                        }
+                        /* 한국공항 */
+                        &:first-child{
+                            .sub-cont{
+                                .icon-motion{
+                                    img{
+                                        &:nth-child(1){width: 80%;}
+                                        &:nth-child(2){
+                                            position: absolute;
+                                            top: 0;
+                                            right: 0;
+                                            transform: translate(80px, 80px);
+                                            animation: ani01 1.2s both alternate;
+                                        }
+                                        @keyframes ani01 {
+                                            0%{transform: translate(80px, 80px);}
+                                            100%{transform: translate(0, 0);}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        /* 사업분야 */
+                        &:nth-child(2){
+                            .sub-cont{
+                                .icon-motion{
+                                    img{
+                                        &:nth-child(1){width: 60%;}
+                                        &::before{
+                                            content: '';
+                                            width: 4.6rem;
+                                            height: 4.6rem;
+                                            border-radius: 50%;
+                                        }
+                                        @keyframes ani01 {
+                                            0%{transform: translate(80px, 80px);}
+                                            100%{transform: translate(0, 0);}
+                                        }
+                                    }
+                                }
+                            }
                         }
                     }
                 }
                 .additional-menu{
                     width: 100%;
                     display: flex;
-                    border-top: 1px solid #D6E2FF;
+                    border-top: 1px solid $mainC;
                     > a{
                         width: 50%;
                         padding: 2rem 7.2rem;
                         @include flexbox(row, flex-end, center);
-                        &:not(:last-child){border-right: 1px solid #D6E2FF;}
+                        &:not(:last-child){border-right: 1px solid $mainC;}
                         &:last-child{
                             justify-content: flex-start;
                             img{margin-right: 4rem;}
