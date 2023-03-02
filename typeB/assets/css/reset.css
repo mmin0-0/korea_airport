@@ -1,0 +1,30 @@
+html{font-size: 10px;}
+
+html, body, p, h1, h2, h3, h4, h5, h6, ul, ul li, ol, ol li, dl, dl dt, dl dd, img, table, th, td, form, fieldset, legend, input, textarea, a, button, select, label, mark {
+    margin: 0; 
+    padding: 0;
+}
+
+body {
+    line-height: 1;
+}
+
+a {
+    color: unset;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+}
+
+ol, ul, li {
+	list-style: none;
+}
+
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+span {
+    display: inline-block;
+}
