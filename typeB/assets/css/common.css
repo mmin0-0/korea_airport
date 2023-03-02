@@ -36,6 +36,9 @@
 #header nav {
   position: fixed;
   top: 100px;
+  right: -100%;
+}
+#header nav.active {
   right: 0;
 }
 
