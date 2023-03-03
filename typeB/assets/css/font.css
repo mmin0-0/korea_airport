@@ -1,0 +1,62 @@
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 100;
+    src: 
+    url(/typeB/assets/font/SUIT-Thin.otf)
+}
+
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 200;
+    src: 
+    url(/typeB/assets/font/SUIT-ExtraLight.otf)
+}
+
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 300;
+    src: 
+    url(/typeB/assets/font/SUIT-Light.otf)
+}
+
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 400;
+    src: 
+    url(/typeB/assets/font/SUIT-Regular.otf)
+}
+
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 500;
+    src: 
+    url(/typeB/assets/font/SUIT-Medium.otf)
+}
+
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 600;
+    src: 
+    url(/typeB/assets/font/SUIT-SemiBold.otf)
+}
+
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 700;
+    src: 
+    url(/typeB/assets/font/SUIT-Bold.otf)
+}
+
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 800;
+    src: 
+    url(/typeB/assets/font/SUIT-ExtraBold.otf)
+}
+
+@font-face{
+    font-family: 'SUIT';
+    font-weight: 900;
+    src: 
+    url(/typeB/assets/font/SUIT-Heavy.otf)
+}
