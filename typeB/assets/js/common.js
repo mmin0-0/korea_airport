@@ -16,25 +16,26 @@ $(document).ready(function() {
 
     $(document).on('click', '.nav-left .depth01-list .depth01' , function() {
         const lists = $('.nav-right .depth02-list')
-        lists.hide()
+        lists.addClass('hide')
+        $(this).addClass('active').siblings().removeClass('active');
         if ($(this).index() == 0) {
             console.log('1');
-            $(lists.index()).show()
+            $(lists.eq(0)).removeClass('hide').siblings().addClass('hide');
         } else if ($(this).index() == 1) {
             console.log('2');
-            $(lists.index(2)).show()
+            $(lists.eq(1)).removeClass('hide').siblings().addClass('hide');
         } else if ($(this).index() == 2) {
             console.log('3');
-            $(lists.index(3)).show()
+            $(lists.eq(2)).removeClass('hide').siblings().addClass('hide');
         } else if ($(this).index() == 3) {
             console.log('4');
-            $(lists.index(4)).show()
+            $(lists.eq(3)).removeClass('hide').siblings().addClass('hide');
         } else if ($(this).index() == 4) {
             console.log('5')
-            $(lists.index(5)).show()
+            $(lists.eq(4)).removeClass('hide').siblings().addClass('hide');
         } else if ($(this).index() == 5) {
             console.log('6')
-            $(lists.index(6)).show()
+            $(lists.eq(5)).removeClass('hide').siblings().addClass('hide');
         }
     });
 
