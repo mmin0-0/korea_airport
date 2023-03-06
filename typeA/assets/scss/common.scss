@@ -1,43 +1,5 @@
 @import "responsive";
-$white: #fff;
-$black: #000;
-$gothic: 'KoddiUD OnGothic';
-$mainC: #D6E2FF;
-
-@mixin flexbox($direction, $justfy, $align){
-	display:flex;
-    flex-direction: $direction;
-    justify-content: $justfy;
-    align-items: $align;
-}
-
-@mixin ellipsis($num) {
-    display:-webkit-box;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    -webkit-line-clamp:$num;
-    -webkit-box-orient:vertical;
-}
-
-@keyframes ani01 {
-    0%{transform: translate(80px, 80px);}
-    100%{transform: translate(0, 0);}
-}
-
-@keyframes scale_ani01 {
-    0%{transform: scale(0);}
-    100%{transform: scale(1);}
-}
-
-@keyframes scale_ani02 {
-    0%{transform: scale(0) translateX(-50%);}
-    100%{transform: scale(1) translateX(-50%);}
-}
-
-@keyframes position_ani01 {
-    0%{transform: translateY(0)}
-    100%{transform: translateY(-5px);}
-}
+@import "common_category";
 
 .hide {
     position: absolute;
@@ -69,8 +31,9 @@ body{
 /* header */
 #header{
     width: 100%;
-    position: sticky;
+    position: fixed;
     top: 0;
+    z-index: 100;
     .header-wrap{
         // height: 49rem;
         height: 10rem;
@@ -79,8 +42,9 @@ body{
         &.on{height: 49rem;}
         .hd-top{
             width: 100%;
-            border-bottom: 1px solid $mainC;
             height: 10rem;
+            background: $white;
+            border-bottom: 1px solid $subC;
             &.on{
                 .hd-inner{
                     nav{
@@ -230,8 +194,8 @@ body{
             height: 390px;
             // height: 0;
             // overflow: hidden;
-            background: #fff;
-            border-right: 1px solid $mainC;
+            background: $white;
+            border-right: 1px solid $subC;
             .hd-inner{
                 width: 100%;
                 height: 100%;
@@ -258,7 +222,7 @@ body{
                             padding-top: 2.4rem;
                             font-size: 3vw;
                             font-weight: bold;
-                            color: $mainC;
+                            color: $subC;
                         }
                         .sub-cont{
                             width: 22%;
@@ -273,7 +237,7 @@ body{
                                 @include flexbox(row, center, center);
                                 .circle , .rectangle{
                                     position: absolute;
-                                    background: rgba($mainC, 0.4);
+                                    background: rgba($subC, 0.4);
                                     backdrop-filter: blur(10px);
                                     z-index: 10;
                                 }
@@ -406,7 +370,7 @@ body{
                                             z-index: 0;
                                             right: -1rem;
                                             bottom: -1rem;
-                                            background: rgba($mainC, 0.8);
+                                            background: rgba($subC, 0.8);
                                             backdrop-filter: blur(10px);
                                         }
                                         span{
@@ -518,12 +482,12 @@ body{
                 .additional-menu{
                     width: 100%;
                     display: flex;
-                    border-top: 1px solid $mainC;
+                    border-top: 1px solid $subC;
                     > a{
                         width: 50%;
                         padding: 1.8rem 7.2rem;
                         @include flexbox(row, flex-end, center);
-                        &:not(:last-child){border-right: 1px solid $mainC;}
+                        &:not(:last-child){border-right: 1px solid $subC;}
                         &:last-child{
                             justify-content: flex-start;
                             img{margin-right: 4rem;}
