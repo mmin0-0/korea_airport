@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -7,7 +8,15 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
 }
+body.fixed {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
+/* color */
+/* icon */
+/* 애니메이션 딜레이 */
 .ani-stop {
   visibility: hidden;
   -webkit-animation-name: none !important;
@@ -94,6 +103,7 @@ body {
   animation-delay: 1s !important;
 }
 
+/* header */
 #header {
   width: 100%;
   height: 8rem;
@@ -104,6 +114,7 @@ body {
 }
 #header .header-inner {
   width: calc(100% - 32rem);
+  max-width: 160rem;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
@@ -133,7 +144,7 @@ body {
   width: 100%;
   max-width: 80.8rem;
   height: 100%;
-  background-color: #FFF;
+  background-color: transparent;
   -webkit-transition: right 0.5s;
   transition: right 0.5s;
   z-index: 100;
@@ -153,6 +164,7 @@ body {
   width: 100%;
   max-width: 40.8rem;
   padding-top: 11.2rem;
+  background-color: #FFF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -174,6 +186,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 3.2rem;
+}
+#header .nav-wrap nav .nav-left .depth01-list li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 #header .nav-wrap nav .nav-left .depth01-list li a span {
   position: relative;
@@ -290,6 +307,7 @@ body {
   display: block;
 }
 
+/* gnb 우측 버튼*/
 .language a span {
   color: #000;
   font-size: 1.8rem;
@@ -388,6 +406,7 @@ body {
           transform: translateY(-1.2rem) rotate(45deg);
 }
 
+/* gnb depth01 아이콘 */
 .search a span {
   color: #000;
   font-size: 2.4rem;
