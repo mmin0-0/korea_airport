@@ -1,0 +1,24 @@
+#main {
+  width: 100%;
+}
+#main .con-wrap {
+  height: 100vh;
+}
+#main .con-wrap.test01 {
+  background-color: bisque;
+}
+#main .con-wrap.test02 .test-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#main .con-wrap.test02 .test-wrap .test-list {
+  width: 100vw;
+  height: 100vh;
+}
+#main .con-wrap.test02 .test-wrap .test-list.list01 {
+  background-color: aquamarine;
+}
+#main .con-wrap.test02 .test-wrap .test-list.list02 {
+  background-color: cornflowerblue;
+}

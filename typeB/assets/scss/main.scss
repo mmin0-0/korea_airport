@@ -1,0 +1,24 @@
+#main {
+    width: 100%;
+    .con-wrap {
+        height: 100vh;
+        &.test01 {
+            background-color: bisque;
+        }
+        &.test02 {
+            .test-wrap {
+                display: flex;
+                .test-list {
+                    width: 100vw;
+                    height: 100vh;
+                    &.list01 {
+                        background-color: aquamarine;
+                    }
+                    &.list02 {
+                        background-color: cornflowerblue;
+                    }
+                }
+            }
+        }
+    }
+}
