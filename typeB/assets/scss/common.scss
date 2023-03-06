@@ -5,6 +5,11 @@
 body{
     font-size: 1.6rem;
     font-weight: 400;
+    &.fixed {
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+    }
 }
 
 /* color */
@@ -52,6 +57,7 @@ $darknavy: #2B2C45;
     z-index: 99;
     .header-inner {
         width: calc(100% - 32rem);
+        max-width: 160rem;
         height: 100%;
         margin: 0 auto;
         display: flex;

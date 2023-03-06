@@ -34,4 +34,22 @@ $(document).ready(function() {
         }
     });
 
+    /* hero-wrap scroll trigger */
+    gsap.registerPlugin(HeroScrollTrigger);
+
+    HeroScrollTrigger.create({
+    trigger: "#hero",
+    start: "top 150px", 
+    end: "bottom 150px",
+    pin: true,
+    markers: true
+    });
+
+    HeroScrollTrigger.create({
+    trigger: "#heroSlide",
+    start: "top center", 
+    end: "+=200", // 200px past the start 
+    pin: "#heroSlide"
+    });
+
 });

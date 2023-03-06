@@ -8,6 +8,11 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
 }
+body.fixed {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
 
 /* color */
 /* icon */
@@ -109,6 +114,7 @@ body {
 }
 #header .header-inner {
   width: calc(100% - 32rem);
+  max-width: 160rem;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
