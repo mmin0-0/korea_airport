@@ -68,22 +68,21 @@ body{
 
 /* header */
 #header{
-    // position: fixed;
     width: 100%;
     position: sticky;
     top: 0;
     .header-wrap{
-        height: 49rem;
-        // height: 10rem;
-        // overflow: hidden;
+        // height: 49rem;
+        height: 10rem;
+        overflow: hidden;
+        transition: height .5s;
+        &.on{height: 49rem;}
         .hd-top{
             width: 100%;
             border-bottom: 1px solid $mainC;
             height: 10rem;
-            border: 1px solid #000;
-            &:hover, &.on{
+            &.on{
                 .hd-inner{
-                    padding: 1.2rem 1.6rem;
                     nav{
                         .depth1-list{
                             > li{
@@ -92,10 +91,7 @@ body{
                                         width: 4rem;
                                         height: 4rem;
                                     }
-                                    span{
-                                        opacity: 1;
-                                        visibility: visible;
-                                    }
+                                    span{display: block;}
                                 }
                             }
                         }
@@ -107,6 +103,18 @@ body{
                         }
                         .lang-wrap{
                             display: block;
+                            > a{
+                                font-weight: bold;
+                                line-height: 3.4rem;
+                                color: #999;
+                                &.on{color: #000;}
+                                &:not(:last-child){
+                                    &::after{
+                                        content: '/';
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
@@ -117,16 +125,7 @@ body{
                 padding: 1.2rem 3rem;
                 transition: all .35s;
                 @include flexbox(row, space-between, center);
-                // .logo{
-                //     width: 18rem;
-                //     img{width: 100%;}
-                // }
                 .lang{
-                    border: 1px solid #000;
-                    // position: absolute;
-                    // top: 50%;
-                    // right: 3rem;
-                    // transform: translateY(-50%);
                     @include flexbox(column, center, center);
                     img{
                         width: 5.6rem;
@@ -157,14 +156,12 @@ body{
                         height: 100%;
                         width: 100%;
                         gap: 2vw;
-                        border: 1px solid red;
                         > li{ 
                             // width: 9.8rem;
                             width: calc(100% / 7);
                             height: 100%;
-                            border: 1px solid #000;
                             position: relative;
-                            &:hover, &.on{
+                            &.on{
                                 .depth1{
                                     img{display: none;}
                                     span{
@@ -178,16 +175,15 @@ body{
                                 height: 100%;
                                 @include flexbox(column, center, center);
                                 img{
-                                    width: 5.6rem;
-                                    height: 5.6rem;
+                                    width: 6.4rem;
+                                    height: 6.4rem;
                                     display: block;
                                     margin: 0 auto;
                                     transition: all .35s;
                                 }
                                 span{
-                                    opacity: 0;
+                                    display: none;
                                     line-height: 3.4rem;
-                                    visibility: hidden;
                                     font-weight: bold;
                                     transition: all .35s;
                                 }
@@ -195,8 +191,7 @@ body{
                         }
                     }
                     .depth2-list-wrap{
-                        border: 1px solid #000;
-                        margin-top: 5.2rem;
+                        margin-top: 5.4rem;
                         > div{
                             display: none;
 
@@ -232,53 +227,47 @@ body{
         }
         .hd-bottom{
             width: 100%;
-            // height: 390px;
+            height: 390px;
             // height: 0;
             // overflow: hidden;
-            background: #eee;
+            background: #fff;
+            border-right: 1px solid $mainC;
             .hd-inner{
                 width: 100%;
                 height: 100%;
                 position: relative;
                 .nav-list{
                     width: 100%;
-                    padding: 4rem 3rem 0;
+                    height: 29rem;
+                    padding: 1.4rem 3rem 0;
                     > div{
                         @include flexbox(row, space-between, flex-start);
                         display: none;
                         &.on{display: flex}
-                        border: 1px solid #000;
                         min-height: 29rem;
                         max-height: 29rem;
                         position: relative;
-                        border: 1px solid red;
                         padding: 0 2.6rem;
                         @include notebook{padding: 0;}
                         .depth2-list-wrap{
                             @include flexbox(row, flex-start, flex-start);
                             width: 50%;
                             max-width: 81.8rem;
-                            border: 1px solid red;
                         }
                         .main-tit{
-                            // width: 18rem;
-                            // font-size: 5.8rem;
+                            padding-top: 2.4rem;
                             font-size: 3vw;
                             font-weight: bold;
                             color: $mainC;
-                            border: 1px solid #000;
                         }
                         .sub-cont{
-                            // width: 41.2rem;
                             width: 22%;
-                            border: 1px solid #000;
                             position: relative;
                             .icon-motion{
-                                border: 1px solid #000;
-                                // width: 50%;
-                                // overflow: hidden;
+                                overflow: hidden;
                                 width: 17.6rem;
                                 height: 17.6rem;
+                                padding: 2.2rem 1.4rem;
                                 margin: 0 auto;
                                 position: relative;
                                 @include flexbox(row, center, center);
@@ -309,7 +298,7 @@ body{
                             .sub-cont{
                                 .icon-motion{
                                     img{
-                                        &:nth-child(1){width: 80%;}
+                                        &:nth-child(1){width: 90%;}
                                         &:nth-child(2){
                                             position: absolute;
                                             top: 0;
@@ -365,7 +354,7 @@ body{
                                         }
                                     }
                                     img{
-                                        &:nth-child(1){width: 60%;}
+                                        &:nth-child(1){width: 100%;}
                                     }
                                 }
                             }
@@ -383,7 +372,7 @@ body{
                                         img{width: 40%;}
                                         animation: scale_ani02 .8s both alternate;
                                     }
-                                    img{width: 80%;}
+                                    img{width: 100%;}
                                 }
                             }
                         }
@@ -428,12 +417,14 @@ body{
                                             transition: height .5s;
                                             position: relative;
                                             z-index: 2;
-                                            &:nth-child(1){animation: motion05_01 .5s both alternate;}
+                                            &:nth-child(1){animation: motion05_01 .8s both alternate;}
                                             &:nth-child(2){
-                                                animation: motion05_02 .5s both alternate;
+                                                animation: motion05_02 .8s both alternate;
+                                                animation-delay: .5s;
                                             }
                                             &:nth-child(3){
-                                                animation: motion05_03 .5s both alternate;
+                                                animation: motion05_03 .8s both alternate;
+                                                animation-delay: .8s;
                                             }
                                         }
                                         @keyframes motion05_01 {
@@ -456,6 +447,72 @@ body{
                                 }
                             }
                         }
+                        /* 인재채용 */
+                        &:nth-child(6){
+                            .sub-cont{
+                                .icon-motion{
+                                    img{
+                                        position: absolute;
+                                        &:nth-child(1){
+                                            left: 2rem;
+                                            bottom: 2.8rem;
+                                            z-index: 2;
+                                        }
+                                        &:nth-child(2){
+                                            left: 2rem;
+                                            bottom: 2.8rem;
+                                            z-index: 1;
+                                            animation: motion06_01 .8s both alternate;
+                                        }
+                                        &:nth-child(3){
+                                            right: 2rem;
+                                            bottom: 1.4rem;
+                                            z-index: 3;
+                                            opacity: .5;
+                                        }
+                                    }
+                                    @keyframes motion06_01 {
+                                        0%{transform: translate(0,0);}
+                                        100%{transform: translate(45px, -28px);}
+                                    }
+                                }
+                            }
+                        }
+                        /* 고객센터 */
+                        &:nth-child(7){
+                            .sub-cont{
+                                .icon-motion{
+                                    img{
+                                        position: absolute;
+                                        &:nth-child(1){
+                                            right: 4rem;
+                                            top: 4rem;
+                                            z-index: 1;
+                                            animation: motion07_01 .8s both alternate;
+                                            animation-delay: .8s;
+                                        }
+                                        &:nth-child(2){
+                                            left: 1.8rem;
+                                            bottom: 1.8rem;
+                                            z-index: 2;
+                                            opacity: .5;
+                                            animation: scale_ani01 .5s both alternate;
+                                            animation-delay: 1.5s;
+                                        }
+                                    }
+                                    @keyframes motion07_01 {
+                                        0%{
+                                            right: 4rem;
+                                            top: 4rem;
+                                        }
+                                        100%{
+                                            right: 1.8rem;
+                                            top: 2.2rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
                 .additional-menu{
@@ -464,7 +521,7 @@ body{
                     border-top: 1px solid $mainC;
                     > a{
                         width: 50%;
-                        padding: 2rem 7.2rem;
+                        padding: 1.8rem 7.2rem;
                         @include flexbox(row, flex-end, center);
                         &:not(:last-child){border-right: 1px solid $mainC;}
                         &:last-child{
