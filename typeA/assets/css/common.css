@@ -2,6 +2,9 @@
 /* 노트북 */
 /* 테블릿 */
 /* 모바일 */
+/* 노트북 */
+/* 테블릿 */
+/* 모바일 */
 @-webkit-keyframes ani01 {
   0% {
     -webkit-transform: translate(80px, 80px);
@@ -124,9 +127,9 @@ body {
 /* header */
 #header {
   width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
+  z-index: 100;
 }
 
 #header .header-wrap {
@@ -142,8 +145,9 @@ body {
 
 #header .header-wrap .hd-top {
   width: 100%;
-  border-bottom: 1px solid #D6E2FF;
   height: 10rem;
+  background: #fff;
+  border-bottom: 1px solid #D6E2FF;
 }
 
 #header .header-wrap .hd-top.on .hd-inner nav .depth1-list > li .depth1 img {
