@@ -11,14 +11,52 @@
     <link rel="stylesheet" href="/typeA/assets/css/common.css">
     <link rel="stylesheet" href="/typeA/assets/css/main.css">
     <script src="/typeA/assets/js/include.js"></script>
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
         <div id="header"></div>
         <div id="wrap">
-            <section style="height: 2000px;"></section>
+            <section id="mainVisual">
+                <div class="visual-tit">
+                    <div>
+                        <strong>Knowing No Limits</strong>
+                    </div>
+                    <div>
+                        <strong>Around The Clock</strong>
+                    </div>
+                    <div>
+                        <strong>State of the Art</strong>
+                    </div>
+                </div>
+            </section>
+            <section id="section2">
+                <div class="box_wrapper">
+                    <div class="box box1 horizon_box">1</div>
+                    <div class="box box2 horizon_box">2</div>
+                    <div class="box box3 horizon_box">3</div>
+                </div>
+            </section>
+            <section id="section3"></section>
+            <section id="section4"></section>
         </div>
         <div id="footer"></div>
     </div>
+    <script>
+        var sections = $('.horizon_box');
+        var tl = gsap.timeline({
+                scrollTrigger: {
+                trigger: "#section2",
+                pin: true,
+                scrub: 0.3,
+                start: "top top",
+                end: "+=500%",
+                markers: true,
+            }
+        });
+        tl.from(sections, {x: '300%', autoAlpha: 0, duration:2, ease: "none", stagger:3}).to(sections, {duration: 3});
+    </script>
 </body>
 </html>
