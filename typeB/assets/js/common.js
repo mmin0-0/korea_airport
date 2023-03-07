@@ -4,10 +4,12 @@ $(document).ready(function() {
     $(document).on('click', '.ham-btn-wrap', function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
+            $('body').addClass('fixed');
             $(this).closest('.header-inner').find('.nav-wrap').addClass('active');
             $(this).children('span').html('CLOSE');
             $(this).siblings('.language').addClass('active');
         } else {
+            $('body').removeClass('fixed')
             $(this).closest('.header-inner').find('.nav-wrap').removeClass('active');
             $(this).children('span').html('MENU');
             $(this).siblings('.language').removeClass('active');
@@ -35,21 +37,34 @@ $(document).ready(function() {
     });
 
     /* hero-wrap scroll trigger */
-    gsap.registerPlugin(HeroScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-    HeroScrollTrigger.create({
-    trigger: "#hero",
-    start: "top 150px", 
-    end: "bottom 150px",
-    pin: true,
-    markers: true
-    });
+    function heroWrap() {
+        const hero = $('#hero');
+        
+        gsap.to(hero, {
+            scrollTrigger: {
+                trigger: "#hero",
+                start: "top top", 
+                end: "bottom 0%",
+                pin: ".content",
+                markers: true
+            }
+        });
+    }
+    heroWrap();
 
-    HeroScrollTrigger.create({
-    trigger: "#heroSlide",
-    start: "top center", 
-    end: "+=200", // 200px past the start 
-    pin: "#heroSlide"
-    });
+    // let sections = gsap.utils.toArray(".panel");
 
+    // gsap.to(sections, {
+    // xPercent: -100 * (sections.length - 1),
+    // ease: "none",
+    // scrollTrigger: {
+    //     trigger: "#heroSlide",
+    //     pin: true,
+    //     scrub: 1,
+    //     snap: 1 / (sections.length - 1),
+    //     end: () => "+=" + document.querySelector("#heroSlide").offsetWidth
+    // }
+    // });
 });

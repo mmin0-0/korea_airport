@@ -1,0 +1,49 @@
+body{
+    font-size: 1.6rem;
+    font-weight: 400;
+    &.fixed {
+        width: 100vw;
+        height: 100vh;
+        // position: fixed;
+        // top: 0;
+        // left: 0;
+        z-index: 95;
+        background:rgba(0,0,0,0.5);
+        overflow: hidden;
+    }
+}
+
+/* color */
+$white: #FFF;
+$black: #000;
+$grey: #AEAEAE;
+$darknavy: #2B2C45;
+
+/* icon */
+@mixin icon ($width, $height, $url) {
+    width: $width;
+    height: $height;
+    background-image: url(../../assets/images/icon/#{$url}.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* 애니메이션 딜레이 */
+.ani-stop { visibility:hidden; -webkit-animation-name:none !important; animation-name:none !important } 
+.ani-delay005 { -webkit-animation-delay:.05s !important; animation-delay:.05s !important } 
+.ani-delay01 { -webkit-animation-delay:.1s !important; animation-delay:.1s !important } 
+.ani-delay015 { -webkit-animation-delay:.15s !important; animation-delay:.15s !important } 
+.ani-delay02 { -webkit-animation-delay:.2s !important; animation-delay:.2s !important } 
+.ani-delay025 { -webkit-animation-delay:.25s !important; animation-delay:.25s !important } 
+.ani-delay03 { -webkit-animation-delay:.3s !important; animation-delay:.3s !important } 
+.ani-delay035 { -webkit-animation-delay:.35s !important; animation-delay:.35s !important } 
+.ani-delay04 { -webkit-animation-delay:.4s !important; animation-delay:.4s !important } 
+.ani-delay045 { -webkit-animation-delay:.45s !important; animation-delay:.45s !important } 
+.ani-delay05 { -webkit-animation-delay:.5s !important; animation-delay:.5s !important } 
+.ani-delay06 { -webkit-animation-delay:.6s !important; animation-delay:.6s !important } 
+.ani-delay07 { -webkit-animation-delay:.7s !important; animation-delay:.7s !important } 
+.ani-delay075 { -webkit-animation-delay:.75s !important; animation-delay:.75s !important } 
+.ani-delay08 { -webkit-animation-delay:.8s !important; animation-delay:.8s !important } 
+.ani-delay09 { -webkit-animation-delay:.9s !important; animation-delay:.9s !important } 
+.ani-delay10 { -webkit-animation-delay:1s !important; animation-delay:1s !important } 
