@@ -4,10 +4,12 @@ $(document).ready(function() {
     $(document).on('click', '.ham-btn-wrap', function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
+            $('body').addClass('fixed');
             $(this).closest('.header-inner').find('.nav-wrap').addClass('active');
             $(this).children('span').html('CLOSE');
             $(this).siblings('.language').addClass('active');
         } else {
+            $('body').removeClass('fixed')
             $(this).closest('.header-inner').find('.nav-wrap').removeClass('active');
             $(this).children('span').html('MENU');
             $(this).siblings('.language').removeClass('active');
@@ -35,21 +37,21 @@ $(document).ready(function() {
     });
 
     /* hero-wrap scroll trigger */
-    gsap.registerPlugin(ScrollTrigger);
+    // gsap.registerPlugin(ScrollTrigger);
 
-    function heroWrap() {
-        const hero = $('#hero');
+    // function heroWrap() {
+    //     const hero = $('#hero');
         
-        gsap.to(hero, {
-            scrollTrigger: {
-                trigger: "#hero",
-                start: "top 24.8%", 
-                end: "bottom 80%",
-                pin: ".content",
-                markers: true
-            }
-        });
-    }
-    heroWrap();
+    //     gsap.to(hero, {
+    //         scrollTrigger: {
+    //             trigger: "#hero",
+    //             start: "top top", 
+    //             end: "bottom 0%",
+    //             pin: ".content",
+    //             markers: true
+    //         }
+    //     });
+    // }
+    // heroWrap();
 
 });
