@@ -172,13 +172,12 @@ body.fixed {
   width: 100%;
   height: 100vh;
   position: relative;
+}
+#main .hero-wrap #heroSlide > div.slide01-wrap {
   background: url(../../assets/images/common/hero_bg_black.png) no-repeat center bottom/100%;
   background-attachment: fixed;
   background-size: cover;
-}
-#main .hero-wrap #heroSlide > div.slide01-wrap {
   background-color: #000;
-  position: relative;
   z-index: 101;
 }
 #main .hero-wrap #heroSlide > div.slide01-wrap .slide01 {
