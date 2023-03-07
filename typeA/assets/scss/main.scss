@@ -70,14 +70,14 @@
                 background: #eee;
                 // transform: translateY(-100vh);
                 position: relative;
-                // position: absolute;
-                // top: 0;
-                // left: 0;
                 z-index: 9;
                 > div{
-                    // position: absolute;
-                    // top: 0;
-                    // left: 0;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    // left: 50%;
+                    // transform: translateX(-50%);
+                    // width: 120%;
                 }
                 .opacity-con{
                     // height: 100vh;
