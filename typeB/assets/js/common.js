@@ -35,21 +35,21 @@ $(document).ready(function() {
     });
 
     /* hero-wrap scroll trigger */
-    gsap.registerPlugin(HeroScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
-    HeroScrollTrigger.create({
-    trigger: "#hero",
-    start: "top 150px", 
-    end: "bottom 150px",
-    pin: true,
-    markers: true
-    });
-
-    HeroScrollTrigger.create({
-    trigger: "#heroSlide",
-    start: "top center", 
-    end: "+=200", // 200px past the start 
-    pin: "#heroSlide"
-    });
+    function heroWrap() {
+        const hero = $('#hero');
+        
+        gsap.to(hero, {
+            scrollTrigger: {
+                trigger: "#hero",
+                start: "top 24.8%", 
+                end: "bottom 80%",
+                pin: ".content",
+                markers: true
+            }
+        });
+    }
+    heroWrap();
 
 });

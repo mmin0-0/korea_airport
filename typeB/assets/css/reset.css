@@ -1,6 +1,6 @@
 html{font-size: 10px;}
 
-*{font-family: 'SUIT';}
+*{font-family: 'SUIT'; box-sizing: border-box;}
 
 html, body, p, h1, h2, h3, h4, h5, h6, ul, ul li, ol, ol li, dl, dl dt, dl dd, img, table, th, td, form, fieldset, legend, input, textarea, a, button, select, label, mark {
     margin: 0; 
