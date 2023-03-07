@@ -32,13 +32,16 @@
                             <span class="op-1">S</span><span>tate of the Art</span>
                         </div>
                         <div class="visual-sub-tit">
-                            <span>Gearing Up For Tomorrow</span>
+                            <span class="op-1">Gearing Up For Tomorrow</span>
                         </div>
                     </div>
                 </div>
                 <div class="bg-list">
                     <div class="opacity-con opacity-con01">
                         <img src="/typeA/assets/images/main/visual01.png" alt="" class="visula-img">
+                    </div>
+                    <div class="opacity-con opacity-con02">
+                        <img src="/typeA/assets/images/main/visual02.png" alt="" class="visula-img">
                     </div>
                 </div>
             </section>
@@ -87,14 +90,19 @@
                 pin: true,
                 scrub: 0.3,
                 start: "top top",
-                end: "+=500%",
+                end: "+=1000%",
                 markers: true,
             }
         })
         .fromTo('.visual-main-tit > div span:not(.op-1)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
-        .fromTo('.bg-list .opacity-con01',{yPercent: 100, duration: 2},{yPercent: 0, duration: 6})
+        // xpercent: 50,
+        .fromTo('.bg-list .opacity-con01',{y: 700, duration: 2},{y: 100, duration: 2})
         .fromTo('.visual-main-tit > div span',{color: 'black', duration: 2},{color: 'white',duration: 2})
         .fromTo('.visual-sub-tit',{opacity: 0, duration: 2},{opacity: 1, duration: 2})
+        .fromTo('.bg-list .opacity-con01',{y: 100, opacity: 1, duration: 2},{y: 100, opacity: 0, duration: 1})
+        .fromTo('.bg-list .opacity-con02',{y: 100, opacity: 0, duration: 2},{y: 100, opacity: 1, duration: 1})
+        // .fromTo('.visual-main-tit > div:not(.visual-sub-tit)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
+        // .fromTo('.visual-sub-tit',{y: 600, duration: 2},{y: 200, duration: 2})
 
         // .fromTo('.bg-list .opacity-con01',{opacity: 0, duration: 2},{opacity: 1,duration: 2})
         // .fromTo('.bg-list .opacity-con03',{opacity: 0, duration: 2},{opacity: 1,duration: 2})
