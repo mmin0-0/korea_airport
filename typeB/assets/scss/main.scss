@@ -66,27 +66,31 @@
                     position: relative;
                     z-index: 101;
                     .slide01 {
+                        width: fit-content;
                         position: relative;
                         top: 27.2%; 
                         left: 15.55%;
-                        span {
-                            color: $white;
-                            font-size: 2.4rem;
-                            font-weight: 500;
-                            letter-spacing: -0.02rem;
-                            line-height: 3rem;
-                        }
                         .txt-wrap {
-                            padding-top: 1.6rem;
                             display: flex;
                             flex-direction: column;
-                            p {
+                            span {
                                 color: $white;
-                                font-size: 4.8rem;
-                                font-weight: 700;
+                                font-size: 2.4rem;
+                                font-weight: 500;
                                 letter-spacing: -0.02rem;
-                                line-height: 6rem;
+                                line-height: 3rem;
                             }
+                            .wrap {
+                                padding-top: 1.6rem;
+                                p {
+                                    color: $white;
+                                    font-size: 4.8rem;
+                                    font-weight: 700;
+                                    letter-spacing: -0.02rem;
+                                    line-height: 6rem;
+                                }
+                            }
+                            
                         }
                     }
                 }
