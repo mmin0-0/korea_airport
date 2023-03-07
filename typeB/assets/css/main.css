@@ -165,7 +165,7 @@ body.fixed {
   gap: 7.5rem;
 }
 #main .hero-wrap #heroSlide {
-  width: 100%;
+  width: 500%;
   height: 100vh;
 }
 #main .hero-wrap #heroSlide > div {

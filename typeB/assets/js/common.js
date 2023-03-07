@@ -39,20 +39,6 @@ $(document).ready(function() {
     /* hero-wrap scroll trigger */
     gsap.registerPlugin(ScrollTrigger);
 
-    // function heroWrap() {
-    //     const hero = $('#hero');
-        
-    //     gsap.to(hero, {
-    //         scrollTrigger: {
-    //             trigger: "#hero",
-    //             start: "top top", 
-    //             end: "bottom 0%",
-    //             pin: ".content",
-    //             markers: true
-    //         }
-    //     });
-    // }
-    // heroWrap();
     function heroWrap() {
         const hero = $('#hero');
         
