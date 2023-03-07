@@ -86,7 +86,6 @@
   }
 }
 #section2 {
-  background: #222;
   overflow: hidden;
 }
 
@@ -128,7 +127,6 @@
 
 #wrap section {
   width: 100%;
-  height: 100vh;
   position: relative;
   border: 1px solid #000;
 }
@@ -137,16 +135,101 @@
 }
 #wrap section#mainVisual .visual-tit {
   position: fixed;
+}
+
+#wrap section#mainVisual .visual-top {
+  position: relative;
+  width: 100%;
+}
+
+#wrap section#mainVisual .visual-top .visual-main-tit {
+  width: 80%;
+  position: absolute;
   top: 25.8rem;
   left: 24rem;
-  z-index: 100;
+  z-index: 10;
+  opacity: 1;
 }
+
 #wrap section#mainVisual .visual-tit > div {
   border: 1px solid #000;
+}
+
+#wrap section#mainVisual .visual-top .visual-main-tit > div {
   font-family: "S-Core Dream";
   font-size: 8rem;
   font-weight: 500;
   line-height: 11rem;
-  color: #222;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#wrap section#mainVisual .visual-top .visual-main-tit > div:not(.visual-sub-tit) span {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
   mix-blend-mode: difference;
+  -webkit-animation: mainTit .8s both alternate;
+          animation: mainTit .8s both alternate;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+#wrap section#mainVisual .visual-top .visual-main-tit > div span {
+  display: block;
+}
+
+@-webkit-keyframes mainTit {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes mainTit {
+  0% {
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+#wrap section#mainVisual .visual-top .visual-main-tit > div.visual-sub-tit {
+  opacity: 0;
+}
+
+#wrap section#mainVisual .bg-list {
+  width: 100%;
+  height: 100vh;
+  background: #eee;
+  position: relative;
+  z-index: 9;
+}
+
+#wrap section#mainVisual .bg-list .opacity-con {
+  border: 1px solid red;
+}
+
+#wrap section#mainVisual .bg-list .opacity-con.opacity-con01 {
+  z-index: 1;
+}
+
+#wrap section#mainVisual .bg-list .opacity-con.opacity-con02 {
+  z-index: 2;
+}
+
+#wrap section#mainVisual .bg-list .opacity-con.opacity-con03 {
+  z-index: 3;
+}
+
+#wrap section#mainVisual .bg-list .opacity-con .visula-img {
+  width: 100%;
 }

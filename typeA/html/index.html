@@ -20,43 +20,85 @@
         <div id="header"></div>
         <div id="wrap">
             <section id="mainVisual">
-                <div class="visual-tit">
-                    <div>
-                        <strong>Knowing No Limits</strong>
+                <div class="visual-top">
+                    <div class="visual-main-tit">
+                        <div>
+                            <span class="op-1">K</span><span>nowing No Limits</span>
+                        </div>
+                        <div>
+                            <span class="op-1">A</span><span>round The Clock</span>
+                        </div>
+                        <div>
+                            <span class="op-1">S</span><span>tate of the Art</span>
+                        </div>
+                        <div class="visual-sub-tit">
+                            <span>Gearing Up For Tomorrow</span>
+                        </div>
                     </div>
-                    <div>
-                        <strong>Around The Clock</strong>
-                    </div>
-                    <div>
-                        <strong>State of the Art</strong>
+                </div>
+                <div class="bg-list">
+                    <div class="opacity-con opacity-con01">
+                        <img src="/typeA/assets/images/main/visual01.png" alt="" class="visula-img">
                     </div>
                 </div>
             </section>
             <section id="section2">
-                <div class="box_wrapper">
+                <!-- <div class="box_wrapper">
                     <div class="box box1 horizon_box">1</div>
                     <div class="box box2 horizon_box">2</div>
                     <div class="box box3 horizon_box">3</div>
-                </div>
+                </div> -->
             </section>
-            <section id="section3"></section>
+            <section id="section3" style="height: 3000px;"></section>
             <section id="section4"></section>
         </div>
         <div id="footer"></div>
     </div>
     <script>
-        var sections = $('.horizon_box');
-        var tl = gsap.timeline({
+        var visualImg = $('.visula-img');
+        var boxItem = $('.horizon_box');
+
+        // gsap.registerPlugin(ScrollTrigger);
+        // gsap.to(".visual-main-tit span:not(.op-1)", {
+        //     scrollTrigger: {
+        //         trigger: ".visual-top",
+        //         scrub: .3,
+        //         start: "top top",
+        //         end: "+=100%",
+        //         markers: true,
+        //     },
+        //     opacity: 0, duration: 2,
+        // });
+
+        // gsap.to(".visual-main-tit", {
+        //     scrollTrigger: {
+        //         trigger: ".bg-list",
+        //         scrub: .3,
+        //         start: "top",
+        //         end: "+=100%",
+        //         markers: true,
+        //     },
+        //     color: "white", duration: 2, y: 200
+        // });
+
+        var t1 = gsap.timeline({
                 scrollTrigger: {
-                trigger: "#section2",
+                trigger: "#mainVisual",
                 pin: true,
                 scrub: 0.3,
                 start: "top top",
                 end: "+=500%",
                 markers: true,
             }
-        });
-        tl.from(sections, {x: '300%', autoAlpha: 0, duration:2, ease: "none", stagger:3}).to(sections, {duration: 3});
+        })
+        .fromTo('.visual-main-tit > div span:not(.op-1)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
+        .fromTo('.bg-list .opacity-con01',{yPercent: 100, duration: 2},{yPercent: 0, duration: 6})
+        .fromTo('.visual-main-tit > div span',{color: 'black', duration: 2},{color: 'white',duration: 2})
+        .fromTo('.visual-sub-tit',{opacity: 0, duration: 2},{opacity: 1, duration: 2})
+
+        // .fromTo('.bg-list .opacity-con01',{opacity: 0, duration: 2},{opacity: 1,duration: 2})
+        // .fromTo('.bg-list .opacity-con03',{opacity: 0, duration: 2},{opacity: 1,duration: 2})
+        // .fromTo('.visual-tit > div.no-ani span',{opacity: 0, duration: 2},{opacity: 1,duration: 2})
     </script>
 </body>
 </html>
