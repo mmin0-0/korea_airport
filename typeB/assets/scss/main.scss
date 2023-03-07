@@ -5,13 +5,19 @@
     .hero-wrap {
         width: 100%;
         height: 100vh;
+        position: relative;
+        background: url(../../assets/images/common/hero_bg_white.png) no-repeat center bottom/ 100%;
+        background-attachment: fixed;
+        background-size: cover;
         #hero {
             width: 100%;
             height: 100vh;
-            background-color: $white;
+            position: relative;
             .content {
-                padding-top: 12.1%;
-                padding-left: 7.7%;
+                width: fit-content;
+                position: relative;
+                top: 25.6%;
+                left: 7.7%;
                 > p {
                     display: flex;
                     align-items: flex-end;
@@ -38,6 +44,8 @@
                     font-size: 20rem;
                     font-weight: 700;
                     letter-spacing: -0.02rem;
+                    display: flex;
+                    gap: 7.5rem;
                     &.txt-img {
                     }
                 }
@@ -45,18 +53,22 @@
         }
         #heroSlide {
             width: 100%;
-            height: 100%;
+            height: 100vh;
             > div {
                 width: 100%;
-                height: 100%;
+                height: 100vh;
+                position: relative;
+                background: url(../../assets/images/common/hero_bg_black.png) no-repeat center bottom/ 100%;
+                background-attachment: fixed;
+                background-size: cover;
                 &.slide01-wrap {
                     background-color: $black;
                     position: relative;
-                    z-index: 999;
+                    z-index: 101;
                     .slide01 {
                         position: relative;
-                        padding-top: 25.5rem; 
-                        padding-left: 29.6rem;
+                        top: 27.2%; 
+                        left: 15.55%;
                         span {
                             color: $white;
                             font-size: 2.4rem;

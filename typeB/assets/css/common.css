@@ -6,6 +6,7 @@ body {
 body.fixed {
   width: 100vw;
   height: 100vh;
+  z-index: 95;
   background: rgba(0, 0, 0, 0.5);
   overflow: hidden;
 }
@@ -106,7 +107,7 @@ body.fixed {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 99;
+  z-index: 98;
 }
 #header .header-inner {
   width: calc(100% - 32rem);

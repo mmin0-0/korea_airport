@@ -30,3 +30,8 @@ table {
 span {
     display: inline-block;
 }
+
+img {
+    max-width: 100%;
+    display: block;
+}

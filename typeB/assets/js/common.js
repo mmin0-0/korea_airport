@@ -37,7 +37,7 @@ $(document).ready(function() {
     });
 
     /* hero-wrap scroll trigger */
-    // gsap.registerPlugin(ScrollTrigger);
+    gsap.registerPlugin(ScrollTrigger);
 
     // function heroWrap() {
     //     const hero = $('#hero');
@@ -53,5 +53,32 @@ $(document).ready(function() {
     //     });
     // }
     // heroWrap();
+    function heroWrap() {
+        const hero = $('#hero');
+        
+        gsap.to(hero, {
+            scrollTrigger: {
+                trigger: "#hero",
+                start: "top top", 
+                end: "bottom 0%",
+                pin: ".content",
+                markers: true
+            }
+        });
+    }
+    heroWrap();
 
+    // let sections = gsap.utils.toArray(".panel");
+
+    // gsap.to(sections, {
+    // xPercent: -100 * (sections.length - 1),
+    // ease: "none",
+    // scrollTrigger: {
+    //     trigger: "#heroSlide",
+    //     pin: true,
+    //     scrub: 1,
+    //     snap: 1 / (sections.length - 1),
+    //     end: () => "+=" + document.querySelector("#heroSlide").offsetWidth
+    // }
+    // });
 });
