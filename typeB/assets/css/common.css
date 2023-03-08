@@ -3,7 +3,6 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
 }
-
 body.fixed {
   width: 100vw;
   height: 100vh;
@@ -548,6 +547,15 @@ body.fixed {
 }
 #footer .footer-inner .footer-right .depth01 > li .depth02-list {
   padding-top: 1.1rem;
+}
+#footer .footer-inner .footer-right .depth01 > li .depth02-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 #footer .footer-inner .footer-right .depth01 > li .depth02-list li a span {
   color: #FFF;
