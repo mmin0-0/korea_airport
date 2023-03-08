@@ -122,16 +122,19 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "KoddiUD OnGothic";
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* btn */
-.shortcuts-btn {
+.common-btn {
   display: block;
   max-width: 13rem;
   width: 100%;
   line-height: 1.4;
   padding: 1rem .5rem;
   border: 1px solid #fff;
+  color: #fff;
   border-radius: 30px;
   position: relative;
   display: -webkit-box;
@@ -149,7 +152,7 @@ body {
           align-items: center;
 }
 
-.shortcuts-btn::after {
+.common-btn::after {
   content: '';
   width: 1.2rem;
   height: 1.2rem;

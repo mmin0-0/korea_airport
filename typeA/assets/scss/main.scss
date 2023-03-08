@@ -16,6 +16,7 @@
 
 #wrap{
     letter-spacing: -2%;
+    line-height: 1.4;
     section{
         width: 100%;
         // height: 100vh;
@@ -32,7 +33,6 @@
         .sec-tit{
             font-size: 4rem;
             font-weight: bold;
-            line-height: 1.4; 
         }
         &#mainVisual{
             background: #ddd;
@@ -130,8 +130,7 @@
                                     .count-num-item{
                                         font-weight: 800;
                                         font-size: 20rem;
-                                        line-height: 1.4;
-                                        color: #0A4FFF;
+                                        color: $mainC;
                                     }
                                 }
                                 &.unit-wrap{
@@ -200,7 +199,6 @@
                                 span{
                                     margin-left: 1.6rem;
                                     font-size: 2.8rem;
-                                    line-height: 1.4;
                                     display: inline-block;
                                     color: #BBBBBB;
                                 }
@@ -271,8 +269,274 @@
                         }
                     }
                     &-bullet-active{
-                        &::after{background: #0A4FFF;}
+                        &::after{background: $mainC;}
                         span{color: $white;}
+                    }
+                }
+            }
+        }
+        &#esg{
+            padding: 8rem 0 10.4rem;
+            &::after{
+                content: '';
+                width: 100vw;
+                height: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(rgba(0,0,0,0), #E7EFFF);
+            }
+            .con-box{
+                .esg-tit-list{
+                    margin-top: 4rem;
+                    > div{
+                        display: none;
+                        align-items: center;
+                        &.on{display: flex;}
+                        > strong{
+                            font-weight: bold;
+                            font-size: 2.8rem;
+                            margin-right: 6.8rem;
+                            @include flexbox(row, flex-start, center);
+                            &::after{
+                                content: '';
+                                height: 1px;
+                                width: 2rem;
+                                display: inline-block;
+                                margin-left: 2rem;
+                                background: $mainC;
+                            }
+                        }
+                        > span{
+                            font-size: 2.4rem;
+                        }
+                    }
+                }
+                .sec-cont{
+                    margin-top: 10.4rem;
+                    .esg-list{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        > li{
+                            width: 19.8rem;
+                            height: 19.8rem;
+                            border-radius: 50%;
+                            background: #eee;
+                            transition: all .35s;
+                            &:hover, &.on{
+                                width: 48rem;
+                                height: 48rem;
+                            }
+                            a{
+                                width: 100%;
+                                height: 100%;
+                                @include flexbox(row, center, center);
+                            }
+                        }
+                    }
+                    .esg-swiper{
+                        .swiper-wrapper{
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        .swiper-slide{
+                            width: 19.8rem;
+                            height: 19.8rem;
+                            overflow: hidden;
+                            border-radius: 50%;
+                            background: #eee;
+                            transition: all .8s;
+                            cursor: pointer;
+                            > img{
+                                width: 150%;
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            .symbols{
+                                position: absolute;
+                                top: 50%;
+                                left: 50%;
+                                transform: translate(-50%, -50%);
+                            }
+                            &-active, &:hover{
+                                width: 48rem;
+                                height: 48rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#kasWrod{
+            margin-top: 8rem;
+            .sec-tit{margin-bottom: 3.2rem;}
+            .sec-cont{
+                padding: 4rem;
+                border-radius: 10px;
+                background: url(/typeA/assets/images/main/kas_bg.png) no-repeat top center/ contain;
+                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                > strong{
+                    font-size: 2.8rem;
+                    font-weight: bold;
+                    display: block;
+                    margin-bottom: 7.8rem;
+                }
+                > p{
+                    font-size: 1.8rem;
+                    color: #666;
+                    @include ellipsis(2);
+                }
+            }
+        }
+        &#talent{
+            margin-top: 8rem;
+            .sec-cont{
+                margin-top: 3.2rem;
+                .talent-list{
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    gap: 2.4rem;
+                    > li{
+                        min-height: 46.4rem;
+                        border-radius: 10px;
+                        overflow: hidden;
+                        position: relative;
+                        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                        &:nth-child(1){
+                            .front{background: url(/typeA/assets/images/main/talent_bg01.png) no-repeat center/ cover;}
+                        }
+                        &:nth-child(2){
+                            .front{background: url(/typeA/assets/images/main/talent_bg02.png) no-repeat center/ cover;}
+                        }
+                        &:nth-child(3){
+                            .front{background: url(/typeA/assets/images/main/talent_bg03.png) no-repeat center/ cover;}
+                        }
+                        &:hover{
+                            .front{
+                                opacity: 0;
+                                visibility: hidden;
+                            }
+                            .back{
+                                opacity: 1;
+                                visibility: visible;
+                            }
+                        }
+                        .front{
+                            width: 100%;
+                            height: 100%;
+                            padding: 4.6rem;
+                            @include flexbox(row, center, center);
+                            &::after{
+                                content: '';
+                                width: 100%;
+                                height: 100%;
+                                background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0));
+                                position: absolute;
+                                top: 0;
+                                left: 0;
+                                z-index: 0;
+                            }
+                            > strong{
+                                font-size: 3.2rem;
+                                font-weight: bold;
+                                color: $white;
+                                text-align: center;
+                                position: relative;
+                                z-index: 1;
+                            }
+                        }
+                        .back{
+                            width: 100%;
+                            height: 100%;
+                            padding: 4.6rem;
+                            @include flexbox(row, center, center);
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all .5s;
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background: $white;
+                            .back-inner{
+                                .back-tit{
+                                    font-size: 3.2rem;
+                                    font-weight: bold;
+                                    text-align: center;
+                                    > span{color: $mainC;}
+                                }
+                                > ul{
+                                    margin-top: 3.2rem;
+                                    > li{
+                                        &:not(:first-child){margin-top: 2.4rem;}
+                                        position: relative ;
+                                        padding-left: 5.2rem;
+                                        font-size: 2rem;
+                                        line-height: 1.6;
+                                        &::after{
+                                            content: '';
+                                            width: 3.2rem;
+                                            height: 3.2rem;
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            background: url(/typeA/assets/images/icon/check_icon.png) no-repeat center/ 80%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &#question{
+            padding: 10.4rem 0 20rem;
+            margin-top: 8rem;
+            background: url(/typeA/assets/images/main/question_bg.png) no-repeat top center/ cover;
+            .con-box{
+                .sec-tit{color: $white;}
+                .sec-cont{
+                    margin-top: 7.2rem;
+                    &::after{
+                        content: '';
+                        display: block;
+                        clear: both;
+                    }
+                    .question-list{
+                        > li{
+                            &:not(:first-child){margin-top: 4.2rem;}
+                            .question-tit{
+                                width: 100%;
+                                font-size: 2.8rem;
+                                color: $white;
+                                padding-bottom: 2.2rem;
+                                border-bottom: 2px solid $white;
+                                @include flexbox(row, flex-start, center);
+                                .question-num{
+                                    font-family: $scoreDream;
+                                    font-size: 4.8rem;
+                                    font-weight: 500;
+                                    color: $mainC;
+                                    margin-right: 2.4rem;
+                                }
+                            }
+                            .question-info{
+                                margin-top: 2rem;
+                                padding-left: 7.2rem;
+                                color: #bbb;
+                                font-size: 2.4rem;
+                                line-height: 1.6;
+                            }
+                        }
+                    }
+                    .question-list + .common-btn{
+                        margin-top: 8.2rem;
+                        float: right;
                     }
                 }
             }

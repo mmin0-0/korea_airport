@@ -25,16 +25,19 @@ body{
     font-size: 1.6rem;
     font-weight: 400;
     font-family: $gothic;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 /* btn */
-.shortcuts-btn{
+.common-btn{
     display: block;
     max-width: 13rem;
     width: 100%;
     line-height: 1.4;
     padding: 1rem .5rem;
     border: 1px solid $white;
+    color: $white;
     border-radius: 30px;
     position: relative;
     @include flexbox(row, center, center);
