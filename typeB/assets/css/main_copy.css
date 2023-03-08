@@ -100,7 +100,10 @@ body.fixed {
   animation-delay: 1s !important;
 }
 
-.container #hero {
+#main {
+  width: 100%;
+}
+#main .hero-wrap {
   width: 100%;
   height: 100vh;
   position: relative;
@@ -108,7 +111,12 @@ body.fixed {
   background-attachment: fixed;
   background-size: cover;
 }
-.container #hero .content {
+#main .hero-wrap #hero {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+#main .hero-wrap #hero .content {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -116,27 +124,27 @@ body.fixed {
   top: 25.6%;
   left: 7.7%;
 }
-.container #hero .content > p {
+#main .hero-wrap #hero .content > p {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  gap: 1.04vw;
+  gap: 2rem;
   color: #000;
-  font-size: 1.25vw;
+  font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: -0.02rem;
-  height: 2.5vw;
+  height: 4.8rem;
 }
-.container #hero .content > p > span {
+#main .hero-wrap #hero .content > p > span {
   color: #000;
-  font-size: 1.67vw;
+  font-size: 3.2rem;
   font-weight: 700;
   letter-spacing: -0.011rem;
 }
-.container #hero .txt-wrap {
+#main .hero-wrap #hero .txt-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -144,37 +152,34 @@ body.fixed {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2.6vw;
+  gap: 7.3rem;
 }
-.container #hero .txt-wrap .txt {
+#main .hero-wrap #hero .txt-wrap .txt {
   color: #000;
-  font-size: 10.41vw;
+  font-size: 20rem;
   font-weight: 700;
   letter-spacing: -0.02rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 3.9vw;
+  gap: 7.5rem;
 }
-.container #hero .txt-wrap .txt.txt-img .img-wrap img {
-  max-width: 12.65625vw;
-}
-.container #heroSlide {
+#main .hero-wrap #heroSlide {
   width: 100%;
   height: 100vh;
 }
-.container #heroSlide > div {
+#main .hero-wrap #heroSlide > div {
   width: 100%;
   height: 100vh;
   position: relative;
 }
-.container #heroSlide > div.slide01-wrap {
+#main .hero-wrap #heroSlide > div.slide01-wrap {
   background: url(../../assets/images/common/hero_bg_black.png) no-repeat center bottom/100%;
   background-attachment: fixed;
   background-size: cover;
   background-color: #000;
 }
-.container #heroSlide > div.slide01-wrap .slide01 {
+#main .hero-wrap #heroSlide > div.slide01-wrap .slide01 {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -182,7 +187,7 @@ body.fixed {
   top: 27.2%;
   left: 15.55%;
 }
-.container #heroSlide > div.slide01-wrap .slide01 .txt-wrap {
+#main .hero-wrap #heroSlide > div.slide01-wrap .slide01 .txt-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -191,72 +196,72 @@ body.fixed {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.container #heroSlide > div.slide01-wrap .slide01 .txt-wrap span {
+#main .hero-wrap #heroSlide > div.slide01-wrap .slide01 .txt-wrap span {
   color: #FFF;
   font-size: 2.4rem;
   font-weight: 500;
   letter-spacing: -0.02rem;
   line-height: 3rem;
 }
-.container #heroSlide > div.slide01-wrap .slide01 .txt-wrap .wrap {
+#main .hero-wrap #heroSlide > div.slide01-wrap .slide01 .txt-wrap .wrap {
   padding-top: 1.6rem;
 }
-.container #heroSlide > div.slide01-wrap .slide01 .txt-wrap .wrap p {
+#main .hero-wrap #heroSlide > div.slide01-wrap .slide01 .txt-wrap .wrap p {
   color: #FFF;
   font-size: 4.8rem;
   font-weight: 700;
   letter-spacing: -0.02rem;
   line-height: 6rem;
 }
-.container #container {
+#main #container {
   width: calc(100% - 32rem);
   max-width: 160rem;
   height: auto;
   margin: 0 auto;
 }
-.container #container .esg-wrap {
+#main #container .esg-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.container #container .contact-wrap {
+#main #container .contact-wrap {
   width: 100%;
 }
-.container #container .contact-wrap .title {
+#main #container .contact-wrap .title {
   color: #000;
   font-size: 6.8rem;
   font-weight: 700;
   line-height: 8.8rem;
   letter-spacing: -0.02rem;
 }
-.container #container .contact-wrap .contact {
+#main #container .contact-wrap .contact {
   padding-top: 4rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 3.25%;
 }
-.container #container .contact-wrap .contact > div {
+#main #container .contact-wrap .contact > div {
   width: 100%;
   height: auto;
 }
-.container #container .contact-wrap .contact > div a {
+#main #container .contact-wrap .contact > div a {
   width: 100%;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.container #container .contact-wrap .contact > div.hire a .img-wrap.no-info {
+#main #container .contact-wrap .contact > div.hire a .img-wrap.no-info {
   display: block;
 }
-.container #container .contact-wrap .contact > div.hire a .img-wrap.info {
+#main #container .contact-wrap .contact > div.hire a .img-wrap.info {
   display: none;
 }
-.container #container .contact-wrap .contact > div.hire:hover a .img-wrap.no-info {
+#main #container .contact-wrap .contact > div.hire:hover a .img-wrap.no-info {
   display: none;
 }
-.container #container .contact-wrap .contact > div.hire:hover a .img-wrap.info {
+#main #container .contact-wrap .contact > div.hire:hover a .img-wrap.info {
   display: block;
 }
 
@@ -349,4 +354,12 @@ h2 {
 }
 .pin-wrap > * {
   min-width: 100vw;
+}
+
+p {
+  position: absolute;
+  bottom: 10vw;
+  right: 10vw;
+  width: 200px;
+  line-height: 1.5;
 }
