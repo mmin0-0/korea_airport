@@ -174,7 +174,7 @@ body.fixed {
 }
 
 #main .hero-wrap #heroSlide {
-  width: 500%;
+  width: 100%;
   height: 100vh;
 }
 
@@ -189,7 +189,6 @@ body.fixed {
   background-attachment: fixed;
   background-size: cover;
   background-color: #000;
-  z-index: 101;
 }
 
 #main .hero-wrap #heroSlide > div.slide01-wrap .slide01 {
@@ -230,3 +229,56 @@ body.fixed {
   letter-spacing: -0.02rem;
   line-height: 6rem;
 }
+
+#main #container {
+  width: calc(100% - 32rem);
+  max-width: 160rem;
+  height: auto;
+  margin: 0 auto;
+}
+#main #container .esg-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#main #container .contact-wrap {
+  width: 100%;
+}
+#main #container .contact-wrap .title {
+  color: #000;
+  font-size: 6.8rem;
+  font-weight: 700;
+  line-height: 8.8rem;
+  letter-spacing: -0.02rem;
+}
+#main #container .contact-wrap .contact {
+  padding-top: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3.25%;
+}
+#main #container .contact-wrap .contact > div {
+  width: 100%;
+  height: auto;
+}
+#main #container .contact-wrap .contact > div a {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#main #container .contact-wrap .contact > div.hire a .img-wrap.no-info {
+  display: block;
+}
+#main #container .contact-wrap .contact > div.hire a .img-wrap.info {
+  display: none;
+}
+#main #container .contact-wrap .contact > div.hire:hover a .img-wrap.no-info {
+  display: none;
+}
+#main #container .contact-wrap .contact > div.hire:hover a .img-wrap.info {
+  display: block;
+}
+

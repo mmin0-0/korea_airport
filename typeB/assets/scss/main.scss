@@ -52,7 +52,7 @@
             }
         }
         #heroSlide {
-            width: 500%;
+            width: 100%;
             height: 100vh;
             > div {
                 width: 100%;
@@ -63,7 +63,7 @@
                     background-attachment: fixed;
                     background-size: cover;
                     background-color: $black;
-                    z-index: 101;
+                    // z-index: 101; 
                     .slide01 {
                         width: fit-content;
                         position: relative;
@@ -90,6 +90,71 @@
                                 }
                             }
                             
+                        }
+                    }
+                }
+            }
+        }
+    }
+    #container {
+        width: calc(100% - 32rem);
+        max-width: 160rem;
+        height: auto;
+        margin: 0 auto;
+        .esg-wrap {
+            display: flex;
+            .esg-left {
+                .txt-wrap {
+
+                }
+            }
+            .esg-right {
+
+            }
+        }
+        .contact-wrap {
+            width: 100%;
+            .title {
+                color: $black;
+                font-size: 6.8rem;
+                font-weight: 700;
+                line-height: 8.8rem;
+                letter-spacing: -0.02rem;
+            }
+            .contact {
+                padding-top: 4rem;
+                display: flex;
+                gap: 3.25%;
+                > div {
+                    width: 100%;
+                    height: auto;
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                    }
+                    &.hire {
+                        a {
+                            .img-wrap {
+                                &.no-info {
+                                    display: block;
+                                }
+                                &.info {
+                                    display: none;
+                                }
+                            }
+                        }
+                        &:hover {
+                            a {
+                                .img-wrap {
+                                    &.no-info {
+                                        display: none;
+                                    }
+                                    &.info {
+                                        display: block;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
