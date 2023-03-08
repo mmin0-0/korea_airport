@@ -351,6 +351,34 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        .footer-right {
+            display: flex;
+            .depth01 {
+                > li {
+                    .depth01-item {
+                        color: $white;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        line-height: 3rem;
+                        text-align: -0.02rem;
+                    }
+                    .depth02-list {
+                        padding-top: 1.1rem;
+                        li {
+                            a {
+                                span {
+                                    color: $white;
+                                    font-size: 1.4rem;
+                                    font-weight: 500;
+                                    line-height: 1.7rem;
+                                    text-align: -0.02rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .menu {
             width: 100%;
             max-width: 20.6rem;

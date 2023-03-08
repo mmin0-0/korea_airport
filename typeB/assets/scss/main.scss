@@ -127,34 +127,34 @@
                 gap: 3.25%;
                 > div {
                     width: 100%;
-                    height: 40rem;
+                    height: auto;
                     a {
                         width: 100%;
                         height: 100%;
-                        padding: 8rem 6rem;
-                        border: 2px solid $black;
-                        border-radius: 40px;
                         display: flex;
-                        .txt-wrap {
-                            span {
-
-                            }
-                            p {
-                                
-                            }
-                            div {
-
-                            }
-                        }
                     }
                     &.hire {
-                        .img-wrap {
-                            max-width: 20rem;
+                        a {
+                            .img-wrap {
+                                &.no-info {
+                                    display: block;
+                                }
+                                &.info {
+                                    display: none;
+                                }
+                            }
                         }
-                    }
-                    &.help {
-                        .img-wrap {
-                            max-width: 23.8rem;
+                        &:hover {
+                            a {
+                                .img-wrap {
+                                    &.no-info {
+                                        display: none;
+                                    }
+                                    &.info {
+                                        display: block;
+                                    }
+                                }
+                            }
                         }
                     }
                 }

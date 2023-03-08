@@ -533,6 +533,28 @@ body.fixed {
       -ms-flex-align: center;
           align-items: center;
 }
+#footer .footer-inner .footer-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#footer .footer-inner .footer-right .depth01 > li .depth01-item {
+  color: #FFF;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 3rem;
+  text-align: -0.02rem;
+}
+#footer .footer-inner .footer-right .depth01 > li .depth02-list {
+  padding-top: 1.1rem;
+}
+#footer .footer-inner .footer-right .depth01 > li .depth02-list li a span {
+  color: #FFF;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.7rem;
+  text-align: -0.02rem;
+}
 #footer .footer-inner .menu {
   width: 100%;
   max-width: 20.6rem;
