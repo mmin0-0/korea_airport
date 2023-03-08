@@ -191,21 +191,91 @@
                 </div>
             </section>
             <section id="business">
-                <!-- <div class="swiper mySwiper">
+                <div class="swiper business-swiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">Slide 1</div>
-                        <div class="swiper-slide">Slide 2</div>
-                        <div class="swiper-slide">Slide 3</div>
-                        <div class="swiper-slide">Slide 4</div>
+                        <div class="swiper-slide">
+                            <img src="/typeA/assets/images/main/business_img01.png" alt="" class="bg-img">
+                            <div class="business-info con-box">
+                                <div>
+                                    <div class="business-tit">
+                                        <strong>여객사업</strong>
+                                        <span>Ramp Handling</span>
+                                    </div>
+                                    <p>
+                                        세계적인 지상조업 Total Solution을 통해 고객이 원하는 최상의 조업품질을 제공하고 있습니다. 원하는 최상의 조업품질을 제공하고 있습니다. 제공하고 있습니다.
+                                    </p>
+                                    <a href="javascript:void(0)" class="shortcuts-btn">바로가기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/typeA/assets/images/main/business_img02.png" alt="" class="bg-img">
+                            <div class="business-info con-box">
+                                <div>
+                                    <div class="business-tit">
+                                        <strong>여객사업</strong>
+                                        <span>Ramp Handling</span>
+                                    </div>
+                                    <p>
+                                        세계적인 지상조업 Total Solution을 통해 고객이 원하는 최상의 조업품질을 제공하고 있습니다. 원하는 최상의 조업품질을 제공하고 있습니다. 제공하고 있습니다.
+                                    </p>
+                                    <a href="javascript:void(0)" class="shortcuts-btn">바로가기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/typeA/assets/images/main/business_img03.png" alt="" class="bg-img">
+                            <div class="business-info con-box">
+                                <div>
+                                    <div class="business-tit">
+                                        <strong>여객사업</strong>
+                                        <span>Ramp Handling</span>
+                                    </div>
+                                    <p>
+                                        세계적인 지상조업 Total Solution을 통해 고객이 원하는 최상의 조업품질을 제공하고 있습니다. 원하는 최상의 조업품질을 제공하고 있습니다. 제공하고 있습니다.
+                                    </p>
+                                    <a href="javascript:void(0)" class="shortcuts-btn">바로가기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="/typeA/assets/images/main/business_img04.png" alt="" class="bg-img">
+                            <div class="business-info con-box">
+                                <div>
+                                    <div class="business-tit">
+                                        <strong>여객사업</strong>
+                                        <span>Ramp Handling</span>
+                                    </div>
+                                    <p>
+                                        세계적인 지상조업 Total Solution을 통해 고객이 원하는 최상의 조업품질을 제공하고 있습니다. 원하는 최상의 조업품질을 제공하고 있습니다. 제공하고 있습니다.
+                                    </p>
+                                    <a href="javascript:void(0)" class="shortcuts-btn">바로가기</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-controls">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                     <div class="swiper-pagination"></div>
-                </div> -->
+                </div>
             </section>
             <section id="section4"></section>
         </div>
         <div id="footer"></div>
     </div>
     <script>
+        var bullet = ['여객사업', '화물사업', '급유사업', '정비사업'];
+        var swiper = new Swiper(".business-swiper", {
+            pagination: {
+                el: ".business-swiper .swiper-pagination",
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+                }
+            },
+        });
         var visualImg = $('.visula-img');
         var boxItem = $('.horizon_box');
 

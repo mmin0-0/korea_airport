@@ -124,6 +124,40 @@ body {
   font-family: "KoddiUD OnGothic";
 }
 
+/* btn */
+.shortcuts-btn {
+  display: block;
+  max-width: 13rem;
+  width: 100%;
+  line-height: 1.4;
+  padding: 1rem .5rem;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.shortcuts-btn::after {
+  content: '';
+  width: 1.2rem;
+  height: 1.2rem;
+  display: inline-block;
+  margin-left: 1.2rem;
+  background: url(/typeA/assets/images/icon/next_arrow_icon.png) no-repeat center/contain;
+}
+
 /* header */
 #header {
   width: 100%;
