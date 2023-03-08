@@ -1,95 +1,96 @@
 @import "_common_component";
 
-.container {
-    #hero {
+#main {
+    width: 100%;
+    .hero-wrap {
         width: 100%;
         height: 100vh;
         position: relative;
         background: url(../../assets/images/common/hero_bg_white.png) no-repeat center bottom/ 100%;
         background-attachment: fixed;
         background-size: cover;
-        .content {
-            width: fit-content;
+        #hero {
+            width: 100%;
+            height: 100vh;
             position: relative;
-            top: 25.6%;
-            left: 7.7%;
-            > p {
-                display: flex;
-                align-items: flex-end;
-                gap: 1.04vw;
-                color: $black;
-                font-size: 1.25vw;
-                font-weight: 500;
-                letter-spacing: -0.02rem;
-                height: 2.5vw;
-                > span {
+            .content {
+                width: fit-content;
+                position: relative;
+                top: 25.6%;
+                left: 7.7%;
+                > p {
+                    display: flex;
+                    align-items: flex-end;
+                    gap: 2rem;
                     color: $black;
-                    font-size: 1.67vw;
-                    font-weight: 700;
-                    letter-spacing: -0.011rem;
+                    font-size: 2.4rem;
+                    font-weight: 500;
+                    letter-spacing: -0.02rem;
+                    height: 4.8rem;
+                    > span {
+                        color: $black;
+                        font-size: 3.2rem;
+                        font-weight: 700;
+                        letter-spacing: -0.011rem;
+                    }
                 }
             }
-        }
-        .txt-wrap {
-            display: flex;
-            flex-direction: column;
-            gap: 2.6vw;
-            .txt {
-                color: $black;
-                font-size: 10.41vw;
-                font-weight: 700;
-                letter-spacing: -0.02rem;
+            .txt-wrap {
                 display: flex;
-                gap: 3.9vw;
-                &.txt-img {
-                    .img-wrap {
-                        img {
-                            max-width: 12.65625vw;
-                        }
+                flex-direction: column;
+                gap: 7.3rem;
+                .txt {
+                    color: $black;
+                    font-size: 20rem;
+                    font-weight: 700;
+                    letter-spacing: -0.02rem;
+                    display: flex;
+                    gap: 7.5rem;
+                    &.txt-img {
                     }
                 }
             }
         }
-    }
-    #heroSlide {
-        width: 100%;
-        height: 100vh;
-        > div {
+        #heroSlide {
             width: 100%;
             height: 100vh;
-            position: relative;
-            &.slide01-wrap {
-                background: url(../../assets/images/common/hero_bg_black.png) no-repeat center bottom/ 100%;
-                background-attachment: fixed;
-                background-size: cover;
-                background-color: $black;
-                // z-index: 101; 
-                .slide01 {
-                    width: fit-content;
-                    position: relative;
-                    top: 27.2%; 
-                    left: 15.55%;
-                    .txt-wrap {
-                        display: flex;
-                        flex-direction: column;
-                        span {
-                            color: $white;
-                            font-size: 2.4rem;
-                            font-weight: 500;
-                            letter-spacing: -0.02rem;
-                            line-height: 3rem;
-                        }
-                        .wrap {
-                            padding-top: 1.6rem;
-                            p {
+            > div {
+                width: 100%;
+                height: 100vh;
+                position: relative;
+                &.slide01-wrap {
+                    background: url(../../assets/images/common/hero_bg_black.png) no-repeat center bottom/ 100%;
+                    background-attachment: fixed;
+                    background-size: cover;
+                    background-color: $black;
+                    // z-index: 101; 
+                    .slide01 {
+                        width: fit-content;
+                        position: relative;
+                        top: 27.2%; 
+                        left: 15.55%;
+                        .txt-wrap {
+                            display: flex;
+                            flex-direction: column;
+                            span {
                                 color: $white;
-                                font-size: 4.8rem;
-                                font-weight: 700;
+                                font-size: 2.4rem;
+                                font-weight: 500;
                                 letter-spacing: -0.02rem;
-                                line-height: 6rem;
+                                line-height: 3rem;
                             }
+                            .wrap {
+                                padding-top: 1.6rem;
+                                p {
+                                    color: $white;
+                                    font-size: 4.8rem;
+                                    font-weight: 700;
+                                    letter-spacing: -0.02rem;
+                                    line-height: 6rem;
+                                }
+                            }
+                            
                         }
-                        
                     }
                 }
             }
@@ -258,10 +259,10 @@ align-items: center;
 }
 }
 
-// p {
-// position: absolute;
-// bottom: 10vw;
-// right: 10vw;
-// width: 200px;
-// line-height: 1.5;
-// }
+p {
+position: absolute;
+bottom: 10vw;
+right: 10vw;
+width: 200px;
+line-height: 1.5;
+}
