@@ -295,13 +295,6 @@ section:not(#sectionPin) {
   place-items: center;
 }
 
-img {
-  height: 80vh;
-  width: auto;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
 h1 {
   font-size: 5rem;
   line-height: 1;
@@ -364,11 +357,9 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 50px 10vw;
 }
 .pin-wrap > * {
-  min-width: 60vw;
-  padding: 0 5vw;
+  min-width: 100vw;
 }
 
 p {
