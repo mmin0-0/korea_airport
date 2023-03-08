@@ -260,11 +260,6 @@ body.fixed {
   display: block;
 }
 
-:root {
-  --text-color: #111;
-  --bg-color: #b9b3a9;
-}
-
 body {
   font-family: termina, sans-serif;
   color: var(--text-color);
@@ -307,18 +302,6 @@ h1 span {
   display: block;
 }
 
-h2 {
-  font-size: 2rem;
-  max-width: 400px;
-}
-
-.credit {
-  font-family: Termina, sans-serif;
-}
-.credit a {
-  color: var(--text-color);
-}
-
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -349,4 +332,47 @@ h2 {
 }
 .pin-wrap > * {
   min-width: 100vw;
+}
+.pin-wrap .slide-item {
+  height: 100vh;
+  min-width: 100vw;
+  position: relative;
+}
+.pin-wrap .slide-item.item01 {
+  background: url(../../assets/images/common/hero_bg_black.png) no-repeat center bottom/100%;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #000;
+}
+.pin-wrap .slide-item.item01 .txt-wrap {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  top: 23.15%;
+  left: 15.42%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.pin-wrap .slide-item.item01 .txt-wrap span {
+  color: #FFF;
+  font-size: 2.4rem;
+  font-weight: 500;
+  letter-spacing: -0.02rem;
+  line-height: 3rem;
+}
+.pin-wrap .slide-item.item01 .txt-wrap .wrap {
+  padding-top: 1.6rem;
+}
+.pin-wrap .slide-item.item01 .txt-wrap .wrap p {
+  color: #FFF;
+  font-size: 4.8rem;
+  font-weight: 700;
+  letter-spacing: -0.02rem;
+  line-height: 6rem;
 }
