@@ -16,6 +16,11 @@ $(document).ready(function() {
         }
     });
 
+    $('.contact-wrap .contact .hire').hover(function() {
+        console.log('123');
+        $(this).children('.img-wrap').hide();
+    })
+
     /* gnb 햄버거 버튼 클릭 시 메뉴 숨김-보임 */
     $(document).on('click', '.nav-left .depth01-list .depth01' , function() {
         const lists = $('.nav-right .depth02-list')
@@ -35,6 +40,7 @@ $(document).ready(function() {
             $(lists.eq(5)).removeClass('hide').siblings().addClass('hide');
         }
     });
+
 
     /* hero-wrap scroll trigger */
     gsap.registerPlugin(ScrollTrigger);
@@ -67,4 +73,6 @@ $(document).ready(function() {
     //     end: () => "+=" + document.querySelector("#heroSlide").offsetWidth
     // }
     // });
+
+    
 });
