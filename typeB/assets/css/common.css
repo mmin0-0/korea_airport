@@ -3,6 +3,7 @@ body {
   font-size: 1.6rem;
   font-weight: 400;
 }
+
 body.fixed {
   width: 100vw;
   height: 100vh;

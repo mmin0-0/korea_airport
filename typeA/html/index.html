@@ -14,6 +14,9 @@
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <!-- swiper slide -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -45,14 +48,159 @@
                     </div>
                 </div>
             </section>
-            <section id="section2">
-                <!-- <div class="box_wrapper">
-                    <div class="box box1 horizon_box">1</div>
-                    <div class="box box2 horizon_box">2</div>
-                    <div class="box box3 horizon_box">3</div>
+            <section id="countNum">
+                <div class="con-box">
+                    <div class="sec-tit">
+                        KAS는 고객 만족을 위한 최고의 서비스를 제공하며, <br>
+                        최고를 추구하는 KAS에는 제한이 없습니다.
+                    </div>
+                    <div class="sec-cont">
+                        <ul class="main-about-list">
+                            <li>
+                                <div class="count-num-box">
+                                    <div class="count-num-item-wrap num01">
+                                        <ul class="count-num-item-box down">
+                                            <li class="count-num-item">5</li>
+                                            <li class="count-num-item">6</li>
+                                            <li class="count-num-item">7</li>
+                                            <li class="count-num-item">8</li>
+                                            <li class="count-num-item">9</li>
+                                            <li class="count-num-item">0</li>
+                                            <li class="count-num-item">1</li>
+                                            <li class="count-num-item">2</li>
+                                            <li class="count-num-item">3</li>
+                                            <li class="count-num-item">4</li>
+                                        </ul>
+                                    </div>
+                                    <div class="count-num-item-wrap num02">
+                                        <ul class="count-num-item-box">
+                                            <li class="count-num-item">5</li>
+                                            <li class="count-num-item">6</li>
+                                            <li class="count-num-item">7</li>
+                                            <li class="count-num-item">8</li>
+                                            <li class="count-num-item">9</li>
+                                            <li class="count-num-item">0</li>
+                                            <li class="count-num-item">1</li>
+                                            <li class="count-num-item">2</li>
+                                            <li class="count-num-item">3</li>
+                                            <li class="count-num-item">5</li>
+                                        </ul>
+                                    </div>
+                                    <div class="count-num-item-wrap unit-wrap">
+                                        <span class="unit">주년</span>
+                                    </div>
+                                </div>
+                                <span class="count-sub-tit">한국공항의 조합 노하우</span>
+                            </li>
+                            <li>
+                                <div class="count-num-box">
+                                    <div class="count-num-item-wrap num01">
+                                        <ul class="count-num-item-box down">
+                                            <li class="count-num-item">5</li>
+                                            <li class="count-num-item">6</li>
+                                            <li class="count-num-item">7</li>
+                                            <li class="count-num-item">8</li>
+                                            <li class="count-num-item">9</li>
+                                            <li class="count-num-item">0</li>
+                                            <li class="count-num-item">1</li>
+                                            <li class="count-num-item">2</li>
+                                            <li class="count-num-item">3</li>
+                                            <li class="count-num-item">4</li>
+                                        </ul>
+                                    </div>
+                                    <div class="count-num-item-wrap num02">
+                                        <ul class="count-num-item-box">
+                                            <li class="count-num-item">0</li>
+                                            <li class="count-num-item">9</li>
+                                            <li class="count-num-item">8</li>
+                                            <li class="count-num-item">7</li>
+                                            <li class="count-num-item">6</li>
+                                            <li class="count-num-item">5</li>
+                                            <li class="count-num-item">4</li>
+                                            <li class="count-num-item">3</li>
+                                            <li class="count-num-item">2</li>
+                                            <li class="count-num-item">0</li>
+                                        </ul>
+                                    </div>
+                                    <div class="count-num-item-wrap unit-wrap">
+                                        <span class="unit">여 개</span>
+                                    </div>
+                                </div>
+                                <span class="count-sub-tit">항공사의 지상조업 서비스 제공</span>
+                            </li>
+                            <li>
+                                <div class="count-num-box">
+                                    <div class="count-num-item-wrap num01">
+                                        <ul class="count-num-item-box down">
+                                            <li class="count-num-item">1</li>
+                                            <li class="count-num-item">9</li>
+                                            <li class="count-num-item">8</li>
+                                            <li class="count-num-item">7</li>
+                                            <li class="count-num-item">6</li>
+                                            <li class="count-num-item">5</li>
+                                            <li class="count-num-item">4</li>
+                                            <li class="count-num-item">3</li>
+                                            <li class="count-num-item">2</li>
+                                            <li class="count-num-item">0</li>
+                                        </ul>
+                                    </div>
+                                    <div class="count-num-item-wrap num02">
+                                        <ul class="count-num-item-box">
+                                            <li class="count-num-item">6</li>
+                                            <li class="count-num-item">4</li>
+                                            <li class="count-num-item">3</li>
+                                            <li class="count-num-item">2</li>
+                                            <li class="count-num-item">1</li>
+                                            <li class="count-num-item">0</li>
+                                            <li class="count-num-item">9</li>
+                                            <li class="count-num-item">8</li>
+                                            <li class="count-num-item">7</li>
+                                            <li class="count-num-item">6</li>
+                                        </ul>
+                                    </div>
+                                    <div class="count-num-item-wrap unit-wrap">
+                                        <span class="unit">개</span>
+                                    </div>
+                                </div>
+                                <span class="count-sub-tit">국내 공항 간의 서비스 네트워크 형성</span>
+                            </li>
+                            <li>
+                                <div class="count-num-box">
+                                    <div class="count-num-item-wrap num01">
+                                        <ul class="count-num-item-box down">
+                                            <li class="count-num-item">8</li>
+                                            <li class="count-num-item">7</li>
+                                            <li class="count-num-item">6</li>
+                                            <li class="count-num-item">5</li>
+                                            <li class="count-num-item">4</li>
+                                            <li class="count-num-item">3</li>
+                                            <li class="count-num-item">2</li>
+                                            <li class="count-num-item">1</li>
+                                            <li class="count-num-item">0</li>
+                                            <li class="count-num-item">9</li>
+                                        </ul>
+                                    </div>
+                                    <div class="count-num-item-wrap unit-wrap">
+                                        <span class="unit">회</span>
+                                    </div>
+                                </div>
+                                <span class="count-sub-tit">연속 ‘ISAGO’ 인증 획득</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section id="business">
+                <!-- <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">Slide 1</div>
+                        <div class="swiper-slide">Slide 2</div>
+                        <div class="swiper-slide">Slide 3</div>
+                        <div class="swiper-slide">Slide 4</div>
+                    </div>
+                    <div class="swiper-pagination"></div>
                 </div> -->
             </section>
-            <section id="section3" style="height: 3000px;"></section>
             <section id="section4"></section>
         </div>
         <div id="footer"></div>
@@ -73,17 +221,6 @@
         //     opacity: 0, duration: 2,
         // });
 
-        // gsap.to(".visual-main-tit", {
-        //     scrollTrigger: {
-        //         trigger: ".bg-list",
-        //         scrub: .3,
-        //         start: "top",
-        //         end: "+=100%",
-        //         markers: true,
-        //     },
-        //     color: "white", duration: 2, y: 200
-        // });
-
         var t1 = gsap.timeline({
                 scrollTrigger: {
                 trigger: "#mainVisual",
@@ -99,8 +236,8 @@
         .fromTo('.bg-list .opacity-con01',{y: 700, duration: 2},{y: 100, duration: 2})
         .fromTo('.visual-main-tit > div span',{color: 'black', duration: 2},{color: 'white',duration: 2})
         .fromTo('.visual-sub-tit',{opacity: 0, duration: 2},{opacity: 1, duration: 2})
-        .fromTo('.bg-list .opacity-con01',{y: 100, opacity: 1, duration: 2},{y: 100, opacity: 0, duration: 1})
-        .fromTo('.bg-list .opacity-con02',{y: 100, opacity: 0, duration: 2},{y: 100, opacity: 1, duration: 1})
+        .fromTo('.bg-list .opacity-con01',{y: 100, opacity: 1, duration: 1},{y: 100, opacity: 0, duration: 1})
+        .fromTo('.bg-list .opacity-con02',{y: 100, opacity: 0, duration: 1},{y: 100, opacity: 1, duration: 1})
         // .fromTo('.visual-main-tit > div:not(.visual-sub-tit)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
         // .fromTo('.visual-sub-tit',{y: 600, duration: 2},{y: 200, duration: 2})
 
