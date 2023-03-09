@@ -1,19 +1,6 @@
 @import "responsive";
 @import "common_category";
 
-// section { position: relative; width: 100%; height: 100vh; display: flex; justify-content: center; align-items: center; flex-direction: column; }
-// section p { font-size: 40px; margin-bottom: 50px; }
-// #section1 { background: yellowgreen; }
-// #section2 { overflow: hidden; }
-// #section3 { background: indianred; }
-// #section4 { background: paleturquoise; }
-// .box h1 { font-size: 50px; text-align: centerspa; }
-.box1 { background: darkslategray; }
-.box2 { background: crimson; }
-.box3 { background: darkorchid; }
-.box_wrapper { display: flex; justify-content: space-around; width: 100%; }
-.box { width: 200px; height: 200px; display: flex; justify-content: center; align-items: center; opacity: 1; }
-
 #wrap{
     letter-spacing: -2%;
     line-height: 1.4;
@@ -21,7 +8,7 @@
         width: 100%;
         // height: 100vh;
         position: relative;
-        border: 1px solid #000;
+        // border: 1px solid #000;
         // &:not(:first-child){margin: 7rem 0;}
         // margin: 7rem 0;
         background: #fff;
@@ -33,6 +20,7 @@
         .sec-tit{
             font-size: 4rem;
             font-weight: bold;
+            // transform: translateY(200px);
         }
         &#mainVisual{
             background: #ddd;
@@ -96,7 +84,6 @@
                 }
                 .opacity-con{
                     // height: 100vh;
-                    border: 1px solid red;
                     &.opacity-con01{z-index: 1;}
                     &.opacity-con02{z-index: 2;}
                     &.opacity-con03{z-index: 3;}
@@ -109,15 +96,15 @@
             }
         }
         &#countNum{
-            margin-top: 16rem;
+            padding: 16rem 0 20rem;
             .sec-cont{
                 margin-top: 14.2rem;
                 .main-about-list{
-                    @include flexbox(row, space-between, center);
-                    gap: 6rem;
+                    @include flexbox(row, space-between, flex-start);
+                    // gap: 6rem;
+                    gap: 4%;
                     > li{
                         .count-num-box{
-                            // @include flexbox(row, center, flex-end);
                             display: flex;
                             justify-content: center;
                             .count-num-item-wrap{
@@ -125,8 +112,10 @@
                                 overflow: hidden;
                                 margin: 0 -2%;
                                 .count-num-item-box{
-                                    animation: count-up-ani 3s forwards;
-                                    &.down{animation: count-down-ani 3s forwards;}
+                                    &.on{
+                                        animation: count-up-ani 3s forwards;
+                                        &.down{animation: count-down-ani 3s forwards;}
+                                    }
                                     .count-num-item{
                                         font-weight: 800;
                                         font-size: 20rem;
@@ -137,6 +126,7 @@
                                     margin: 0;
                                     @include flexbox(row, center, flex-end);
                                     .unit{
+                                        padding-bottom: 6rem;
                                         font-size: 2.4rem;
                                         font-weight: bold;
                                         color: #222;
@@ -180,6 +170,8 @@
                         width: 100%;
                     }
                     .business-info{
+                        width: 80%;
+                        max-width: 1440px;
                         height: 100%;
                         position: absolute;
                         left: 50%;
