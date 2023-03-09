@@ -280,17 +280,12 @@ position: relative;
             }
             a {
                 padding-top: 1.25vw;
-                font-weight: 400;
-                font-size: 0.9375vw;
-                line-height: 2.083vw;
-                letter-spacing: -0.02rem;
-
             }
         }
         &.main {
             background: url(../../assets/images/common/hero_bg_black.png) no-repeat center bottom/ 100%;
             background-attachment: fixed;
-            background-size: contain;
+            background-size: cover;
             background-color: $black;           
             .txt-wrap {
                 width: fit-content;
@@ -301,19 +296,19 @@ position: relative;
                 flex-direction: column;
                 span {
                     color: $white;
-                    font-size: 2.4rem;
+                    font-size: 1.25vw;
                     font-weight: 500;
                     letter-spacing: -0.022rem;
-                    line-height: 3rem;
+                    line-height: 1.5625vw;
                 }
                 .wrap {
-                    padding-top: 1.6rem;
+                    padding-top: 0.83vw;
                     p {
                         color: $white;
-                        font-size: 4.8rem;
+                        font-size: 2.5vw;
                         font-weight: 700;
                         letter-spacing: -0.022rem;
-                        line-height: 6rem;
+                        line-height: 3.125vw;
                     }
                 }
             }
@@ -339,35 +334,51 @@ position: relative;
             background-size: contain;
             background-color: $white;
             &.slide01 {
-                background: url(../../assets/images/common/travel_bg.png) no-repeat center center/ 100%;
+                background: url(../../assets/images/common/travel_bg.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
                 .img-wrap {
-                    @include icon (38.4375vw, 31.51vw, travel_img);
-                    right: 2.083vw;
-                    bottom: 8.28125vw;
+                    width: 38.4375vw;
+                    height: 31.51vw;
+                    top: 29.25%;
+                    right: 1.98%;
                 }
             }
             &.slide02 {
-                background: url(../../assets/images/common/cargo_bg.png) no-repeat center center/ 100%;     
+                background: url(../../assets/images/common/cargo_bg.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;     
                 .img-wrap {
-                    @include icon (47.8645vw, 38.17vw, cargo_img);
-                    right: 1.40625vw;
-                    bottom: 1.823vw;
+                    width: 47.8645vw;
+                    height: 38.17vw;
+                    top: 28.89%;
+                    right: 1.53%;
                 }
             }
             &.slide03 {
-                background: url(../../assets/images/common/oil_bg.png) no-repeat center center/ 100%;
+                background: url(../../assets/images/common/oil_bg.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
                 .img-wrap {
-                    @include icon (39.42vw, 35.2vw, oil_img);
-                    right: 2.2396vw;
-                    bottom: 5.1vw;
+                    width: 39.42vw;
+                    height: 35.2vw;
+                    top: 28.34%;
+                    right: 2.26%;
                 }
             }
             &.slide04 {
-                background: url(../../assets/images/common/maintain_bg.png) no-repeat center center/ 100%;
+                background: url(../../assets/images/common/maintain_bg.png);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
                 .img-wrap {
-                    @include icon (43.8vw, 27.29vw, maintain_img);
-                    right: 6.823vw;
-                    bottom: 10.78125vw;
+                    width: 43.8vw;
+                    height: 27.29vw;
+                    top: 32.32%;
+                    right: 7.34%;
                 }
             }
         }
@@ -412,73 +423,24 @@ position: relative;
         
     }
     .esg-wrap {
-        width: calc(100% - 32rem);
-        max-width: 160rem;
+        width: 100%;
+        max-width: 192rem;
         height: auto;
         margin: 0 auto;
         display: flex;
         position: relative;
-        .esg-left {
-            position: relative;
-            width: 39.79vw;
-            height: 46.875vw;
-            background-image: url(../../assets/images/common/esg_bg.png);
-            background-size: contain;
-            background-position: center;
-            background-repeat: no-repeat;
-        }
-        .esg-right {
+        // .esg-left {
+        //     position: relative;
+        //     width: 39.79vw;
+        //     height: 46.875vw;
+        //     background-image: url(../../assets/images/common/esg_bg.png);
+        //     background-size: contain;
+        //     background-position: center;
+        //     background-repeat: no-repeat;
+        // }
+        // .esg-right {
 
-        }
-    }
-
-    .contact-wrap {
-        width: 100%;
-        .title {
-            color: $black;
-            font-size: 6.8rem;
-            font-weight: 700;
-            line-height: 8.8rem;
-            letter-spacing: -0.02rem;
-        }
-        .contact {
-            padding-top: 4rem;
-            display: flex;
-            gap: 3.25%;
-            > div {
-                width: 100%;
-                height: auto;
-                a {
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                }
-                &.hire {
-                    a {
-                        .img-wrap {
-                            &.no-info {
-                                display: block;
-                            }
-                            &.info {
-                                display: none;
-                            }
-                        }
-                    }
-                    &:hover {
-                        a {
-                            .img-wrap {
-                                &.no-info {
-                                    display: none;
-                                }
-                                &.info {
-                                    display: block;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+        // }
     }
     .contact-wrap {
         width: calc(100% - 32rem);
@@ -486,79 +448,20 @@ position: relative;
         margin: 0 auto;
         .title {
             color: $black;
-            font-size: 6.8rem;
+            font-size: 3.54vw;
             font-weight: 700;
-            line-height: 8.8rem;
+            line-height: 4.58vw;
             letter-spacing: -0.02rem;
         }
-        // .contact {
-        //     padding-top: 4rem;
-        //     display: flex;
-        //     gap: 3.25%;
-        //     > div {
-        //         width: 100%;
-        //         height: auto;
-        //         a {
-        //             width: 100%;
-        //             height: 100%;
-        //             display: flex;
-        //         }
-        //         &.hire {
-        //             a {
-        //                 .img-wrap {
-        //                     &.no-info {
-        //                         display: block;
-        //                     }
-        //                     &.info {
-        //                         display: none;
-        //                     }
-        //                 }
-        //             }
-        //             &:hover {
-        //                 a {
-        //                     .img-wrap {
-        //                         &.no-info {
-        //                             display: none;
-        //                         }
-        //                         &.info {
-        //                             display: block;
-        //                         }
-        //                     }
-        //                 }
-        //             }
-        //         }
-        //     }
-        // }
         .contact {
-            padding-top: 4rem;
+            padding-top: 2.083vw;
             display: flex;
-            gap: 3.25%;
+            gap: 2.7vw;
             > div {
                 width: 39.79vw;
                 height: 20.83vw;
                 border: 2px solid $black;
                 border-radius: 40px;
-                a {
-                    display: flex;
-                }
-                &.hire {
-                    a {
-                        .img-wrap {
-                            position: relative;
-                            width: 10.416vw;
-                            height: 10.625vw;
-                        }
-                    }
-                }
-                &.help {
-                    a {
-                        .img-wrap {
-                            position: relative;
-                            width: 12.395vw;
-                            height: 9.0625vw;
-                        }
-                    }
-                }
             }
         }
     }
