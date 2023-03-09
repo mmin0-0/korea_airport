@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="/typeA/assets/css/common.css">
     <link rel="stylesheet" href="/typeA/assets/css/main.css">
     <script src="/typeA/assets/js/include.js"></script>
+    <!-- <script src="/typeA/assets/js/main.js"></script> -->
     <!-- gsap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
     <!-- swiper slide -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- aos animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <div id="wrapper">
@@ -50,7 +54,7 @@
             </section>
             <section id="countNum">
                 <div class="con-box">
-                    <div class="sec-tit">
+                    <div class="sec-tit" data-aos="fade-up" data-aos-duration="1000">
                         KAS는 고객 만족을 위한 최고의 서비스를 제공하며, <br>
                         최고를 추구하는 KAS에는 제한이 없습니다.
                     </div>
@@ -195,7 +199,7 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="/typeA/assets/images/main/business_img01.png" alt="" class="bg-img">
-                            <div class="business-info con-box">
+                            <div class="business-info">
                                 <div>
                                     <div class="business-tit">
                                         <strong>여객사업</strong>
@@ -210,7 +214,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="/typeA/assets/images/main/business_img02.png" alt="" class="bg-img">
-                            <div class="business-info con-box">
+                            <div class="business-info">
                                 <div>
                                     <div class="business-tit">
                                         <strong>여객사업</strong>
@@ -225,7 +229,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="/typeA/assets/images/main/business_img03.png" alt="" class="bg-img">
-                            <div class="business-info con-box">
+                            <div class="business-info">
                                 <div>
                                     <div class="business-tit">
                                         <strong>여객사업</strong>
@@ -240,7 +244,7 @@
                         </div>
                         <div class="swiper-slide">
                             <img src="/typeA/assets/images/main/business_img04.png" alt="" class="bg-img">
-                            <div class="business-info con-box">
+                            <div class="business-info">
                                 <div>
                                     <div class="business-tit">
                                         <strong>여객사업</strong>
@@ -263,7 +267,7 @@
             </section>
             <section id="esg">
                 <div class="con-box">
-                    <div class="sec-tit">ESG Management</div>
+                    <div class="sec-tit" data-aos="fade-up" data-aos-duration="1000">ESG Management</div>
                     <div class="esg-tit-list">
                         <div class="on">
                             <strong>저탄소 경영체제 구축</strong>
@@ -338,8 +342,8 @@
             </section>
             <section id="kasWrod">
                 <div class="con-box">
-                    <div class="sec-tit">KAS 소식을 전해드립니다.</div>
-                    <div class="sec-cont">
+                    <div class="sec-tit" data-aos="fade-up" data-aos-duration="1000">KAS 소식을 전해드립니다.</div>
+                    <div class="sec-cont" data-aos="fade-up" data-aos-duration="1500">
                         <strong>한국공항, 율도 항공유 비축기지 공정안전관리(PSM) ‘S’등급 획득</strong>
                         <p>한국공항이 운영중인 율도 항공유 비축기지가 공정안전관리(PSM) 이행상태 평가에서‘S등급’을 획득했습니다. 이는 임직원 모두가 안전관리에 합심한 결과로, 무엇보다 중대재해처벌법 시행으로 안전에 대한 국가적 관심이 높아지는 상황에서 이번 달성은 그 의미가 크다. 지난 5월 중부지방 고용노동청 주관으로 실시된 공정안전관리 (PSM : Process Safety</p>
                     </div>
@@ -347,10 +351,10 @@
             </section>
             <section id="talent">
                 <div class="con-box">
-                    <div class="sec-tit">사람이 한국공항의 가장 소중한 자산입니다.</div>
+                    <div class="sec-tit" data-aos="fade-up" data-aos-duration="1000">사람이 한국공항의 가장 소중한 자산입니다.</div>
                     <div class="sec-cont">
                         <ul class="talent-list">
-                            <li>
+                            <li data-aos="fade-right" data-aos-duration="1000">
                                 <div class="front">
                                     <strong>창의성과 역량을 갖춘꿈과 열정의 소유자</strong>
                                 </div>
@@ -366,7 +370,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li data-aos="fade-right" data-aos-duration="1500">
                                 <div class="front">
                                     <strong>안전을 우선하고 적극적으로 소통하는 TEAM PLAYER</strong>
                                 </div>
@@ -382,7 +386,7 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+                            <li data-aos="fade-right" data-aos-duration="2000">
                                 <div class="front">
                                     <strong>도전정신을 갖춘 글로벌 마인드의 소유자</strong>
                                 </div>
@@ -404,10 +408,10 @@
             </section>
             <section id="question">
                 <div class="con-box">
-                    <div class="sec-tit">자주 묻는 질문</div>
+                    <div class="sec-tit" data-aos="fade-up" data-aos-duration="1000">자주 묻는 질문</div>
                     <div class="sec-cont">
                         <ul class="question-list">
-                            <li>
+                            <li data-aos="fade-right" data-aos-duration="1000">
                                 <div class="question-tit">
                                     <span class="question-num">Q.</span>
                                     항공기 지상조업에는 어떤 서비스가 포함됩니까?
@@ -416,7 +420,7 @@
                                     항공기 지상조업은 항공기가 운항하기 위하여 지상에서 필요로 하는 서비스를 항공사에 제공하는 업무를 말하며 서비스 범위는 화물·수하물 상하역, 항공서비스 등 여러가지 서비스를 제공하며 항공기 지상조업은 항공기가 운항하기 위하여 지상에서 필요로 하는 서비스를 항공사에 제공하는 업무를 말하며 서비스 범위는 화물·수하물 상하역, 항공서비스 등 여러가지 서비스를 제공하며
                                 </div>
                             </li>
-                            <li>
+                            <li data-aos="fade-right" data-aos-duration="1500">
                                 <div class="question-tit">
                                     <span class="question-num">Q.</span>
                                     항공기 지상조업에는 어떤 서비스가 포함됩니까?
@@ -425,7 +429,7 @@
                                     항공기 지상조업은 항공기가 운항하기 위하여 지상에서 필요로 하는 서비스를 항공사에 제공하는 업무를 말하며 서비스 범위는 화물·수하물 상하역, 항공서비스 등 여러가지 서비스를 제공하며 항공기 지상조업은 항공기가 운항하기 위하여 지상에서 필요로 하는 서비스를 항공사에 제공하는 업무를 말하며 서비스 범위는 화물·수하물 상하역, 항공서비스 등 여러가지 서비스를 제공하며
                                 </div>
                             </li>
-                            <li>
+                            <li data-aos="fade-right" data-aos-duration="2000">
                                 <div class="question-tit">
                                     <span class="question-num">Q.</span>
                                     항공기 지상조업에는 어떤 서비스가 포함됩니까?
@@ -443,42 +447,94 @@
         <div id="footer"></div>
     </div>
     <script>
-        var bullet = ['여객사업', '화물사업', '급유사업', '정비사업'];
-        var businessSwiper = new Swiper(".business-swiper", {
-            pagination: {
-                el: ".business-swiper .swiper-pagination",
-                clickable: true,
-                renderBullet: function (index, className) {
-                    return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
-                }
-            },
+        AOS.init({
+            once: true
         });
+    
+    /* main visual */
+    var visualImg = $('.visula-img');
+    var t1 = gsap.timeline({
+            scrollTrigger: {
+            trigger: "#mainVisual",
+            pin: true,
+            scrub: 0.3,
+            start: "top top",
+            end: "+=1000%",
+            markers: true,
+        }
+    })
+    .fromTo('.visual-main-tit > div span:not(.op-1)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
+    // xpercent: 50,
+    .fromTo('.bg-list .opacity-con01',{y: 700, duration: 2},{y: 100, duration: 2})
+    .fromTo('.visual-main-tit > div span',{color: 'black', duration: 2},{color: 'white',duration: 2})
+    .fromTo('.visual-sub-tit',{opacity: 0, duration: 2},{opacity: 1, duration: 2})
+    .fromTo('.bg-list .opacity-con01',{y: 100, opacity: 1, duration: 1},{y: 100, opacity: 0, duration: 1})
+    .fromTo('.bg-list .opacity-con02',{y: 100, opacity: 0, duration: 1},{y: 100, opacity: 1, duration: 1});
 
-        var esgSwiper = new Swiper(".esg-swiper", {
-            slidesPerView: 'auto',
-            // spaceBetween: 120,
-            // centeredSlides: true,
-            slideToClickedSlide : true,
-            slidesOffsetBefore : 0,
-            slidesOffsetAfter : 0, 
-            loop : false,
-            loopAdditionalSlides : 1,
-            observer: true,	
-            observeParents: true,
-            autoplay: {
-                delay: 2500,
-                disableOnInteraction: true,
-            },
-            on: {
-                slideChange : function() {
-                    $(this).addClass('on').siblings().removeClass('on');
-                    // if($(this).){}
-                },
-            },
-        });
+    /* 카운팅 */
+    ScrollTrigger.create({
+        trigger: "#countNum",
+        start: "top 20%",
+        markers: true,
+        toggleClass: {targets: '.count-num-item-box', className: 'on'}
+    });
 
-        var visualImg = $('.visula-img');
-        var boxItem = $('.horizon_box');
+    /* 사업 slide */
+    var bullet = ['여객사업', '화물사업', '급유사업', '정비사업'];
+    var businessSwiper = new Swiper(".business-swiper", {
+        autoplay: {
+            delay: 4000,
+            disableOnInteraction: true,
+        },
+        navigation: {
+            nextEl: ".business-swiper .swiper-button-next",
+            prevEl: ".business-swiper .swiper-button-prev",
+        },
+        pagination: {
+            el: ".business-swiper .swiper-pagination",
+            clickable: true,
+            renderBullet: function (index, className) {
+                return '<div class="' + className + '"><span>' + (bullet[index]) + '</span></div>';
+            }
+        },
+    });
+
+    /* esg slide */
+    var esgSwiper = new Swiper(".esg-swiper", {
+        slidesPerView: 'auto',
+        // spaceBetween: 120,
+        // centeredSlides: true,
+        slideToClickedSlide : true,
+        slidesOffsetBefore : 0,
+        slidesOffsetAfter : 0, 
+        loop : false,
+        loopAdditionalSlides : 1,
+        observer: true,	
+        observeParents: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: true,
+        },
+        on: {
+            slideChange : function() {
+                $(this).addClass('on').siblings().removeClass('on');
+                // if($(this).){}
+            },
+        },
+    });
+        // gsap.to("section:not(#mainVisual)", {
+        //     scrollTrigger: {
+        //         trigger: ".sec-tit",
+        //         markers: true,
+        //     },
+        //     y: 400, duration: 2 
+        // });
+
+        // gsap.to("#countNum", {
+        // scrollTrigger: {
+        //     trigger: ".count-num-item-box",
+        //     toggleActions: "restart none reverse none"
+        // }, x: 400, duration: 2, });
 
         // gsap.registerPlugin(ScrollTrigger);
         // gsap.to(".visual-main-tit span:not(.op-1)", {
@@ -491,27 +547,6 @@
         //     },
         //     opacity: 0, duration: 2,
         // });
-
-        // var t1 = gsap.timeline({
-        //         scrollTrigger: {
-        //         trigger: "#mainVisual",
-        //         pin: true,
-        //         scrub: 0.3,
-        //         start: "top top",
-        //         end: "+=1000%",
-        //         markers: true,
-        //     }
-        // })
-        // .fromTo('.visual-main-tit > div span:not(.op-1)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
-        // // xpercent: 50,
-        // .fromTo('.bg-list .opacity-con01',{y: 700, duration: 2},{y: 100, duration: 2})
-        // .fromTo('.visual-main-tit > div span',{color: 'black', duration: 2},{color: 'white',duration: 2})
-        // .fromTo('.visual-sub-tit',{opacity: 0, duration: 2},{opacity: 1, duration: 2})
-        // .fromTo('.bg-list .opacity-con01',{y: 100, opacity: 1, duration: 1},{y: 100, opacity: 0, duration: 1})
-        // .fromTo('.bg-list .opacity-con02',{y: 100, opacity: 0, duration: 1},{y: 100, opacity: 1, duration: 1})
-
-
-
         // .fromTo('.visual-main-tit > div:not(.visual-sub-tit)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
         // .fromTo('.visual-sub-tit',{y: 600, duration: 2},{y: 200, duration: 2})
 
