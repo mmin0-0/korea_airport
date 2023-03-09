@@ -45,11 +45,11 @@
                 </div>
                 <div class="bg-list">
                     <div class="opacity-con opacity-con01">
-                        <img src="/typeA/assets/images/main/visual01.png" alt="" class="visula-img">
-                    </div>
-                    <div class="opacity-con opacity-con02">
                         <img src="/typeA/assets/images/main/visual02.png" alt="" class="visula-img">
                     </div>
+                    <!-- <div class="opacity-con opacity-con02">
+                        <img src="/typeA/assets/images/main/visual02.png" alt="" class="visula-img">
+                    </div> -->
                 </div>
             </section>
             <section id="countNum">
@@ -223,7 +223,7 @@
                                     <p>
                                         세계적인 지상조업 Total Solution을 통해 고객이 원하는 최상의 조업품질을 제공하고 있습니다. 원하는 최상의 조업품질을 제공하고 있습니다. 제공하고 있습니다.
                                     </p>
-                                    <a href="javascript:void(0)" class="shortcuts-btn">바로가기</a>
+                                    <a href="javascript:void(0)" class="common-btn">바로가기</a>
                                 </div>
                             </div>
                         </div>
@@ -238,7 +238,7 @@
                                     <p>
                                         세계적인 지상조업 Total Solution을 통해 고객이 원하는 최상의 조업품질을 제공하고 있습니다. 원하는 최상의 조업품질을 제공하고 있습니다. 제공하고 있습니다.
                                     </p>
-                                    <a href="javascript:void(0)" class="shortcuts-btn">바로가기</a>
+                                    <a href="javascript:void(0)" class="common-btn">바로가기</a>
                                 </div>
                             </div>
                         </div>
@@ -253,7 +253,7 @@
                                     <p>
                                         세계적인 지상조업 Total Solution을 통해 고객이 원하는 최상의 조업품질을 제공하고 있습니다. 원하는 최상의 조업품질을 제공하고 있습니다. 제공하고 있습니다.
                                     </p>
-                                    <a href="javascript:void(0)" class="shortcuts-btn">바로가기</a>
+                                    <a href="javascript:void(0)" class="common-btn">바로가기</a>
                                 </div>
                             </div>
                         </div>
@@ -287,7 +287,7 @@
                         </div>
                     </div>
                     <div class="sec-cont">
-                        <div class="swiper esg-swiper">
+                        <!-- <div class="swiper esg-swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="/typeA/assets/images/main/esg_bg01.png" alt="">
@@ -314,8 +314,8 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- <ul class="esg-list">
+                        </div> -->
+                        <ul class="esg-list">
                             <li class="on">
                                 <a href="javascript:void(0)">
                                     <img src="/typeA/assets/images/icon/esg_icon01.png" alt="">
@@ -336,7 +336,7 @@
                                     <img src="/typeA/assets/images/icon/esg_icon04.png" alt="">
                                 </a>
                             </li>
-                        </ul> -->
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -447,6 +447,31 @@
         <div id="footer"></div>
     </div>
     <script>
+
+        function esgAni(){
+            var idx = 0;
+            var box = $('.esg-list > li');
+            var boxInfo = $('.esg-tit-list > div');
+            function time(){
+        
+                boxInfo.removeClass('on');
+                box.removeClass('on');
+        
+                boxInfo.eq(idx).addClass('on');
+                box.eq(idx).addClass('on');
+                idx++;
+                if(idx >= box.length) idx= 0;
+            }
+            var interval = setInterval(time, 1000);
+            box.mouseleave(function(){
+                // clearInterval(interval); 
+                interval;
+            });
+            box.mouseover(function(){
+                clearInterval(interval); 
+            });
+        }esgAni();
+
         AOS.init({
             once: true
         });
@@ -457,19 +482,25 @@
             scrollTrigger: {
             trigger: "#mainVisual",
             pin: true,
-            scrub: 0.3,
+            scrub: 0.5,
             start: "top top",
             end: "+=1000%",
             markers: true,
         }
     })
-    .fromTo('.visual-main-tit > div span:not(.op-1)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
+    .fromTo('.visual-main-tit > div span:not(.op-1)',{opacity: 1, duration: 1},{opacity: 0,duration: 1})
     // xpercent: 50,
-    .fromTo('.bg-list .opacity-con01',{y: 700, duration: 2},{y: 100, duration: 2})
-    .fromTo('.visual-main-tit > div span',{color: 'black', duration: 2},{color: 'white',duration: 2})
-    .fromTo('.visual-sub-tit',{opacity: 0, duration: 2},{opacity: 1, duration: 2})
-    .fromTo('.bg-list .opacity-con01',{y: 100, opacity: 1, duration: 1},{y: 100, opacity: 0, duration: 1})
-    .fromTo('.bg-list .opacity-con02',{y: 100, opacity: 0, duration: 1},{y: 100, opacity: 1, duration: 1});
+    .fromTo('.bg-list .opacity-con01',{y: 700, duration: 1},{y: '10rem', duration: 1})
+    .fromTo('.visual-main-tit > div span',{color: 'black', duration: 1},{color: 'white',duration: 1})
+    .fromTo('.visual-sub-tit',{opacity: 0, duration: 1},{opacity: 1, duration: 1})
+    .fromTo('.visual-main-tit > div:not(.visual-sub-tit)',{opacity: 1, duration: .5},{opacity: 0,duration: .5})
+    .fromTo('.visual-sub-tit',{y: 0, opacity: 1, duration: .5},{y: -500, opacity: 1, duration: 2})
+    // .fromTo('.visual-sub-tit',{y: 600, duration: 1},{y: 200, duration: 1})
+
+
+    // .fromTo('.visual-sub-tit',{y: 600, duration: 1},{y: '25.8rem', duration: 1})
+    // .fromTo('.bg-list .opacity-con01',{y: 100, opacity: 1, duration: 1},{y: 100, opacity: 0, duration: 1})
+    // .fromTo('.bg-list .opacity-con02',{y: 100, opacity: 0, duration: 1},{y: 100, opacity: 1, duration: 1});
 
     /* 카운팅 */
     ScrollTrigger.create({
@@ -500,59 +531,22 @@
     });
 
     /* esg slide */
-    var esgSwiper = new Swiper(".esg-swiper", {
-        slidesPerView: 'auto',
-        // spaceBetween: 120,
-        // centeredSlides: true,
-        slideToClickedSlide : true,
-        slidesOffsetBefore : 0,
-        slidesOffsetAfter : 0, 
-        loop : false,
-        loopAdditionalSlides : 1,
-        observer: true,	
-        observeParents: true,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: true,
-        },
-        on: {
-            slideChange : function() {
-                $(this).addClass('on').siblings().removeClass('on');
-                // if($(this).){}
-            },
-        },
-    });
-        // gsap.to("section:not(#mainVisual)", {
-        //     scrollTrigger: {
-        //         trigger: ".sec-tit",
-        //         markers: true,
-        //     },
-        //     y: 400, duration: 2 
-        // });
-
-        // gsap.to("#countNum", {
-        // scrollTrigger: {
-        //     trigger: ".count-num-item-box",
-        //     toggleActions: "restart none reverse none"
-        // }, x: 400, duration: 2, });
-
-        // gsap.registerPlugin(ScrollTrigger);
-        // gsap.to(".visual-main-tit span:not(.op-1)", {
-        //     scrollTrigger: {
-        //         trigger: ".visual-top",
-        //         scrub: .3,
-        //         start: "top top",
-        //         end: "+=100%",
-        //         markers: true,
-        //     },
-        //     opacity: 0, duration: 2,
-        // });
-        // .fromTo('.visual-main-tit > div:not(.visual-sub-tit)',{opacity: 1, duration: 2},{opacity: 0,duration: 2})
-        // .fromTo('.visual-sub-tit',{y: 600, duration: 2},{y: 200, duration: 2})
-
-        // .fromTo('.bg-list .opacity-con01',{opacity: 0, duration: 2},{opacity: 1,duration: 2})
-        // .fromTo('.bg-list .opacity-con03',{opacity: 0, duration: 2},{opacity: 1,duration: 2})
-        // .fromTo('.visual-tit > div.no-ani span',{opacity: 0, duration: 2},{opacity: 1,duration: 2})
+    // var esgSwiper = new Swiper(".esg-swiper", {
+    //     slidesPerView: 4,
+    //     // spaceBetween: 120,
+    //     centeredSlides: true,
+    //     slideToClickedSlide : true,
+    //     // slidesOffsetBefore : 0,
+    //     // slidesOffsetAfter : 0, 
+    //     // loop : false,
+    //     // loopAdditionalSlides : 1,
+    //     observer: true,	
+    //     observeParents: true,
+    //     autoplay: {
+    //         delay: 2500,
+    //         disableOnInteraction: false,
+    //     },
+    // });
     </script>
 </body>
 </html>
