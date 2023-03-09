@@ -45,6 +45,27 @@ $(document).ready(function() {
     /* hero-wrap scroll trigger */
     gsap.registerPlugin(ScrollTrigger);
 
+    // function slide01() {
+
+    //   const scroll01 = $('.slide.slide01')
+
+    //   var tl01 = gsap.timeline({
+
+    //     scrollTrigger: {
+    //       trigger: ".slide.slide01",
+    //       scrumb: 1,
+    //       start: "top 45%",
+    //       end: "bottom bottom",
+    //       markers: true,
+    //     }
+
+    //   });
+      
+    //   tl01.to()
+
+    // }
+    // horizonScroll();
+
     const pageContainer = document.querySelector(".container");
     
     /* SMOOTH SCROLL */

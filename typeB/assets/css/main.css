@@ -183,8 +183,6 @@ section:not(#sectionPin) {
   display: -ms-flexbox;
   display: flex;
   left: 0;
-  background: var(--text-color);
-  color: var(--bg-color);
 }
 
 .pin-wrap {
@@ -299,8 +297,6 @@ section:not(#sectionPin) {
 }
 .pin-wrap .slide-list.slide .img-wrap {
   position: absolute;
-  right: 0;
-  bottom: 0;
 }
 .pin-wrap .slide-list.slide.slide01 {
   background: url(../../assets/images/common/travel_bg.png) no-repeat center center/100%;
@@ -312,6 +308,8 @@ section:not(#sectionPin) {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  right: 2.083vw;
+  bottom: 8.28125vw;
 }
 .pin-wrap .slide-list.slide.slide02 {
   background: url(../../assets/images/common/cargo_bg.png) no-repeat center center/100%;
@@ -323,6 +321,8 @@ section:not(#sectionPin) {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  right: 1.40625vw;
+  bottom: 1.823vw;
 }
 .pin-wrap .slide-list.slide.slide03 {
   background: url(../../assets/images/common/oil_bg.png) no-repeat center center/100%;
@@ -334,6 +334,8 @@ section:not(#sectionPin) {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  right: 2.2396vw;
+  bottom: 5.1vw;
 }
 .pin-wrap .slide-list.slide.slide04 {
   background: url(../../assets/images/common/maintain_bg.png) no-repeat center center/100%;
@@ -345,6 +347,8 @@ section:not(#sectionPin) {
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
+  right: 6.823vw;
+  bottom: 10.78125vw;
 }
 
 .content-bottom {
