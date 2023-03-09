@@ -431,10 +431,9 @@ position: relative;
 
         }
     }
+
     .contact-wrap {
-        width: calc(100% - 32rem);
-        max-width: 160rem;
-        margin: 0 auto;
+        width: 100%;
         .title {
             color: $black;
             font-size: 6.8rem;
@@ -475,6 +474,88 @@ position: relative;
                                     display: block;
                                 }
                             }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact-wrap {
+        width: calc(100% - 32rem);
+        max-width: 160rem;
+        margin: 0 auto;
+        .title {
+            color: $black;
+            font-size: 6.8rem;
+            font-weight: 700;
+            line-height: 8.8rem;
+            letter-spacing: -0.02rem;
+        }
+        // .contact {
+        //     padding-top: 4rem;
+        //     display: flex;
+        //     gap: 3.25%;
+        //     > div {
+        //         width: 100%;
+        //         height: auto;
+        //         a {
+        //             width: 100%;
+        //             height: 100%;
+        //             display: flex;
+        //         }
+        //         &.hire {
+        //             a {
+        //                 .img-wrap {
+        //                     &.no-info {
+        //                         display: block;
+        //                     }
+        //                     &.info {
+        //                         display: none;
+        //                     }
+        //                 }
+        //             }
+        //             &:hover {
+        //                 a {
+        //                     .img-wrap {
+        //                         &.no-info {
+        //                             display: none;
+        //                         }
+        //                         &.info {
+        //                             display: block;
+        //                         }
+        //                     }
+        //                 }
+        //             }
+        //         }
+        //     }
+        // }
+        .contact {
+            padding-top: 4rem;
+            display: flex;
+            gap: 3.25%;
+            > div {
+                width: 39.79vw;
+                height: 20.83vw;
+                border: 2px solid $black;
+                border-radius: 40px;
+                a {
+                    display: flex;
+                }
+                &.hire {
+                    a {
+                        .img-wrap {
+                            position: relative;
+                            width: 10.416vw;
+                            height: 10.625vw;
+                        }
+                    }
+                }
+                &.help {
+                    a {
+                        .img-wrap {
+                            position: relative;
+                            width: 12.395vw;
+                            height: 9.0625vw;
                         }
                     }
                 }
