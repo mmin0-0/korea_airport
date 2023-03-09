@@ -237,15 +237,11 @@ section:not(#sectionPin) {
 }
 .pin-wrap .slide-list .txt-wrap a {
   padding-top: 1.25vw;
-  font-weight: 400;
-  font-size: 0.9375vw;
-  line-height: 2.083vw;
-  letter-spacing: -0.02rem;
 }
 .pin-wrap .slide-list.main {
   background: url(../../assets/images/common/hero_bg_black.png) no-repeat center bottom/100%;
   background-attachment: fixed;
-  background-size: contain;
+  background-size: cover;
   background-color: #000;
 }
 .pin-wrap .slide-list.main .txt-wrap {
@@ -265,20 +261,20 @@ section:not(#sectionPin) {
 }
 .pin-wrap .slide-list.main .txt-wrap span {
   color: #FFF;
-  font-size: 2.4rem;
+  font-size: 1.25vw;
   font-weight: 500;
   letter-spacing: -0.022rem;
-  line-height: 3rem;
+  line-height: 1.5625vw;
 }
 .pin-wrap .slide-list.main .txt-wrap .wrap {
-  padding-top: 1.6rem;
+  padding-top: 0.83vw;
 }
 .pin-wrap .slide-list.main .txt-wrap .wrap p {
   color: #FFF;
-  font-size: 4.8rem;
+  font-size: 2.5vw;
   font-weight: 700;
   letter-spacing: -0.022rem;
-  line-height: 6rem;
+  line-height: 3.125vw;
 }
 .pin-wrap .slide-list.slide {
   background-attachment: fixed;
@@ -299,56 +295,52 @@ section:not(#sectionPin) {
   position: absolute;
 }
 .pin-wrap .slide-list.slide.slide01 {
-  background: url(../../assets/images/common/travel_bg.png) no-repeat center center/100%;
+  background: url(../../assets/images/common/travel_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .pin-wrap .slide-list.slide.slide01 .img-wrap {
   width: 38.4375vw;
   height: 31.51vw;
-  background-image: url(../../assets/images/icon/travel_img.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  right: 2.083vw;
-  bottom: 8.28125vw;
+  top: 29.25%;
+  right: 1.98%;
 }
 .pin-wrap .slide-list.slide.slide02 {
-  background: url(../../assets/images/common/cargo_bg.png) no-repeat center center/100%;
+  background: url(../../assets/images/common/cargo_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .pin-wrap .slide-list.slide.slide02 .img-wrap {
   width: 47.8645vw;
   height: 38.17vw;
-  background-image: url(../../assets/images/icon/cargo_img.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  right: 1.40625vw;
-  bottom: 1.823vw;
+  top: 28.89%;
+  right: 1.53%;
 }
 .pin-wrap .slide-list.slide.slide03 {
-  background: url(../../assets/images/common/oil_bg.png) no-repeat center center/100%;
+  background: url(../../assets/images/common/oil_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .pin-wrap .slide-list.slide.slide03 .img-wrap {
   width: 39.42vw;
   height: 35.2vw;
-  background-image: url(../../assets/images/icon/oil_img.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  right: 2.2396vw;
-  bottom: 5.1vw;
+  top: 28.34%;
+  right: 2.26%;
 }
 .pin-wrap .slide-list.slide.slide04 {
-  background: url(../../assets/images/common/maintain_bg.png) no-repeat center center/100%;
+  background: url(../../assets/images/common/maintain_bg.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .pin-wrap .slide-list.slide.slide04 .img-wrap {
   width: 43.8vw;
   height: 27.29vw;
-  background-image: url(../../assets/images/icon/maintain_img.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  right: 6.823vw;
-  bottom: 10.78125vw;
+  top: 32.32%;
+  right: 7.34%;
 }
 
 .content-bottom {
@@ -399,63 +391,14 @@ section:not(#sectionPin) {
   letter-spacing: -0.022rem;
 }
 .content-bottom .esg-wrap {
-  width: calc(100% - 32rem);
-  max-width: 160rem;
+  width: 100%;
+  max-width: 192rem;
   height: auto;
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-}
-.content-bottom .esg-wrap .esg-left {
-  position: relative;
-  width: 39.79vw;
-  height: 46.875vw;
-  background-image: url(../../assets/images/common/esg_bg.png);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-.content-bottom .contact-wrap {
-  width: 100%;
-}
-.content-bottom .contact-wrap .title {
-  color: #000;
-  font-size: 6.8rem;
-  font-weight: 700;
-  line-height: 8.8rem;
-  letter-spacing: -0.02rem;
-}
-.content-bottom .contact-wrap .contact {
-  padding-top: 4rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 3.25%;
-}
-.content-bottom .contact-wrap .contact > div {
-  width: 100%;
-  height: auto;
-}
-.content-bottom .contact-wrap .contact > div a {
-  width: 100%;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.content-bottom .contact-wrap .contact > div.hire a .img-wrap.no-info {
-  display: block;
-}
-.content-bottom .contact-wrap .contact > div.hire a .img-wrap.info {
-  display: none;
-}
-.content-bottom .contact-wrap .contact > div.hire:hover a .img-wrap.no-info {
-  display: none;
-}
-.content-bottom .contact-wrap .contact > div.hire:hover a .img-wrap.info {
-  display: block;
 }
 .content-bottom .contact-wrap {
   width: calc(100% - 32rem);
@@ -464,36 +407,21 @@ section:not(#sectionPin) {
 }
 .content-bottom .contact-wrap .title {
   color: #000;
-  font-size: 6.8rem;
+  font-size: 3.54vw;
   font-weight: 700;
-  line-height: 8.8rem;
+  line-height: 4.58vw;
   letter-spacing: -0.02rem;
 }
 .content-bottom .contact-wrap .contact {
-  padding-top: 4rem;
+  padding-top: 2.083vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 3.25%;
+  gap: 2.7vw;
 }
 .content-bottom .contact-wrap .contact > div {
   width: 39.79vw;
   height: 20.83vw;
   border: 2px solid #000;
   border-radius: 40px;
-}
-.content-bottom .contact-wrap .contact > div a {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-.content-bottom .contact-wrap .contact > div.hire a .img-wrap {
-  position: relative;
-  width: 10.416vw;
-  height: 10.625vw;
-}
-.content-bottom .contact-wrap .contact > div.help a .img-wrap {
-  position: relative;
-  width: 12.395vw;
-  height: 9.0625vw;
 }

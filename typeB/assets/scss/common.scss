@@ -338,6 +338,10 @@
     width: fit-content;
     display: flex;
     align-items: center;
+    font-weight: 400;
+    font-size: 0.9375vw;
+    line-height: 2.083vw;
+    letter-spacing: -0.02rem;
     &::after {
         content: '';
         display: inline;
