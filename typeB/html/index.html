@@ -17,6 +17,8 @@
     <script src="/typeB/assets/js/gsap.min.js"></script>
     <script src="/typeB/assets/js/ScrollTrigger.min.js"></script>
     <script src="/typeB/assets/js/locomotive-scroll.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
 <body>
     <header id="header"></header>
@@ -34,7 +36,7 @@
         <section id="sectionPin">
           <div class="pin-wrap">
             <div class="slide-list main">
-                <div class="txt-wrap">
+                <div class="txt-wrap" data-aos="fade-up" data-aos-duration="1000">
                     <span>한국 경제와 항공산업 발전의 역사를 함께해 온 한국공항</span>
                     <div class="wrap">
                         <p>항공기 지상조업서비스부터 항공 화물조업,</p>
@@ -101,7 +103,7 @@
         </section>
         <section class="content-bottom">
             <div class="esg-intro">
-                <div class="txt-wrap">
+                <div class="txt-wrap" data-aos="fade-up" data-aos-duration="1000">
                     <p>KAS Sustainbillity</p>
                     <div>
                         <span>We are taking action for a</span>
@@ -135,18 +137,25 @@
                 <div class="contact">
                     <div class="hire">
                         <a href="javascript:void(0)">
-                            <div class="img-wrap no-info">
-                                <img src="../assets/images/icon/contact_hire_box.png" alt="채용정보">
+                            <div class="txt-wrap">
+                                <span>채용정보</span>
+                                <p>People are the future</p>
+                                <div>자세히 보기</div>
                             </div>
-                            <div class="img-wrap info">
-                                <img src="../assets/images/icon/contact_hire_box_hover.png" alt="채용정보">
+                            <div class="img-wrap ">
+                                <img src="../assets/images/icon/contact_hire_icon.svg" alt="채용정보">
                             </div>
                         </a>
                     </div>
                     <div class="help">
                         <a href="javascript:void(0)">
+                            <div class="txt-wrap">
+                                <span>문의하기</span>
+                                <p>어떤 도움이 필요하세요?</p>
+                                <div>자세히 보기</div>
+                            </div>
                             <div class="img-wrap">
-                                <img src="../assets/images/icon/contact_help_box.png" alt="문의하기">
+                                <img src="../assets/images/icon/contact_help_icon.svg" alt="문의하기">
                             </div>
                         </a>
                     </div>
@@ -155,5 +164,10 @@
         </section>
         <footer id="footer"></footer>
     </div>
+    <script>
+        AOS.init({
+            once: true
+        });
+    </script>
 </body>
 </html>
