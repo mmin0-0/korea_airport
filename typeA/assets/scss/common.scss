@@ -29,6 +29,12 @@ body{
     overflow-x: hidden;
 }
 
+.mb-cont{
+    max-width: 420px;
+    margin: 0 auto;
+}
+.pc-cont{width: 100%;}
+
 /* btn */
 .common-btn{
     display: block;
