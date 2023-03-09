@@ -352,18 +352,75 @@ section:not(#sectionPin) {
 }
 
 .content-bottom {
+  width: 100%;
+  height: auto;
+}
+.content-bottom .esg-intro {
+  width: 100vw;
+  min-height: 100vh;
+  background: url(../../assets/images/common/KAS_bg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.content-bottom .esg-intro .txt-wrap p {
+  color: #000;
+  font-size: 6.25vw;
+  font-weight: 700;
+  line-height: 7.8125vw;
+  letter-spacing: -0.02rem;
+}
+.content-bottom .esg-intro .txt-wrap > div {
+  padding-top: 3.125vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.content-bottom .esg-intro .txt-wrap > div span {
+  text-align: center;
+  color: #000;
+  font-size: 3.54vw;
+  font-weight: 700;
+  line-height: 4.167vw;
+  letter-spacing: -0.022rem;
+}
+.content-bottom .esg-wrap {
   width: calc(100% - 32rem);
   max-width: 160rem;
   height: auto;
   margin: 0 auto;
-}
-.content-bottom .esg-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
+}
+.content-bottom .esg-wrap .esg-left {
+  position: relative;
+  width: 39.79vw;
+  height: 46.875vw;
+  background-image: url(../../assets/images/common/esg_bg.png);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .content-bottom .contact-wrap {
-  width: 100%;
+  width: calc(100% - 32rem);
+  max-width: 160rem;
+  margin: 0 auto;
 }
 .content-bottom .contact-wrap .title {
   color: #000;
