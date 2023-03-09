@@ -108,25 +108,26 @@
                             display: flex;
                             justify-content: center;
                             .count-num-item-wrap{
-                                height: 28rem;
+                                height: 20rem;
                                 overflow: hidden;
                                 margin: 0 -2%;
                                 .count-num-item-box{
                                     &.on{
-                                        animation: count-up-ani 3s forwards;
-                                        &.down{animation: count-down-ani 3s forwards;}
+                                        animation: count-up-ani 5s forwards;
+                                        &.down{animation: count-down-ani 5s forwards;}
                                     }
                                     .count-num-item{
                                         font-weight: 800;
                                         font-size: 20rem;
                                         color: $mainC;
+                                        line-height: 1;
                                     }
                                 }
                                 &.unit-wrap{
                                     margin: 0;
                                     @include flexbox(row, center, flex-end);
                                     .unit{
-                                        padding-bottom: 6rem;
+                                        padding-bottom: 2rem;
                                         font-size: 2.4rem;
                                         font-weight: bold;
                                         color: #222;
@@ -277,6 +278,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
+                z-index: 0;
                 background: linear-gradient(rgba(0,0,0,0), #E7EFFF);
             }
             .con-box{
@@ -309,15 +311,22 @@
                     margin-top: 10.4rem;
                     .esg-list{
                         width: 100%;
+                        height: 48rem;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
                         > li{
+                            position: relative;
+                            z-index: 1;
                             width: 19.8rem;
                             height: 19.8rem;
                             border-radius: 50%;
                             background: #eee;
                             transition: all .35s;
+                            &:nth-child(1){background: url(/typeA/assets/images/main/esg_bg01.png) no-repeat center/ cover;}
+                            &:nth-child(2){background: url(/typeA/assets/images/main/esg_bg02.png) no-repeat center/ cover;}
+                            &:nth-child(3){background: url(/typeA/assets/images/main/esg_bg03.png) no-repeat center/ cover;}
+                            &:nth-child(4){background: url(/typeA/assets/images/main/esg_bg04.png) no-repeat center/ cover;}
                             &:hover, &.on{
                                 width: 48rem;
                                 height: 48rem;
@@ -330,6 +339,7 @@
                         }
                     }
                     .esg-swiper{
+                        height: 48rem;
                         .swiper-wrapper{
                             justify-content: space-between;
                             align-items: center;
@@ -490,6 +500,7 @@
             padding: 10.4rem 0 20rem;
             margin-top: 8rem;
             background: url(/typeA/assets/images/main/question_bg.png) no-repeat top center/ cover;
+            background-attachment: fixed;
             .con-box{
                 .sec-tit{color: $white;}
                 .sec-cont{
