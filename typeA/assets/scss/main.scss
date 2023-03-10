@@ -6,12 +6,8 @@
     line-height: 1.4;
     section{
         width: 100%;
-        // height: 100vh;
         position: relative;
-        // border: 1px solid #000;
-        // &:not(:first-child){margin: 7rem 0;}
-        // margin: 7rem 0;
-        background: #fff;
+        background: $white;
         .con-box{
             width: calc(100% - 40px);
             max-width: 1440px;
@@ -20,13 +16,9 @@
         .sec-tit{
             font-size: 4rem;
             font-weight: bold;
-            // transform: translateY(200px);
         }
         &#mainVisual{
-            background: #ddd;
             .visual-top{
-                // height: 100vh;
-                // padding: 30rem 0;
                 position: relative;
                 width: 100%;
                 .visual-main-tit{
@@ -37,6 +29,10 @@
                     left: 24rem;
                     z-index: 10;
                     opacity: 1;
+                    @include tablet{
+                        top: 16rem;
+                        left: 2rem;
+                    }
                     > div{
                         // border: 1px solid #000;
                         font-family: $scoreDream;
@@ -45,6 +41,10 @@
                         line-height: 11rem;
                         overflow: hidden;
                         display: flex;
+                        @include tablet{
+                            font-size: 2.8rem;
+                            line-height: 1.4;
+                        }
                         &:not(.visual-sub-tit){
                             span{
                                 transform: translateY(100%);
@@ -54,7 +54,6 @@
                             }
                         }
                         span{
-                            // color: #fafafa;
                             display: block;
                         }
                         @keyframes mainTit {
@@ -69,28 +68,24 @@
             }
             .bg-list{
                 width: 100%;
-                background: #eee;
-                // height: 100vh;
-                // transform: translateY(-100vh);
+                height: 100vh;
                 position: relative;
                 z-index: 9;
                 > div{
                     position: absolute;
                     top: 0;
                     left: 0;
-                    // left: 50%;
-                    // transform: translateX(-50%);
-                    // width: 120%;
                 }
                 .opacity-con{
-                    // height: 100vh;
+                    width: 100%;
+                    height: 100%;
+                    border: 1px solid #000;
+                    background: url(/typeA/assets/images/main/visual02.png) no-repeat center/ cover;
                     &.opacity-con01{z-index: 1;}
                     &.opacity-con02{z-index: 2;}
                     &.opacity-con03{z-index: 3;}
                     .visula-img{
-                        // height: 100vh;
                         width: 100%;
-                        // opacity: 0;
                     }
                 }
             }
@@ -333,7 +328,6 @@
                             width: 19.8rem;
                             height: 19.8rem;
                             border-radius: 50%;
-                            background: #eee;
                             transition: all .35s;
                             &:nth-child(1){background: url(/typeA/assets/images/main/esg_bg01.png) no-repeat center/ cover;}
                             &:nth-child(2){background: url(/typeA/assets/images/main/esg_bg02.png) no-repeat center/ cover;}
@@ -361,7 +355,6 @@
                             height: 19.8rem;
                             overflow: hidden;
                             border-radius: 50%;
-                            background: #eee;
                             transition: all .8s;
                             cursor: pointer;
                             > img{
