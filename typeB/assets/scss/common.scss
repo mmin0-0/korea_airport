@@ -380,13 +380,43 @@
         // justify-content: space-between;
         // align-items: center;
         .footer-top {
-
+            color: white;
+            font-size: 3.2rem;
+            line-height: 4rem;
+            letter-spacing: -0.02rem;
+            font-weight: 700;
+            padding-bottom: 2.4rem;
         }
         .footer-middle {
             width: 100%;
             display: flex;
             justify-content: space-between;
             .footer-left {
+                display: flex;
+                flex-direction: column;
+                gap: 7rem;
+                .site {
+                    display: flex;
+                    align-items: center;
+                    border: 2px solid $white;
+                    width: 24rem;
+                    height: 4.3rem;
+                    color: $white;
+                    font-size: 1.8rem;
+                    letter-spacing: -0.02rem;
+                    padding: 0 1.2rem;
+                    position: relative;
+                    cursor: pointer;
+                    &::after {
+                        position: absolute;
+                        right: 1.2rem;
+                        top: 25%;
+                        display: inline-block;
+                        content: '';
+                        @include icon (2.4rem, 2.4rem, btn_down_icon)
+                        
+                    }
+                }
                 .service-wrap {
                     display: flex;
                     flex-direction: column;

@@ -5,11 +5,13 @@ $(document).ready(function() {
         $(this).toggleClass('active');
         if ($(this).hasClass('active')) {
             $('body').addClass('fixed');
+            $('#hero').addClass('fixed');
             $(this).closest('.header-inner').find('.nav-wrap').addClass('active');
             $(this).children('span').html('CLOSE');
             $(this).siblings('.language').addClass('active');
         } else {
             $('body').removeClass('fixed')
+            $('#hero').removeClass('fixed');
             $(this).closest('.header-inner').find('.nav-wrap').removeClass('active');
             $(this).children('span').html('MENU');
             $(this).siblings('.language').removeClass('active');
