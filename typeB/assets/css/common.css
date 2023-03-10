@@ -601,6 +601,7 @@ body.fixed {
   letter-spacing: -0.02rem;
   padding: 0 1.2rem;
   position: relative;
+  cursor: pointer;
 }
 #footer .footer-inner .footer-middle .footer-left .site::after {
   position: absolute;
