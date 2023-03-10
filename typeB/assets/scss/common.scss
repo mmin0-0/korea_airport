@@ -392,6 +392,20 @@
             display: flex;
             justify-content: space-between;
             .footer-left {
+                display: flex;
+                flex-direction: column;
+                gap: 7rem;
+                .site {
+                    display: flex;
+                    align-items: center;
+                    border: 2px solid $white;
+                    width: 24rem;
+                    height: 4.3rem;
+                    color: $white;
+                    font-size: 1.8rem;
+                    letter-spacing: -0.02rem;
+                    padding: 0 1.2rem;
+                }
                 .service-wrap {
                     display: flex;
                     flex-direction: column;
