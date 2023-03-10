@@ -405,6 +405,16 @@
                     font-size: 1.8rem;
                     letter-spacing: -0.02rem;
                     padding: 0 1.2rem;
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        right: 1.2rem;
+                        top: 25%;
+                        display: inline-block;
+                        content: '';
+                        @include icon (2.4rem, 2.4rem, btn_down_icon)
+                        
+                    }
                 }
                 .service-wrap {
                     display: flex;
