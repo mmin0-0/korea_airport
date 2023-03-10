@@ -47,7 +47,7 @@
                     <div class="opacity-con opacity-con01">
                         <img src="/typeA/assets/images/main/visual02.png" alt="" class="visula-img">
                     </div>
-                    <!-- <div class="opacity-con opacity-con02">
+                    <!-- <div class="opacity-con opacity-con01">
                         <img src="/typeA/assets/images/main/visual02.png" alt="" class="visula-img">
                     </div> -->
                 </div>
@@ -270,23 +270,23 @@
                     <div class="sec-tit" data-aos="fade-up" data-aos-duration="1000">ESG Management</div>
                     <div class="esg-tit-list" data-aos="fade-up" data-aos-duration="1500">
                         <div class="on">
-                            <strong>저탄소 경영체제 구축</strong>
+                            <strong>저탄소 경영체제 구축01</strong>
                             <span>자연보호 및 환경정화운동과 온실가스 감축 및 에너지 저감 활동을 실천합니다.</span>
                         </div>
                         <div>
-                            <strong>안전보건 경영시 템 구축</strong>
+                            <strong>안전보건 경영시 템 구축02</strong>
                             <span>자연보호 및 환경정화운동과 온실가스 감축 및 에너지 저감 활동을 실천합니다.</span>
                         </div>
                         <div>
-                            <strong>지속가능한 가치 창출 실현</strong>
+                            <strong>지속가능한 가치 창출 실현03</strong>
                             <span>자연보호 및 환경정화운동과 온실가스 감축 및 에너지 저감 활동을 실천합니다.</span>
                         </div>
                         <div>
-                            <strong>저탄소 경영체제 구축</strong>
+                            <strong>저탄소 경영체제 구축04</strong>
                             <span>자연보호 및 환경정화운동과 온실가스 감축 및 에너지 저감 활동을 실천합니다.</span>
                         </div>
                     </div>
-                    <div class="sec-cont">
+                    <div class="sec-cont" data-aos="fade-up" data-aos-duration="2000">
                         <!-- <div class="swiper esg-swiper">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
@@ -453,7 +453,6 @@
             var box = $('.esg-list > li');
             var boxInfo = $('.esg-tit-list > div');
             function time(){
-        
                 boxInfo.removeClass('on');
                 box.removeClass('on');
         
@@ -462,15 +461,26 @@
                 idx++;
                 if(idx >= box.length) idx= 0;
             }
-            var interval = setInterval(time, 1000);
-            box.mouseleave(function(){
-                // clearInterval(interval); 
-                interval;
-            });
+
+            var interval = setInterval(time, 3500);
             box.mouseover(function(){
-                clearInterval(interval); 
+                clearInterval(interval);
             });
-        }esgAni();
+
+            box.mouseleave(function(){
+                interval = setInterval(time, 3500);
+            });
+
+            box.click(function(){
+                let boxIndex = $(this).index();
+                box.removeClass('on');
+                boxInfo.removeClass('on');
+
+                $(this).addClass('on');
+                boxInfo.eq(boxIndex).addClass('on');
+            });
+        }
+        esgAni();
 
         AOS.init({
             once: true
@@ -484,8 +494,8 @@
             pin: true,
             scrub: 0.5,
             start: "top top",
-            end: "+=1000%",
-            markers: true,
+            end: "+=800%",
+            // markers: true,
         }
     })
     .fromTo('.visual-main-tit > div span:not(.op-1)',{opacity: 1, duration: 1},{opacity: 0,duration: 1})
@@ -494,19 +504,13 @@
     .fromTo('.visual-main-tit > div span',{color: 'black', duration: 1},{color: 'white',duration: 1})
     .fromTo('.visual-sub-tit',{opacity: 0, duration: 1},{opacity: 1, duration: 1})
     .fromTo('.visual-main-tit > div:not(.visual-sub-tit)',{opacity: 1, duration: .5},{opacity: 0,duration: .5})
-    .fromTo('.visual-sub-tit',{y: 0, opacity: 1, duration: .5},{y: -500, opacity: 1, duration: 2})
-    // .fromTo('.visual-sub-tit',{y: 600, duration: 1},{y: 200, duration: 1})
-
-
-    // .fromTo('.visual-sub-tit',{y: 600, duration: 1},{y: '25.8rem', duration: 1})
-    // .fromTo('.bg-list .opacity-con01',{y: 100, opacity: 1, duration: 1},{y: 100, opacity: 0, duration: 1})
-    // .fromTo('.bg-list .opacity-con02',{y: 100, opacity: 0, duration: 1},{y: 100, opacity: 1, duration: 1});
+    .fromTo('.visual-sub-tit',{y: 0, opacity: 1, duration: .5},{y: -500, opacity: 1, duration: 2});
 
     /* 카운팅 */
     ScrollTrigger.create({
         trigger: "#countNum",
         start: "top 20%",
-        markers: true,
+        // markers: true,
         toggleClass: {targets: '.count-num-item-box', className: 'on'}
     });
 
