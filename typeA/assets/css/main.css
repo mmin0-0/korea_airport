@@ -533,7 +533,7 @@
 }
 
 #wrap section#esg {
-  padding: 8rem 0 10.4rem;
+  padding: 10rem 0 10.4rem;
 }
 
 #wrap section#esg::after {
@@ -615,7 +615,7 @@
 
 #wrap section#esg .con-box .sec-cont .esg-list {
   width: 100%;
-  height: 48rem;
+  height: 40rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -636,21 +636,26 @@
   -webkit-transition: all .35s;
   transition: all .35s;
 }
+
 #wrap section#esg .con-box .sec-cont .esg-list > li:nth-child(1) {
   background: url(/typeA/assets/images/main/esg_bg01.png) no-repeat center/cover;
 }
+
 #wrap section#esg .con-box .sec-cont .esg-list > li:nth-child(2) {
   background: url(/typeA/assets/images/main/esg_bg02.png) no-repeat center/cover;
 }
+
 #wrap section#esg .con-box .sec-cont .esg-list > li:nth-child(3) {
   background: url(/typeA/assets/images/main/esg_bg03.png) no-repeat center/cover;
 }
+
 #wrap section#esg .con-box .sec-cont .esg-list > li:nth-child(4) {
   background: url(/typeA/assets/images/main/esg_bg04.png) no-repeat center/cover;
 }
+
 #wrap section#esg .con-box .sec-cont .esg-list > li:hover, #wrap section#esg .con-box .sec-cont .esg-list > li.on {
-  width: 48rem;
-  height: 48rem;
+  width: 40rem;
+  height: 40rem;
 }
 
 #wrap section#esg .con-box .sec-cont .esg-list > li a {
@@ -670,9 +675,11 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
 #wrap section#esg .con-box .sec-cont .esg-swiper {
   height: 48rem;
 }
+
 #wrap section#esg .con-box .sec-cont .esg-swiper .swiper-wrapper {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -715,7 +722,7 @@
 }
 
 #wrap section#kasWrod {
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
 #wrap section#kasWrod .sec-tit {
@@ -748,7 +755,7 @@
 }
 
 #wrap section#talent {
-  margin-top: 8rem;
+  margin-top: 10rem;
 }
 
 #wrap section#talent .sec-cont {
@@ -898,7 +905,7 @@
 
 #wrap section#question {
   padding: 10.4rem 0 20rem;
-  margin-top: 8rem;
+  margin-top: 10rem;
   background: url(/typeA/assets/images/main/question_bg.png) no-repeat top center/cover;
   background-attachment: fixed;
 }
@@ -918,7 +925,7 @@
 }
 
 #wrap section#question .con-box .sec-cont .question-list > li:not(:first-child) {
-  margin-top: 4.2rem;
+  margin-top: 8rem;
 }
 
 #wrap section#question .con-box .sec-cont .question-list > li .question-tit {

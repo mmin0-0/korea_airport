@@ -265,7 +265,7 @@
             }
         }
         &#esg{
-            padding: 8rem 0 10.4rem;
+            padding: 10rem 0 10.4rem;
             &::after{
                 content: '';
                 width: 100vw;
@@ -319,7 +319,7 @@
                     z-index: 1;
                     .esg-list{
                         width: 100%;
-                        height: 48rem;
+                        height: 40rem;
                         display: flex;
                         justify-content: space-between;
                         align-items: center;
@@ -335,8 +335,8 @@
                             &:nth-child(3){background: url(/typeA/assets/images/main/esg_bg03.png) no-repeat center/ cover;}
                             &:nth-child(4){background: url(/typeA/assets/images/main/esg_bg04.png) no-repeat center/ cover;}
                             &:hover, &.on{
-                                width: 48rem;
-                                height: 48rem;
+                                width: 40rem;
+                                height: 40rem;
                             }
                             a{
                                 width: 100%;
@@ -381,7 +381,7 @@
             }
         }
         &#kasWrod{
-            margin-top: 8rem;
+            margin-top: 10rem;
             .sec-tit{margin-bottom: 3.2rem;}
             .sec-cont{
                 padding: 4rem;
@@ -402,7 +402,7 @@
             }
         }
         &#talent{
-            margin-top: 8rem;
+            margin-top: 10rem;
             .sec-cont{
                 margin-top: 3.2rem;
                 .talent-list{
@@ -504,7 +504,7 @@
         }
         &#question{
             padding: 10.4rem 0 20rem;
-            margin-top: 8rem;
+            margin-top: 10rem;
             background: url(/typeA/assets/images/main/question_bg.png) no-repeat top center/ cover;
             background-attachment: fixed;
             .con-box{
@@ -518,7 +518,7 @@
                     }
                     .question-list{
                         > li{
-                            &:not(:first-child){margin-top: 4.2rem;}
+                            &:not(:first-child){margin-top: 8rem;}
                             .question-tit{
                                 width: 100%;
                                 font-size: 2.8rem;
