@@ -123,7 +123,6 @@ $(document).ready(function() {
           pin: true,
           // end: pinWrapWidth,
           end: "+=500%",
-          markers: true,
           scrub: 0.3,
         },
         x: -horizontalScrollLength,
@@ -158,7 +157,6 @@ $(document).ready(function() {
         trigger: "#footer",
         start: "top 80%",
         end: "bottom",
-        markers: true,
         toggleClass: {targets: '#footer', className: 'on'}
       });
     
