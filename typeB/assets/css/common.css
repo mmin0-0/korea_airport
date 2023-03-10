@@ -600,6 +600,20 @@ body.fixed {
   font-size: 1.8rem;
   letter-spacing: -0.02rem;
   padding: 0 1.2rem;
+  position: relative;
+}
+#footer .footer-inner .footer-middle .footer-left .site::after {
+  position: absolute;
+  right: 1.2rem;
+  top: 25%;
+  display: inline-block;
+  content: "";
+  width: 2.4rem;
+  height: 2.4rem;
+  background-image: url(../../assets/images/icon/btn_down_icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 #footer .footer-inner .footer-middle .footer-left .service-wrap {
   display: -webkit-box;
