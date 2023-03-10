@@ -409,6 +409,7 @@ section:not(#sectionPin) {
       -ms-flex-align: start;
           align-items: flex-start;
   position: relative;
+  gap: 7.6rem;
 }
 .content-bottom .esg-wrap .wrap-inner .left {
   position: sticky;
