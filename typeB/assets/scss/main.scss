@@ -321,6 +321,17 @@ position: relative;
         margin: 0 auto;
         display: flex;
         position: relative;
+        padding: 32rem 0 ;
+        .wrap-inner {
+            display:flex;
+            align-items: flex-start;
+            position: relative;
+            .left {
+                position: sticky;
+                top: 20rem;
+                left: 0;
+            }
+        }
         // .esg-left {
         //     position: relative;
         //     width: 39.79vw;
@@ -333,6 +344,7 @@ position: relative;
         // .esg-right {
 
         // }
+        
     }
     .contact-wrap {
         width: calc(100% - 32rem);
