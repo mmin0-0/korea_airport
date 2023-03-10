@@ -162,6 +162,8 @@ position: relative;
             }
             .wrap {
                 padding-top: 0.83vw;
+                position: relative;
+                z-index: 1;
                 p {
                     color: $black;
                     font-size: 2.5vw;
@@ -315,13 +317,13 @@ position: relative;
         
     }
     .esg-wrap {
-        width: 100%;
+        width: calc(100% - 40px);
         max-width: 192rem;
         height: auto;
         margin: 0 auto;
         display: flex;
         position: relative;
-        padding: 32rem 0 ;
+        padding: 32rem 0 16rem;
         .wrap-inner {
             display:flex;
             align-items: flex-start;
@@ -348,7 +350,7 @@ position: relative;
         
     }
     .contact-wrap {
-        width: calc(100% - 32rem);
+        width: calc(100% - 40px);
         max-width: 160rem;
         margin: 0 auto;
         .title {
