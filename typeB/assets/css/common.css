@@ -527,6 +527,32 @@ body.fixed {
   font-size: 0.9375vw;
   line-height: 2.083vw;
   letter-spacing: -0.02rem;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.detail .btn-circle {
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: #FFF;
+  width: 2.083vw;
+  height: 2.083vw;
+}
+.detail .btn-circle .arrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 1.04vw;
+  height: 1.04vw;
+  background-image: url(../../assets/images/icon/arrow_icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .detail::after {
   content: "";
@@ -540,6 +566,9 @@ body.fixed {
   margin-left: 0.416vw;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+.detail:hover {
+  font-weight: 600;
 }
 .detail:hover::after {
   width: 2.083vw;
