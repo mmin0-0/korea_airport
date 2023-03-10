@@ -576,6 +576,31 @@ body.fixed {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+#footer .footer-inner .footer-middle .footer-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 7rem;
+}
+#footer .footer-inner .footer-middle .footer-left .site {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 2px solid #FFF;
+  width: 24rem;
+  height: 4.3rem;
+  color: #FFF;
+  font-size: 1.8rem;
+  letter-spacing: -0.02rem;
+  padding: 0 1.2rem;
+}
 #footer .footer-inner .footer-middle .footer-left .service-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
