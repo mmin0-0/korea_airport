@@ -538,6 +538,16 @@ body.fixed {
   background-position: center;
   background-repeat: no-repeat;
   margin-left: 0.416vw;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.detail:hover::after {
+  width: 2.083vw;
+  height: 2.083vw;
+  background-image: url(../../assets/images/icon/detail_icon_hover.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 #footer {
