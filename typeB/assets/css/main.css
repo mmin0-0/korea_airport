@@ -436,66 +436,92 @@ section:not(#sectionPin) {
   gap: 2.7vw;
 }
 .content-bottom .contact-wrap .contact > div {
-  width: 39.79vw;
-  height: 20.83vw;
+  width: calc(100% / 2 - 25px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.content-bottom .contact-wrap .contact > div .bg {
+  content: '';
+  width: 100%;
+  height: 100%;
+  border-radius: 40px;
+  position: absolute;
+  right: -2rem;
+  bottom: -2rem;
+  z-index: -1;
+}
+
+.content-bottom .contact-wrap .contact > div.hire .txt-wrap {
+  background: #FFF url(/typeB/assets/images/icon/contact_hire_icon.svg) no-repeat right 38px bottom 38px/18rem;
+}
+
+.content-bottom .contact-wrap .contact > div.hire .bg {
+  background: #CFF2F4;
+}
+
+.content-bottom .contact-wrap .contact > div.help .txt-wrap {
+  background: #FFF url(/typeB/assets/images/icon/contact_help_icon.svg) no-repeat right 38px bottom 38px/22rem;
+}
+
+.content-bottom .contact-wrap .contact > div.help .bg {
+  background: #FFFF90;
+}
+
+.content-bottom .contact-wrap .contact > div .txt-wrap {
+  width: 100%;
+  height: 40rem;
+  padding: 6rem 4.4rem;
   border: 2px solid #000;
   border-radius: 40px;
   position: relative;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  z-index: 1;
 }
-.content-bottom .contact-wrap .contact > div .img-wrap {
-  position: absolute;
-  right: 2.083vw;
-  bottom: 2.083vw;
-}
-.content-bottom .contact-wrap .contact > div:hover {
-  height: 22.916vw;
-}
-.content-bottom .contact-wrap .contact > div:hover.hire .txt-wrap .txt-hide {
+
+.content-bottom .contact-wrap .contact > div .txt-wrap:hover .txt-hide {
+  height: 3rem;
+  visibility: visible;
   opacity: 1;
 }
-.content-bottom .contact-wrap .contact > div.hire {
-  padding-top: 4.16vw;
-  padding-left: 3.125vw;
-}
-.content-bottom .contact-wrap .contact > div.hire .txt-wrap span {
+
+.content-bottom .contact-wrap .contact > div .txt-wrap span {
   color: #000;
   font-size: 1.25vw;
   font-weight: 700;
   line-height: 1.5625vw;
   letter-spacing: -0.02rem;
 }
-.content-bottom .contact-wrap .contact > div.hire .txt-wrap p {
+
+.content-bottom .contact-wrap .contact > div .txt-wrap p {
   color: #000;
   font-size: 2.5vw;
   font-weight: 400;
   line-height: 3.125vw;
   letter-spacing: -0.02rem;
 }
-.content-bottom .contact-wrap .contact > div.hire .txt-wrap .txt-hide {
-  padding-top: 0.83vw;
+
+.content-bottom .contact-wrap .contact > div .txt-wrap .txt-hide {
+  height: 0;
+  visibility: hidden;
+  opacity: 0;
+  margin-top: 1.6rem;
   color: #000;
   font-size: 0.9375vw;
   font-weight: 400;
   line-height: 1.5625vw;
   letter-spacing: -0.02rem;
-  opacity: 0;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
 }
-.content-bottom .contact-wrap .contact > div.hire .txt-wrap a {
+
+.content-bottom .contact-wrap .contact > div .txt-wrap a {
   padding-top: 1.25vw;
 }
-.content-bottom .contact-wrap .contact > div.hire .img-wrap {
-  width: 10.416vw;
-  height: 10.625vw;
-}
-.content-bottom .contact-wrap .contact > div.help {
-  padding-top: 2.083vw;
-  padding-left: 4.16vw;
-}
-.content-bottom .contact-wrap .contact > div.help .img-wrap {
-  width: 12.395vw;
-  height: 9.0625vw;
+
+.content-bottom .contact-wrap .contact > div .img-wrap {
+  position: absolute;
+  right: 2.083vw;
+  bottom: 2.083vw;
 }
