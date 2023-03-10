@@ -68,29 +68,29 @@ $(document).ready(function() {
     const pageContainer = document.querySelector(".container");
     
     /* SMOOTH SCROLL */
-    const scroller = new LocomotiveScroll({
-      el: pageContainer,
-      smooth: true
-    });
+    // const scroller = new LocomotiveScroll({
+    //   el: pageContainer,
+    //   smooth: true
+    // });
     
-    scroller.on("scroll", ScrollTrigger.update);
+    // scroller.on("scroll", ScrollTrigger.update);
     
-    ScrollTrigger.scrollerProxy(pageContainer, {
-      scrollTop(value) {
-        return arguments.length
-          ? scroller.scrollTo(value, 0, 0)
-          : scroller.scroll.instance.scroll.y;
-      },
-      getBoundingClientRect() {
-        return {
-          left: 0,
-          top: 0,
-          width: window.innerWidth,
-          height: window.innerHeight
-        };
-      },
-      pinType: pageContainer.style.transform ? "transform" : "fixed"
-    });
+    // ScrollTrigger.scrollerProxy(pageContainer, {
+    //   scrollTop(value) {
+    //     return arguments.length
+    //       ? scroller.scrollTo(value, 0, 0)
+    //       : scroller.scroll.instance.scroll.y;
+    //   },
+    //   getBoundingClientRect() {
+    //     return {
+    //       left: 0,
+    //       top: 0,
+    //       width: window.innerWidth,
+    //       height: window.innerHeight
+    //     };
+    //   },
+    //   pinType: pageContainer.style.transform ? "transform" : "fixed"
+    // });
     
     ////////////////////////////////////
     ////////////////////////////////////
@@ -102,21 +102,66 @@ $(document).ready(function() {
     
       // Pinning and horizontal scrolling
     
+      // gsap.to(".pin-wrap", {
+      //   scrollTrigger: {
+      //     scroller: pageContainer, //locomotive-scroll
+      //     scrub: 0.3,
+      //     trigger: "#sectionPin",
+      //     pin: true,
+      //     // anticipatePin: 1,
+      //     start: "top top",
+      //     end: pinWrapWidth
+      //   },
+      //   x: -horizontalScrollLength,
+      //   ease: "none"
+      // });
+
       gsap.to(".pin-wrap", {
         scrollTrigger: {
-          scroller: pageContainer, //locomotive-scroll
-          scrub: true,
           trigger: "#sectionPin",
-          pin: true,
-          // anticipatePin: 1,
           start: "top top",
-          end: pinWrapWidth
+          pin: true,
+          // end: pinWrapWidth,
+          end: "+=500%",
+          markers: true,
+          scrub: 0.3,
         },
         x: -horizontalScrollLength,
         ease: "none"
       });
+
+      // var t1 = gsap.timeline({
+      //     scrollTrigger: {
+      //     trigger: "#footer",
+      //     // pin: true,
+      //     // scrub: 0.5,
+      //     start: "top top",
+      //     end: "bottom",
+      //     markers: true,
+      //   }
+      // })
+      // .fromTo('#footer',{width: '90%', duration: 1},{width: '100%', duration: 1});
+
+      // let t2 = gsap.timeline({
+      //   scrollTrigger: {
+      //     trigger: '#footer',
+      //     start: "top top",
+      //     end: "top -100%",
+      //     scrub: true
+      //   },
+      //   // onReverseComplete: () => removeProps()
+      // })
+
+      // .fromTo('.footer-inner',{width: "90%", duration: 1},{width: "100%", duration: 1});
+
+      ScrollTrigger.create({
+        trigger: "#footer",
+        start: "top 80%",
+        markers: true,
+        toggleClass: {targets: '.footer-inner', className: 'on'}
+      });
     
-      ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
+      // ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
     
       ScrollTrigger.refresh();
     });
