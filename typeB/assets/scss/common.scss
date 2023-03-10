@@ -347,6 +347,12 @@
         display: inline;
         @include icon (2.083vw, 2.083vw, detail_icon);
         margin-left: 0.416vw;
+        transition: all 0.5s;
+    }
+    &:hover {
+        &::after {
+        @include icon (2.083vw, 2.083vw, detail_icon_hover);
+        }
     }
 }
 
