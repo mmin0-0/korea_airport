@@ -14,7 +14,6 @@ body {
 a {
     color: unset;
     text-decoration: none;
-    display: inline-block;
     cursor: pointer;
 }
 
