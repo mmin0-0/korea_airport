@@ -157,8 +157,9 @@ $(document).ready(function() {
       ScrollTrigger.create({
         trigger: "#footer",
         start: "top 80%",
+        end: "bottom",
         markers: true,
-        toggleClass: {targets: '.footer-inner', className: 'on'}
+        toggleClass: {targets: '#footer', className: 'on'}
       });
     
       // ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
