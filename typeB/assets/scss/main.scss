@@ -8,6 +8,11 @@
         background: url(../../assets/images/common/hero_bg_white.png) no-repeat center bottom/ 100%;
         background-attachment: fixed;
         background-size: cover;
+        opacity: 1;
+        transition: all 0.3s;
+        &.fixed {
+            opacity: 0.5;
+        }
         .content {
             width: fit-content;
             position: relative;

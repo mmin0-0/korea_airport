@@ -107,6 +107,12 @@ body.fixed {
   background: url(../../assets/images/common/hero_bg_white.png) no-repeat center bottom/100%;
   background-attachment: fixed;
   background-size: cover;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.container #hero.fixed {
+  opacity: 0.5;
 }
 .container #hero .content {
   width: -webkit-fit-content;
