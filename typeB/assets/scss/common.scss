@@ -342,6 +342,20 @@
     font-size: 0.9375vw;
     line-height: 2.083vw;
     letter-spacing: -0.02rem;
+    transition: all 0.3s;
+    .btn-circle {
+        border: 1px solid black;
+        border-radius: 50%;
+        background-color: $white;
+        width: 2.083vw;
+        height: 2.083vw;
+        .arrow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @include icon (1.04vw, 1.04vw, arrow_icon);
+        }
+    }
     &::after {
         content: '';
         display: inline;
@@ -350,6 +364,7 @@
         transition: all 0.5s;
     }
     &:hover {
+        font-weight: 600;
         &::after {
         @include icon (2.083vw, 2.083vw, detail_icon_hover);
         }
