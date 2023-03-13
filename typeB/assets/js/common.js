@@ -155,41 +155,42 @@ $(document).ready(function() {
 
       // .fromTo('.footer-inner',{width: "90%", duration: 1},{width: "100%", duration: 1});
 
-    // function esgIntro() {
+    function esgIntroStart() {
 
-    //     const kas = $('.esg-intro')
-    //     const kasTxt = $('.esg-intro .txt-wrap')
+        const kas = $('.esg-intro')
+        const kasTxt = $('.esg-intro .txt-wrap')
 
-    //     var tlEsg = gsap.timeline({
+        var tlEsg = gsap.timeline({
             
-    //         scrollTrigger: {
-    //             trigger: ".esg-intro",
-    //             scrub: 1,
-    //             start: "top 45%",
-    //             end: "bottom bottom",
-    //             markers: true,
-    //         }
+            scrollTrigger: {
+                trigger: ".content-bottom",
+                scrub: 1,
+                start: "top 100%",
+                end: "bottom 200%",
+                markers: true,
+            }
 
-    //     });
+        });
 
-    //     tlEsg.to(kas, {y:0, duration:4, opacity:1}, "group1")
-    //     .to(kasTxt, {y:0, duration:4, opacity:1}, "group2")
-    //     .to(kas, {y:0, duration:4, opacity:0}, "group3")
-    //     .to(kasTxt, {y:0, duration:4, opacity:0}, "group4")
+        tlEsg.to(kas, {y:0, duration:4, opacity:1}, "group1")
+        .to(kasTxt, {y:0, duration:4, opacity:1}, "group2")
+        .to(kas, {y:0, duration:4, opacity:0}, "group3")
+        .to(kasTxt, {y:0, duration:4, opacity:0}, "group4")
+        
+    }
+    esgIntroStart();
+    
 
-    // }
-    // esgIntro();
-
-      ScrollTrigger.create({
-        trigger: "#footer",
-        start: "top 80%",
-        end: "bottom",
-        toggleClass: {targets: '#footer', className: 'on'}
-      });
+    ScrollTrigger.create({
+    trigger: "#footer",
+    start: "top 80%",
+    end: "bottom",
+    toggleClass: {targets: '#footer', className: 'on'}
+    });
     
       // ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
     
-      ScrollTrigger.refresh();
+    ScrollTrigger.refresh();
     });
 
     
