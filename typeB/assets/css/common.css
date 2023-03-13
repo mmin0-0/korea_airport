@@ -531,13 +531,13 @@ body.fixed {
   transition: all 0.3s;
 }
 .detail .btn-circle {
-  border: 1px solid black;
+  border: 1px solid #000;
   border-radius: 50%;
   background-color: #FFF;
   width: 2.083vw;
   height: 2.083vw;
-}
-.detail .btn-circle .arrow {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -547,36 +547,31 @@ body.fixed {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-left: 0.8rem;
+}
+.detail .btn-circle .arrow {
   width: 1.04vw;
   height: 1.04vw;
   background-image: url(../../assets/images/icon/arrow_icon.svg);
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
-}
-.detail::after {
-  content: "";
-  display: inline;
-  width: 2.083vw;
-  height: 2.083vw;
-  background-image: url(../../assets/images/icon/detail_icon.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-left: 0.416vw;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-filter: brightness(0);
+          filter: brightness(0);
 }
 .detail:hover {
   font-weight: 600;
 }
-.detail:hover::after {
-  width: 2.083vw;
-  height: 2.083vw;
-  background-image: url(../../assets/images/icon/detail_icon_hover.svg);
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+.detail:hover .btn-circle {
+  background-color: #000;
+}
+.detail:hover .btn-circle .arrow {
+  -webkit-filter: brightness(100%);
+          filter: brightness(100%);
+  -webkit-transform: rotate(-30deg);
+          transform: rotate(-30deg);
 }
 
 #footer {

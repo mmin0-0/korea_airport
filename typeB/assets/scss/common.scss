@@ -344,30 +344,41 @@
     letter-spacing: -0.02rem;
     transition: all 0.3s;
     .btn-circle {
-        border: 1px solid black;
+        border: 1px solid $black;
         border-radius: 50%;
         background-color: $white;
         width: 2.083vw;
         height: 2.083vw;
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0.8rem;
         .arrow {
-            display: flex;
-            justify-content: center;
-            align-items: center;
             @include icon (1.04vw, 1.04vw, arrow_icon);
+            transition: all 0.3s;
+            filter: brightness(0);
         }
     }
-    &::after {
-        content: '';
-        display: inline;
-        @include icon (2.083vw, 2.083vw, detail_icon);
-        margin-left: 0.416vw;
-        transition: all 0.5s;
-    }
+    // &::after {
+    //     content: '';
+    //     display: inline;
+    //     @include icon (2.083vw, 2.083vw, detail_icon);
+    //     margin-left: 0.416vw;
+    //     transition: all 0.5s;
+    // }
     &:hover {
         font-weight: 600;
-        &::after {
-        @include icon (2.083vw, 2.083vw, detail_icon_hover);
+        .btn-circle {
+            background-color: $black;
+            .arrow {
+                filter: brightness(100%);
+                transform: rotate(-30deg);
+            }
         }
+        // &::after {
+        // @include icon (2.083vw, 2.083vw, detail_icon_hover);
+        // }
     }
 }
 
