@@ -155,6 +155,31 @@ $(document).ready(function() {
 
       // .fromTo('.footer-inner',{width: "90%", duration: 1},{width: "100%", duration: 1});
 
+    // function esgIntro() {
+
+    //     const kas = $('.esg-intro')
+    //     const kasTxt = $('.esg-intro .txt-wrap')
+
+    //     var tlEsg = gsap.timeline({
+            
+    //         scrollTrigger: {
+    //             trigger: ".esg-intro",
+    //             scrub: 1,
+    //             start: "top 45%",
+    //             end: "bottom bottom",
+    //             markers: true,
+    //         }
+
+    //     });
+
+    //     tlEsg.to(kas, {y:0, duration:4, opacity:1}, "group1")
+    //     .to(kasTxt, {y:0, duration:4, opacity:1}, "group2")
+    //     .to(kas, {y:0, duration:4, opacity:0}, "group3")
+    //     .to(kasTxt, {y:0, duration:4, opacity:0}, "group4")
+
+    // }
+    // esgIntro();
+
       ScrollTrigger.create({
         trigger: "#footer",
         start: "top 80%",

@@ -331,7 +331,9 @@ position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
+        // opacity: 0;
         .txt-wrap {
+            // opacity: 0;
             p {
                 color: $black;
                 font-size: 6.25vw;
@@ -435,7 +437,7 @@ position: relative;
                     width: 100%;
                     height: 40rem;
                     padding: 6rem 4.4rem;
-                    border: 2px solid $black;
+                    border: 1px solid $black;
                     border-radius: 40px;
                     position: relative;
                     z-index: 1;
