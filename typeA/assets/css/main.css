@@ -615,7 +615,7 @@
 
 #wrap section#esg .con-box .sec-cont .esg-list {
   width: 100%;
-  height: 40rem;
+  height: 35rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -654,8 +654,8 @@
 }
 
 #wrap section#esg .con-box .sec-cont .esg-list > li:hover, #wrap section#esg .con-box .sec-cont .esg-list > li.on {
-  width: 40rem;
-  height: 40rem;
+  width: 35rem;
+  height: 35rem;
 }
 
 #wrap section#esg .con-box .sec-cont .esg-list > li a {
