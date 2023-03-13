@@ -268,20 +268,42 @@
         $('.mb-menu').on('click', function(){
             console.log('모바일 메뉴')
             $(this).toggleClass('on');
+            if($(this).hasClass('on')){
+                $(this).removeClass('on');
+            }else{
+
+            }
         });
+
+        $('#header, nav').addClass('on');
+        $('.depth1-list > li:first-child, .depth2-list-wrap > div:first-child').addClass('on');
     }
 
-    function responsive(){
-        if($(window).width() > 768){
-            console.log('pc');
-            gnbPc();
-        }else{
-            console.log('mobile');
-            gnbMobile();
-        }
-    }responsive();
+    function respon(){
+        $(window).resize(function(){ 
+            if (window.innerWidth > 900) {
+                gnbPc();
+                console.log('pc');
+            } else {
+                gnbMobile();
+                console.log('mobile');
+            }
+    
+        })
+    }respon();
+
+
+    // function responsive(){
+    //     if($(window).width() > 768){
+    //         console.log('pc');
+    //         gnbPc();
+    //     }else{
+    //         console.log('mobile');
+    //         gnbMobile();
+    //     }
+    // }responsive();
 
     $(window).resize($.debounce(500, function(e){
-        responsive();
+        respon();
     }));
 </script>

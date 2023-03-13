@@ -5,8 +5,8 @@
     }
 }
 
-@mixin notebook_junction{
-    @media (max-width: 1150px){
+@mixin tablet_junction{
+    @media (max-width: 900px){
         @content;
     }
 }
