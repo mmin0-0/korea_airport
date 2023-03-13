@@ -258,6 +258,7 @@
 .search {
     a {
         span {
+            width: fit-content;
             color: $black;
             font-size: 2.4rem;
             font-weight: 700;
@@ -277,8 +278,8 @@
 }
 .tracking {
     a {
-        position: relative;
         span {
+            width: fit-content;
             color: $black;
             font-size: 2.4rem;
             font-weight: 700;
@@ -334,7 +335,7 @@
         }
     }
 }
-.detail {
+.detail { 
     width: fit-content;
     display: flex;
     align-items: center;
@@ -381,6 +382,39 @@
         // }
     }
 }
+.scroll-down {
+    position: absolute;
+    right: 8.4rem;
+    bottom: 25.1rem;
+    transform: rotate(90deg);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 0.9375vw;
+    line-height: 1.5625vw;
+    letter-spacing: -0.02rem;
+    .scroll-icon {
+        display: inline;
+        margin-left: 0.8rem;
+        @include icon (2.083vw, 2.083vw, scroll_down_icon);
+    }
+    // &::after {
+    //     content: '';
+    //     display: inline;
+    //     @include icon (2.083vw, 2.083vw, scroll_down_icon);
+    //     margin-left: 0.416vw;
+    //     transition: all 0.5s;
+    // }
+}
+.scroll-down-bg {
+    position: absolute;
+    right: -25%;
+    bottom: -50%;
+    width: 105.5rem;
+    height: 105.5rem;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 0, 0.2) 0%, rgba(255, 255, 0, 0) 100%);
+}
 
 #footer {
     // width: calc(100% - 32rem);
@@ -423,6 +457,32 @@
             width: 100%;
             display: flex;
             justify-content: space-between;
+            @media (max-width: 1440px) {
+                // justify-content: unset;
+                .footer-right {
+                    .depth01 {
+                        // padding-left: 4.9rem;
+                        // &.menu02 {
+                        //     margin-left: 1.6rem;
+                        // }
+                        // &.menu03 {
+                        //     margin-left: 1.6rem;
+                        // }
+                        // &.menu04 {
+                        //     margin-left: 1.6rem;
+                        // }
+                        // &.menu05 {
+                        //     margin-left: 1.6rem;
+                        // }
+                        // &.menu06 {
+                        //     margin-left: 1.6rem;
+                        // }
+                        // &.menu07 {
+                        //     margin-left: 1.6rem;
+                        // }
+                    }
+                }
+            }
             .footer-left {
                 display: flex;
                 flex-direction: column;
@@ -539,30 +599,29 @@
                         }
                     }
                 }
-                @media (max-width: 1280px) {
-                    padding-left: 4.9rem;
-                    justify-content: flex-end;
-                    .depth01 {
-                        &.menu02 {
-                            margin-left: 1.6rem;
-                        }
-                        &.menu03 {
-                            margin-left: 1.6rem;
-                        }
-                        &.menu04 {
-                            margin-left: 1.6rem;
-                        }
-                        &.menu05 {
-                            margin-left: 1.6rem;
-                        }
-                        &.menu06 {
-                            margin-left: 1.6rem;
-                        }
-                        &.menu07 {
-                            margin-left: 1.6rem;
-                        }
-                    }
-                }
+                // @media (max-width: 1440px) {
+                //     padding-left: 4.9rem;
+                //     .depth01 {
+                //         &.menu02 {
+                //             margin-left: 1.6rem;
+                //         }
+                //         &.menu03 {
+                //             margin-left: 1.6rem;
+                //         }
+                //         &.menu04 {
+                //             margin-left: 1.6rem;
+                //         }
+                //         &.menu05 {
+                //             margin-left: 1.6rem;
+                //         }
+                //         &.menu06 {
+                //             margin-left: 1.6rem;
+                //         }
+                //         &.menu07 {
+                //             margin-left: 1.6rem;
+                //         }
+                //     }
+                // }
             }
         }
         .copyright{

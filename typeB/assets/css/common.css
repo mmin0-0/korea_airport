@@ -405,6 +405,9 @@ body.fixed {
 
 /* gnb depth01 아이콘 */
 .search a span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #000;
   font-size: 2.4rem;
   font-weight: 700;
@@ -430,10 +433,10 @@ body.fixed {
   background-repeat: no-repeat;
 }
 
-.tracking a {
-  position: relative;
-}
 .tracking a span {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   color: #000;
   font-size: 2.4rem;
   font-weight: 700;
@@ -572,6 +575,46 @@ body.fixed {
           filter: brightness(100%);
   -webkit-transform: rotate(-30deg);
           transform: rotate(-30deg);
+}
+
+.scroll-down {
+  position: absolute;
+  right: 8.4rem;
+  bottom: 25.1rem;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 0.9375vw;
+  line-height: 1.5625vw;
+  letter-spacing: -0.02rem;
+}
+.scroll-down .scroll-icon {
+  display: inline;
+  margin-left: 0.8rem;
+  width: 2.083vw;
+  height: 2.083vw;
+  background-image: url(../../assets/images/icon/scroll_down_icon.svg);
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.scroll-down-bg {
+  position: absolute;
+  right: -25%;
+  bottom: -50%;
+  width: 105.5rem;
+  height: 105.5rem;
+  background: radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 0, 0.2) 0%, rgba(255, 255, 0, 0) 100%);
 }
 
 #footer {
@@ -749,32 +792,6 @@ body.fixed {
   font-weight: 500;
   line-height: 1.7rem;
   letter-spacing: -0.02rem;
-}
-@media (max-width: 1280px) {
-  #footer .footer-inner .footer-middle .footer-right {
-    padding-left: 4.9rem;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
-  }
-  #footer .footer-inner .footer-middle .footer-right .depth01.menu02 {
-    margin-left: 1.6rem;
-  }
-  #footer .footer-inner .footer-middle .footer-right .depth01.menu03 {
-    margin-left: 1.6rem;
-  }
-  #footer .footer-inner .footer-middle .footer-right .depth01.menu04 {
-    margin-left: 1.6rem;
-  }
-  #footer .footer-inner .footer-middle .footer-right .depth01.menu05 {
-    margin-left: 1.6rem;
-  }
-  #footer .footer-inner .footer-middle .footer-right .depth01.menu06 {
-    margin-left: 1.6rem;
-  }
-  #footer .footer-inner .footer-middle .footer-right .depth01.menu07 {
-    margin-left: 1.6rem;
-  }
 }
 #footer .footer-inner .copyright {
   margin-top: 7rem;
