@@ -1,5 +1,5 @@
-<div class="header-wrap">
-    <div class="hd-top">
+<div class="header-wrap on">
+    <div class="hd-top on">
         <div class="hd-inner">
             <div class="logo">
                 <a href="javascript:void(0)">
@@ -133,17 +133,20 @@
                     </div>
                 </div>
             </nav>
-            <div class="lang">
-                <img src="/typeA/assets/images/icon/language_icon.png" alt="언어">
-                <div class="lang-wrap">
-                    <a href="javascript:void(0)" class="ko on">KO</a>
-                    <a href="javascript:void(0)" class="en">EN</a>
+            <div class="nav-sub-menu">
+                <div class="lang">
+                    <img src="/typeA/assets/images/icon/language_icon.png" alt="언어">
+                    <div class="lang-wrap">
+                        <a href="javascript:void(0)" class="ko on">KO</a>
+                        <a href="javascript:void(0)" class="en">EN</a>
+                    </div>
                 </div>
-            </div>
-            <div class="mb-menu on">
-                <span></span>
-                <span></span>
-                <span></span>
+                <div class="mb-menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </div>
     </div>
@@ -244,19 +247,41 @@
     </div>
 </div>
 <script>
-    $('.depth1-list > li').on('mouseover', function(){
-        $('.header-wrap').addClass('on');
-        $(this).parents('.hd-top').addClass('on');
-        $(this).addClass('on').siblings().removeClass('on');
-        var index = $(this).index();
+    function gnbPc(){
+        $('.depth1-list > li').on('mouseover', function(){
+            var index = $(this).index();
+            $('#header, .header-wrap').addClass('on');
+            $(this).parents('.hd-top').addClass('on');
+            $(this).addClass('on').siblings().removeClass('on');
+    
+            $('.depth2-list-wrap > div').eq(index).addClass('on').siblings().removeClass('on');
+            $('.nav-list > div').eq(index).addClass('on').siblings().removeClass('on');
+        });
+    
+        $('.header-wrap').on('mouseleave', function(){
+            $(this).removeClass('on');
+            $('#header, .hd-top, .depth1-list > li').removeClass('on');
+        });
+    }
 
-        $('.depth2-list-wrap > div').eq(index).addClass('on').siblings().removeClass('on');
-        $('.nav-list > div').eq(index).addClass('on').siblings().removeClass('on');
-    });
+    function gnbMobile(){
+        $('.mb-menu').on('click', function(){
+            console.log('모바일 메뉴')
+            $(this).toggleClass('on');
+        });
+    }
 
-    $('.header-wrap').on('mouseleave', function(){
-        $(this).removeClass('on');
-        $('.hd-top').removeClass('on');
-        $('.depth1-list > li').removeClass('on');
-    });
+    function responsive(){
+        if($(window).width() > 768){
+            console.log('pc');
+            gnbPc();
+        }else{
+            console.log('mobile');
+            gnbMobile();
+        }
+    }responsive();
+
+    $(window).resize($.debounce(500, function(e){
+        responsive();
+    }));
 </script>

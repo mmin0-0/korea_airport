@@ -6,7 +6,7 @@
 }
 
 @mixin notebook_junction{
-    @media (max-width: 1280px){
+    @media (max-width: 1150px){
         @content;
     }
 }

@@ -37,8 +37,42 @@ body{
 }
 
 .mb-cont{
-    max-width: 420px;
+    width: 420px;
     margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 730px;
+    background: url(/cover/assets/images/mb_woodwork.png) no-repeat top center/ 100% 100%;
+    .swiper{
+        width: 90%;
+        height: 95%;
+        margin: 0 auto;
+        position: absolute;
+        top: 18px;
+        left: 22px;
+        // transform: translate(-50%, -50%);
+        z-index: 2;
+        border-radius: 40px;
+        .swiper-slide{
+            height: 100%;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar{display: none;}
+            img{width: 100%;}
+        }
+    }
+    // .woodwork{
+    //     width: 420px;
+    //     height: 720px;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     z-index: 1;
+    // }
 }
 .pc-cont{width: 100%;}
 
@@ -69,17 +103,36 @@ body{
     position: fixed;
     top: 0;
     z-index: 100;
+    &.on{
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+    }
     .header-wrap{
         // height: 49rem;
+        width: 100%;
         height: 10rem;
         overflow: hidden;
         transition: height .5s;
-        &.on{height: 49rem;}
+        @include notebook_junction{
+            height: 6.4rem;
+        }
+        &.on{
+            height: 49rem;
+            // @include notebook_junction{
+            //     height: 100%;
+            // }
+        }
+        @include notebook_junction{
+            overflow: visible;
+        }
         .hd-top{
             width: 100%;
             height: 10rem;
             background: $white;
             border-bottom: 1px solid $subC;
+            @include notebook_junction{
+                height: 100%;
+            }
             &.on{
                 .hd-inner{
                     nav{
@@ -124,47 +177,55 @@ body{
                 padding: 1.2rem 3rem;
                 transition: all .35s;
                 @include flexbox(row, space-between, center);
-                .lang{
-                    @include flexbox(column, center, center);
-                    img{
-                        width: 5.6rem;
-                        height: 5.6rem;
-                        display: block;
-                        margin: 0 auto;
+                .nav-sub-menu{
+                    @include flexbox(row, flex-start, center);
+                    gap: 2rem;
+                    // position: absolute;
+                    .lang{
+                        @include flexbox(column, center, center);
+                        img{
+                            width: 5.6rem;
+                            height: 5.6rem;
+                            display: block;
+                            margin: 0 auto;
+                        }
+                        .lang-wrap{
+                            display: none;
+                            a{
+                                line-height: 3.4rem;
+                            }
+                        }
                     }
-                    .lang-wrap{
+                    .mb-menu{
                         display: none;
-                        a{
-                            line-height: 3.4rem;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        border: 1px solid blue;
+                        position: relative;
+                        cursor: pointer;
+                        @include notebook_junction{display: block;}
+                        &.on{
+                            span{
+                                &:nth-child(1), &:nth-child(4){
+                                    top: 14px;
+                                    left: 50%;
+                                    width: 0%;
+                                }
+                                &:nth-child(2){transform: rotate(45deg);}
+                                &:nth-child(3){transform: rotate(-45deg);}
+                            }
                         }
-                    }
-                }
-                .mb-menu{
-                    display: none;
-                    width: 2.4rem;
-                    height: 2.4rem;
-                    border: 1px solid blue;
-                    position: relative;
-                    cursor: pointer;
-                    &.on{
                         span{
-                            &:nth-child(1){transform: translateY(10px) rotate(45deg);}
-                            &:nth-child(2){opacity: 0;}
-                            &:nth-child(3){transform: translateY(-10px) rotate(-45deg);}
+                            width: 100%;
+                            height: 2px;
+                            border-radius: 2px;
+                            position: absolute;
+                            background: $black;
+                            transition: all .35s;
+                            &:nth-child(1){top: 0;}
+                            &:nth-child(2), &:nth-child(3){top: 7px;}
+                            &:nth-child(4){top: 14px;}
                         }
-                    }
-                    span{
-                        display: block;
-                        width: 100%;
-                        height: 2px;
-                        background: $black;
-                        border-radius: 3px;
-                        position: absolute;
-                        left: 0;
-                        transition: all .35s ease-in-out;
-                        &:nth-child(1){top: 0;}
-                        &:nth-child(2){top: 50%;transform: translateY(-50%);}
-                        &:nth-child(3){bottom: 0;}
                     }
                 }
                 nav{
@@ -173,21 +234,33 @@ body{
                     height: 100%;
                     position: relative;
                     z-index: 10;
-                    // margin-left: 15vw;
-                    // position: absolute;
-                    // top: 50%;
-                    // left: 50%;
-                    // transform: translate(-50%, -50%);
+                    @include notebook_junction{
+                        width: 90%;
+                        max-width: 100%;
+                        height: 100vh;
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        background: $white;
+                        margin-top: 6.4rem;
+                        @include flexbox(row, flex-start, flex-start);
+                    }
                     .depth1-list{
                         @include flexbox(row, center, center);
                         height: 100%;
                         width: 100%;
                         gap: 2vw;
+                        @include notebook_junction{
+                            width: 50%;
+                            padding: 2rem;
+                            @include flexbox(column, flex-start, flex-start);
+                        }
                         > li{ 
                             // width: 9.8rem;
                             width: calc(100% / 7);
                             height: 100%;
                             position: relative;
+                            @include notebook_junction{width: 100%;}
                             &.on{
                                 .depth1{
                                     img{display: none;}
@@ -201,27 +274,44 @@ body{
                                 width: 100%;
                                 height: 100%;
                                 @include flexbox(column, center, center);
+                                @include notebook_junction{
+                                    @include flexbox(row, flex-start, center);
+                                    gap: 1.4rem;
+                                }
                                 img{
                                     width: 6.4rem;
                                     height: 6.4rem;
                                     display: block;
                                     margin: 0 auto;
                                     transition: all .35s;
+                                    @include notebook_junction{
+                                        margin: 0;
+                                    }
                                 }
                                 span{
                                     display: none;
                                     line-height: 3.4rem;
                                     font-weight: bold;
                                     transition: all .35s;
+                                    @include notebook_junction{
+                                        display: block;
+                                    }
                                 }
                             }
                         }
                     }
                     .depth2-list-wrap{
                         margin-top: 5.4rem;
+                        @include notebook_junction{
+                            margin-top: 0;
+                            width: 50%;
+                            height: 100%;
+                            padding: 2rem;
+                            background: $subC;
+                        }
                         > div{
                             display: none;
-
+                            // @include notebook_junction{display: block;}
                             &.on{display: flex;}
                             .depth2-list{
                                 max-width: 24rem;
