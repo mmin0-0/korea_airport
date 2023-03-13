@@ -752,6 +752,7 @@ body.fixed {
 }
 @media (max-width: 1280px) {
   #footer .footer-inner .footer-middle .footer-right {
+    padding-left: 4.9rem;
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: flex-end;
