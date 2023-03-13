@@ -111,7 +111,7 @@ body.fixed {
 }
 #header .header-inner {
   width: calc(100% - 32rem);
-  max-width: 160rem;
+  max-width: 192rem;
   height: 100%;
   margin: 0 auto;
   display: -webkit-box;
