@@ -167,7 +167,7 @@ $(document).ready(function() {
                 scrub: 1,
                 start: "top 100%",
                 end: "bottom 250%",
-                markers: true,
+                // markers: true,
             }
 
         });
