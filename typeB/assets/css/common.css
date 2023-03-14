@@ -303,6 +303,11 @@ body.fixed {
 #header .nav-wrap nav .nav-right .depth02-list.show {
   display: block;
 }
+#header.on {
+  background-color: #FFF;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
+}
 
 /* gnb 우측 버튼*/
 .language a span {
@@ -536,7 +541,7 @@ body.fixed {
 .detail .btn-circle {
   border: 1px solid #000;
   border-radius: 50%;
-  background-color: #FFF;
+  background-color: transparent;
   width: 2.083vw;
   height: 2.083vw;
   -webkit-transition: all 0.3s;
