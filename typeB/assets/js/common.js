@@ -6,12 +6,16 @@ $(document).ready(function() {
         if ($(this).hasClass('active')) {
             $('body').addClass('fixed');
             $('#hero').addClass('fixed');
+            $('.slide-list').addClass('fixed');
+            $('.content-bottom').addClass('fixed');
             $(this).closest('.header-inner').find('.nav-wrap').addClass('active');
             $(this).children('span').html('CLOSE');
             $(this).siblings('.language').addClass('active');
         } else {
             $('body').removeClass('fixed')
             $('#hero').removeClass('fixed');
+            $('.slide-list').removeClass('fixed');
+            $('.content-bottom').removeClass('fixed');
             $(this).closest('.header-inner').find('.nav-wrap').removeClass('active');
             $(this).children('span').html('MENU');
             $(this).siblings('.language').removeClass('active');
@@ -166,7 +170,7 @@ $(document).ready(function() {
                 trigger: ".content-bottom",
                 scrub: 1,
                 start: "top 100%",
-                end: "bottom 250%",
+                end: "bottom 284%",
                 // markers: true,
             }
 
@@ -174,7 +178,7 @@ $(document).ready(function() {
 
         tlEsg.to(kas, {y:0, duration:1, opacity:1}, "group1")
         .to(kasTxt, {y:0, duration:1, opacity:1}, "group2")
-        .to(kas, {y:-400, duration:1, opacity:0}, "group3")
+        .to(kas, {y:0, duration:1, opacity:0}, "group3")
     }
     esgIntroStart();
     
@@ -189,6 +193,28 @@ $(document).ready(function() {
       // ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
     
     ScrollTrigger.refresh();
+    });
+
+    // $(window).on('scroll',function() {
+    //     if($(window).scrollTop()) {
+    //         $('#header').addClass('on');
+    //     } else {
+    //         $('#header').removeClass('on');
+    //     }
+    // })
+
+    function vh(v) {
+        var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        return (v * h) / 100;
+    }
+
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > vh(100)) {
+            $("#header").addClass("on");
+        } else {
+            //remove the background property so it comes transparent again (defined in your css)
+            $("#header").removeClass("on");
+        }
     });
 
     

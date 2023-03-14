@@ -7,7 +7,7 @@ body.fixed {
   width: 100vw;
   height: 100vh;
   z-index: 95;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(34, 34, 34);
   overflow: hidden;
 }
 
@@ -107,6 +107,7 @@ body.fixed {
   background: url(../../assets/images/common/hero_bg_white.png) no-repeat center bottom/100%;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #FFF;
   opacity: 1;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -210,6 +211,9 @@ section:not(#sectionPin) {
   height: 100vh;
   min-width: 100vw;
   position: relative;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .pin-wrap .slide-list .txt-wrap {
   width: -webkit-fit-content;
@@ -284,11 +288,6 @@ section:not(#sectionPin) {
   letter-spacing: -0.022rem;
   line-height: 6rem;
 }
-.pin-wrap .slide-list.slide {
-  background-attachment: fixed;
-  background-size: contain;
-  background-color: #FFF;
-}
 .pin-wrap .slide-list.slide .txt-wrap {
   top: 31%;
   left: 15.42%;
@@ -307,6 +306,7 @@ section:not(#sectionPin) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 .pin-wrap .slide-list.slide.slide01 .img-wrap {
   max-width: 73.8rem;
@@ -320,6 +320,7 @@ section:not(#sectionPin) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 .pin-wrap .slide-list.slide.slide02 .img-wrap {
   max-width: 91.9rem;
@@ -333,6 +334,7 @@ section:not(#sectionPin) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 .pin-wrap .slide-list.slide.slide03 .img-wrap {
   max-width: 75.7rem;
@@ -346,6 +348,7 @@ section:not(#sectionPin) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 .pin-wrap .slide-list.slide.slide04 .img-wrap {
   max-width: 84.1rem;
@@ -354,10 +357,18 @@ section:not(#sectionPin) {
   top: 32.32%;
   right: 7.34%;
 }
+.pin-wrap .slide-list.fixed {
+  opacity: 0.5;
+}
 
 .content-bottom {
   width: 100%;
   height: auto;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  background-color: #FFF;
+  padding-bottom: 19rem;
 }
 .content-bottom .esg-intro {
   width: 100vw;
@@ -415,7 +426,7 @@ section:not(#sectionPin) {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding: 32rem 0 16rem;
+  padding: 16rem 13.5% 16rem 0;
 }
 .content-bottom .esg-wrap .wrap-inner {
   display: -webkit-box;
@@ -528,4 +539,7 @@ section:not(#sectionPin) {
   position: absolute;
   right: 2.083vw;
   bottom: 2.083vw;
+}
+.content-bottom.fixed {
+  opacity: 0.5;
 }
