@@ -16,6 +16,7 @@
 }
 
 html{
+    color: red;
     font-size: 10px;
     @media (max-width: 1150px) {font-size: 7.5px;}
     @include tablet_junction{font-size: 10px;}
