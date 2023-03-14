@@ -160,6 +160,8 @@ position: relative;
         height: 100vh;
         min-width: 100vw;
         position: relative;
+        opacity: 1;
+        transition: all 0.3s;
         .txt-wrap {
             width: fit-content;
             position: relative;
@@ -247,9 +249,9 @@ position: relative;
                 position: absolute;
                 
             }
-            background-attachment: fixed;
-            background-size: contain;
-            background-color: $white;
+            // background-attachment: fixed;
+            // background-size: contain;
+            // background-color: $white;
             &.slide01 {
                 background: url(../../assets/images/common/travel_bg.png);
                 background-size: cover;
@@ -315,11 +317,16 @@ position: relative;
                 }
             }
         }
+        &.fixed {
+            opacity: 0.5;
+        }
     }
 }
 .content-bottom {
     width: 100%;
     height: auto;
+    opacity: 1;
+    transition: all 0.3s;
     .esg-intro {
         width: 100vw;
         min-height: 100vh;
@@ -509,6 +516,9 @@ position: relative;
                 // }
             }
         }
+    }
+    &.fixed {
+        opacity: 0.5;
     }
 }
 

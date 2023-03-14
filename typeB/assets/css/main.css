@@ -210,6 +210,9 @@ section:not(#sectionPin) {
   height: 100vh;
   min-width: 100vw;
   position: relative;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .pin-wrap .slide-list .txt-wrap {
   width: -webkit-fit-content;
@@ -284,11 +287,6 @@ section:not(#sectionPin) {
   letter-spacing: -0.022rem;
   line-height: 6rem;
 }
-.pin-wrap .slide-list.slide {
-  background-attachment: fixed;
-  background-size: contain;
-  background-color: #FFF;
-}
 .pin-wrap .slide-list.slide .txt-wrap {
   top: 31%;
   left: 15.42%;
@@ -354,10 +352,16 @@ section:not(#sectionPin) {
   top: 32.32%;
   right: 7.34%;
 }
+.pin-wrap .slide-list.fixed {
+  opacity: 0.5;
+}
 
 .content-bottom {
   width: 100%;
   height: auto;
+  opacity: 1;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .content-bottom .esg-intro {
   width: 100vw;
@@ -528,4 +532,7 @@ section:not(#sectionPin) {
   position: absolute;
   right: 2.083vw;
   bottom: 2.083vw;
+}
+.content-bottom.fixed {
+  opacity: 0.5;
 }
