@@ -1,0 +1,43 @@
+@import "responsive";
+
+$white: #fff;
+$black: #000;
+$gothic: 'KoddiUD OnGothic';
+$scoreDream: 'S-Core Dream';
+$mainC: #0A4FFF;
+$subC: #D6E2FF;
+
+@mixin flexbox($direction, $justfy, $align){
+	display:flex;
+    flex-direction: $direction;
+    justify-content: $justfy;
+    align-items: $align;
+}
+
+@mixin ellipsis($num) {
+    display:-webkit-box;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    -webkit-line-clamp:$num;
+    -webkit-box-orient:vertical;
+}
+
+@keyframes ani01 {
+    0%{transform: translate(80px, 80px);}
+    100%{transform: translate(0, 0);}
+}
+
+@keyframes scale_ani01 {
+    0%{transform: scale(0);}
+    100%{transform: scale(1);}
+}
+
+@keyframes scale_ani02 {
+    0%{transform: scale(0) translateX(-50%);}
+    100%{transform: scale(1) translateX(-50%);}
+}
+
+@keyframes position_ani01 {
+    0%{transform: translateY(0)}
+    100%{transform: translateY(-5px);}
+}

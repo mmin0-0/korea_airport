@@ -1,0 +1,48 @@
+@font-face{
+    font-family: 'KoddiUD OnGothic';
+    font-weight: 800;
+    src: 
+    url(/typeA/assets/font/KoddiUDOnGothic-ExtraBold.otf)
+}
+
+@font-face{
+    font-family: 'KoddiUD OnGothic';
+    font-weight: 600;
+    src: 
+    url(/typeA/assets/font/KoddiUDOnGothic-Bold.otf)
+}
+
+@font-face{
+    font-family: 'KoddiUD OnGothic';
+    font-weight: 400;
+    src: 
+    url(/typeA/assets/font/KoddiUDOnGothic-Regular.otf)
+}
+
+@font-face{
+    font-family: 'S-Core Dream';
+    font-weight: 400;
+    src: 
+    url(/typeA/assets/font/SCDream4.otf)
+}
+
+@font-face{
+    font-family: 'S-Core Dream';
+    font-weight: 500;
+    src: 
+    url(/typeA/assets/font/SCDream5.otf)
+}
+
+@font-face{
+    font-family: 'S-Core Dream';
+    font-weight: 600;
+    src: 
+    url(/typeA/assets/font/SCDream6.otf)
+}
+
+@font-face{
+    font-family: 'S-Core Dream';
+    font-weight: 700;
+    src: 
+    url(/typeA/assets/font/SCDream7.otf)
+}

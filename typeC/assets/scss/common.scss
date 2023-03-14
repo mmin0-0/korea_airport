@@ -1,0 +1,741 @@
+@import "responsive";
+@import "common_category";
+
+.hide {
+    position: absolute;
+    width: 1px!important;
+    height: 1px!important;
+    margin: -1px;
+    overflow: hidden;
+    clip-path: polygon(0 0, 0 0, 0 0);
+} 
+
+*{
+    box-sizing: border-box;
+    color: $black;
+}
+
+html{
+    color: red;
+    font-size: 10px;
+    @media (max-width: 1150px) {font-size: 7.5px;}
+    @include tablet_junction{font-size: 10px;}
+}
+
+body{
+    font-size: 1.6rem;
+    font-weight: 400;
+    font-family: $gothic;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.d-pc{display: block;}
+.d-mb{display: none;}
+@include tablet{
+    .d-pc{display: none;}
+    .d-mb{display: block;}
+}
+
+.mb-cont{
+    width: 420px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 730px;
+    background: url(/cover/assets/images/mb_woodwork.png) no-repeat top center/ 100% 100%;
+    .swiper{
+        width: 90%;
+        height: 95%;
+        margin: 0 auto;
+        position: absolute;
+        top: 18px;
+        left: 22px;
+        // transform: translate(-50%, -50%);
+        z-index: 2;
+        border-radius: 40px;
+        .swiper-slide{
+            height: 100%;
+            overflow-y: scroll;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            &::-webkit-scrollbar{display: none;}
+            img{width: 100%;}
+        }
+    }
+    // .woodwork{
+    //     width: 420px;
+    //     height: 720px;
+    //     position: fixed;
+    //     top: 0;
+    //     left: 50%;
+    //     transform: translateX(-50%);
+    //     z-index: 1;
+    // }
+}
+.pc-cont{width: 100%;}
+
+/* btn */
+.common-btn{
+    display: block;
+    max-width: 13rem;
+    width: 100%;
+    line-height: 1.4;
+    padding: 1rem .5rem;
+    border: 1px solid $white;
+    color: $white;
+    border-radius: 30px;
+    position: relative;
+    @include flexbox(row, center, center);
+    &::after{
+        content: '';
+        width: 1.2rem;
+        height: 1.2rem;
+        display: inline-block;
+        margin-left: 1.2rem;
+        background: url(/typeA/assets/images/icon/next_arrow_icon.png) no-repeat center/ contain;
+    }
+}
+/* header */
+#header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    &.on{
+        height: 100vh;
+        background: rgba(0,0,0,0.5);
+    }
+    .header-wrap{
+        // height: 49rem;
+        width: 100%;
+        height: 10rem;
+        overflow: hidden;
+        transition: height .5s;
+        @include tablet_junction{
+            height: 6.4rem;
+        }
+        &.on{
+            height: 49rem;
+            // @include tablet_junction{
+            //     height: 100%;
+            // }
+        }
+        @include tablet_junction{
+            overflow: visible;
+        }
+        .hd-top{
+            width: 100%;
+            height: 10rem;
+            background: $white;
+            border-bottom: 1px solid $subC;
+            @include tablet_junction{
+                height: 6.4rem;
+            }
+            &.on{
+                .hd-inner{
+                    nav{
+                        .depth1-list{
+                            > li{
+                                .depth1{
+                                    img{
+                                        width: 4rem;
+                                        height: 4rem;
+                                    }
+                                    span{display: block;}
+                                }
+                            }
+                        }
+                    }
+                    .lang{
+                        img{
+                            width: 4rem;
+                            height: 4rem;
+                        }
+                        .lang-wrap{
+                            display: block;
+                            > a{
+                                font-weight: bold;
+                                line-height: 3.4rem;
+                                color: #999;
+                                &.on{color: #000;}
+                                &:not(:last-child){
+                                    &::after{
+                                        content: '/';
+                                        font-weight: bold;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .hd-inner{
+                position: relative;
+                height: 100%;
+                padding: 1.2rem 3rem;
+                transition: all .35s;
+                @include flexbox(row, space-between, center);
+                .nav-sub-menu{
+                    @include flexbox(row, flex-start, center);
+                    @include tablet_junction{
+                        gap: 2rem;
+                        position: absolute;
+                        top: 50%;
+                        right: 3rem;
+                        transform: translateY(-50%);
+                        z-index: 10;
+                    }
+                    .lang{
+                        @include flexbox(column, center, center);
+                        img{
+                            width: 5.6rem;
+                            height: 5.6rem;
+                            display: block;
+                            margin: 0 auto;
+                            @include tablet_junction{
+                                width: 4rem;
+                                height: 4rem;
+                            }
+                        }
+                        .lang-wrap{
+                            display: none;
+                            a{
+                                line-height: 3.4rem;
+                            }
+                        }
+                    }
+                    .mb-menu{
+                        display: none;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        position: relative;
+                        cursor: pointer;
+                        @include tablet_junction{display: block;}
+                        &.on{
+                            span{
+                                &:nth-child(1), &:nth-child(4){
+                                    top: 14px;
+                                    left: 50%;
+                                    width: 0%;
+                                }
+                                &:nth-child(2){transform: rotate(45deg);}
+                                &:nth-child(3){transform: rotate(-45deg);}
+                            }
+                        }
+                        span{
+                            width: 100%;
+                            height: 2px;
+                            border-radius: 2px;
+                            position: absolute;
+                            background: $black;
+                            transition: all .35s;
+                            &:nth-child(1){top: 0;}
+                            &:nth-child(2), &:nth-child(3){top: 10px;}
+                            &:nth-child(4){top: 20px;}
+                        }
+                    }
+                }
+                nav{
+                    width: 55%;
+                    max-width: 81.8rem;
+                    height: 100%;
+                    position: relative;
+                    z-index: 10;
+                    @include tablet_junction{
+                        width: 90%;
+                        max-width: 100%;
+                        height: 100vh;
+                        position: absolute;
+                        top: 0;
+                        right: -100%;
+                        background: $white;
+                        border-top: 1px solid $subC;
+                        margin-top: 6.4rem;
+                        transition: right .35s;
+                        @include flexbox(row, flex-start, flex-start);
+                        &.on{right: 0;}
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 6.4rem;
+                            background: $white;
+                            position: absolute;
+                            top: -6.6rem;
+                            right: 0;
+                            z-index: 0;
+                        }
+                    }
+                    .depth1-list{
+                        @include flexbox(row, center, center);
+                        height: 100%;
+                        width: 100%;
+                        gap: 2vw;
+                        @include tablet_junction{
+                            width: 50%;
+                            padding: 2rem;
+                            gap: 1.6rem;
+                            @include flexbox(column, flex-start, flex-start);
+                        }
+                        > li{ 
+                            // width: 9.8rem;
+                            width: calc(100% / 7);
+                            height: 100%;
+                            position: relative;
+                            @include tablet_junction{
+                                width: 100%;
+                                height: auto;
+                                opacity: .5;
+                            }
+                            &.on{
+                                opacity: 1;
+                                .depth1{
+                                    img{
+                                        display: none;
+                                        @include tablet_junction{display: block;}
+                                    }
+                                    span{
+                                        opacity: 1;
+                                        visibility: visible;
+                                    }
+                                }
+                            }
+                            .depth1{
+                                width: 100%;
+                                height: 100%;
+                                @include flexbox(column, center, center);
+                                @include tablet_junction{
+                                    @include flexbox(row, flex-start, center);
+                                    gap: 1.4rem;
+                                }
+                                img{
+                                    width: 6.4rem;
+                                    height: 6.4rem;
+                                    display: block;
+                                    margin: 0 auto;
+                                    transition: all .35s;
+                                    @include tablet_junction{
+                                        margin: 0;
+                                    }
+                                }
+                                span{
+                                    display: none;
+                                    line-height: 3.4rem;
+                                    font-weight: bold;
+                                    transition: all .35s;
+                                    @include tablet_junction{
+                                        display: block;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .depth2-list-wrap{
+                        margin-top: 5.4rem;
+                        @include tablet_junction{
+                            margin-top: 0;
+                            width: 50%;
+                            height: 100%;
+                            padding: 2rem;
+                            background: $subC;
+                        }
+                        > div{
+                            display: none;
+                            &.on{display: flex;}
+                            @include tablet_junction{
+                                flex-direction: column;
+                                gap: 1.6rem;
+                            }
+                            .depth2-list{
+                                max-width: 24rem;
+                                width: calc(100% / 3);
+                                gap: 2.4rem;
+                                @include flexbox(column, flex-start, flex-start);
+                                @include tablet_junction{
+                                    width: 100%;
+                                    gap: 1.6rem;
+                                }
+                                > li{  
+                                    .depth2{
+                                        width: 100%;
+                                        padding-left: 1rem;
+                                        line-height: 3.4rem;
+                                        position: relative;
+                                        &::before{
+                                            content: '';
+                                            width: 1px;
+                                            height: 80%;
+                                            background: #D9D9D9;
+                                            position: absolute;
+                                            top: 50%;
+                                            left: 0;
+                                            transform: translateY(-50%);
+                                            @include tablet_junction{display: none;}
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .hd-bottom{
+            width: 100%;
+            height: 390px;
+            background: $white;
+            border-bottom: 1px solid $subC;
+            @include tablet_junction{
+                display: none;
+            }
+            .hd-inner{
+                width: 100%;
+                height: 100%;
+                position: relative;
+                .nav-list{
+                    width: 100%;
+                    height: 29rem;
+                    padding: 1.4rem 3rem 0;
+                    > div{
+                        @include flexbox(row, space-between, flex-start);
+                        display: none;
+                        &.on{display: flex}
+                        min-height: 29rem;
+                        max-height: 29rem;
+                        position: relative;
+                        padding: 0 2.6rem;
+                        @include notebook{padding: 0;}
+                        .depth2-list-wrap{
+                            @include flexbox(row, flex-start, flex-start);
+                            width: 50%;
+                            max-width: 81.8rem;
+                        }
+                        .main-tit{
+                            padding-top: 2.4rem;
+                            font-size: 3vw;
+                            font-weight: bold;
+                            color: $subC;
+                        }
+                        .sub-cont{
+                            width: 22%;
+                            position: relative;
+                            .icon-motion{
+                                overflow: hidden;
+                                width: 17.6rem;
+                                height: 17.6rem;
+                                padding: 2.2rem 1.4rem;
+                                margin: 0 auto;
+                                position: relative;
+                                @include flexbox(row, center, center);
+                                .circle , .rectangle{
+                                    position: absolute;
+                                    background: rgba($subC, 0.4);
+                                    backdrop-filter: blur(10px);
+                                    z-index: 10;
+                                }
+                                .circle{
+                                    width: 4.6rem;
+                                    height: 4.6rem;
+                                    border-radius: 50%;
+                                }
+                                .rectangle{
+                                    width: 6.8rem;
+                                    height: 6.8rem;
+                                    border-radius: 10px;
+                                }
+                            }
+                            p{
+                                line-height: 3.4rem;
+                                text-align: center;
+                            }
+                        }
+                        /* 한국공항 */
+                        &:first-child{
+                            .sub-cont{
+                                .icon-motion{
+                                    img{
+                                        &:nth-child(1){
+                                            width: 90%;
+                                            z-index: 1;
+                                        }
+                                        &:nth-child(2){
+                                            position: absolute;
+                                            top: 2.4rem;
+                                            right: 6rem;
+                                            transform: translate(80px, 80px);
+                                            animation: ani01 1.2s both alternate;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        /* 사업분야 */
+                        &:nth-child(2){
+                            .sub-cont{
+                                .icon-motion{
+                                    img{
+                                        &:nth-child(1){width: 60%;}
+                                    }
+                                    .circle{
+                                        animation: scale_ani01 .85s both alternate;
+                                        bottom: 1.8rem;
+                                        right: 1rem;
+                                    }
+                                }
+                            }
+                        }
+                        /* ESG */
+                        &:nth-child(3){
+                            .sub-cont{
+                                .icon-motion{
+                                    .circle{
+                                        &-01{
+                                            right: 1rem;
+                                            bottom: 3rem;
+                                            transform: translateY(-5px);
+                                            animation: position_ani01 1s both alternate infinite;
+                                        }
+                                        &-02{
+                                            left: 1rem;
+                                            top: 2rem;
+                                            transform: translateY(-5px);
+                                            animation: position_ani01 1.2s both alternate infinite;
+                                            animation-delay: .5s;
+                                        }
+                                        &-03{
+                                            width: 2rem;
+                                            height: 2rem;
+                                            left: 3rem;
+                                            bottom: 4rem;
+                                            transform: translateY(-5px);
+                                            animation: position_ani01 1.5s both alternate infinite;
+                                            animation-delay: 1s;
+                                        }
+                                    }
+                                    img{
+                                        &:nth-child(1){width: 100%;}
+                                    }
+                                }
+                            }
+                        }
+                        /* 미디어룸 */
+                        &:nth-child(4){
+                            .sub-cont{
+                                .icon-motion{
+                                    .circle{
+                                        position: absolute;
+                                        left: 50%;
+                                        top: 4rem;
+                                        transform: scale(0) translateX(-50%);
+                                        @include flexbox(row, center, center);
+                                        img{width: 40%;}
+                                        animation: scale_ani02 .8s both alternate;
+                                    }
+                                    img{width: 100%;}
+                                }
+                            }
+                        }
+                        /* 투자정보 */
+                        &:nth-child(5){
+                            .sub-cont{
+                                .icon-motion{
+                                    > div{
+                                        width: 9.6rem;
+                                        height: 9.6rem;
+                                        padding: 1.6rem;
+                                        position: absolute;
+                                        top: 2rem;
+                                        left: 2rem;
+                                        @include flexbox(row, space-between, flex-end);
+                                        &::after, &::before{
+                                            content: '';
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 10px;
+                                            display: block;
+                                            position: absolute;
+                                        }
+                                        &::after{
+                                            z-index: 1;
+                                            top: 0;
+                                            left: 0;
+                                            background: #0A4FFF;
+                                        }
+                                        &::before{
+                                            z-index: 0;
+                                            right: -1rem;
+                                            bottom: -1rem;
+                                            background: rgba($subC, 0.8);
+                                            backdrop-filter: blur(10px);
+                                        }
+                                        span{
+                                            width: 1.4rem;
+                                            height: 0;
+                                            background: $white;
+                                            border-radius: 3px;
+                                            transition: height .5s;
+                                            position: relative;
+                                            z-index: 2;
+                                            &:nth-child(1){animation: motion05_01 .8s both alternate;}
+                                            &:nth-child(2){
+                                                animation: motion05_02 .8s both alternate;
+                                                animation-delay: .5s;
+                                            }
+                                            &:nth-child(3){
+                                                animation: motion05_03 .8s both alternate;
+                                                animation-delay: .8s;
+                                            }
+                                        }
+                                        @keyframes motion05_01 {
+                                            0%{height: 0%;}
+                                            100%{height: 50%;}
+                                        }
+                                        @keyframes motion05_02 {
+                                            0%{height: 0%;}
+                                            100%{height: 70%;}
+                                        }
+                                        @keyframes motion05_03 {
+                                            0%{height: 0%;}
+                                            100%{height: 100%;}
+                                        }
+                                    }
+                                    .rectangle{
+                                        right: 2rem;
+                                        bottom: 2rem;
+                                    }
+                                }
+                            }
+                        }
+                        /* 인재채용 */
+                        &:nth-child(6){
+                            .sub-cont{
+                                .icon-motion{
+                                    img{
+                                        position: absolute;
+                                        &:nth-child(1){
+                                            left: 2rem;
+                                            bottom: 2.8rem;
+                                            z-index: 2;
+                                        }
+                                        &:nth-child(2){
+                                            left: 2rem;
+                                            bottom: 2.8rem;
+                                            z-index: 1;
+                                            animation: motion06_01 .8s both alternate;
+                                        }
+                                        &:nth-child(3){
+                                            right: 2rem;
+                                            bottom: 1.4rem;
+                                            z-index: 3;
+                                            opacity: .5;
+                                        }
+                                    }
+                                    @keyframes motion06_01 {
+                                        0%{transform: translate(0,0);}
+                                        100%{transform: translate(45px, -28px);}
+                                    }
+                                }
+                            }
+                        }
+                        /* 고객센터 */
+                        &:nth-child(7){
+                            .sub-cont{
+                                .icon-motion{
+                                    img{
+                                        position: absolute;
+                                        &:nth-child(1){
+                                            right: 4rem;
+                                            top: 4rem;
+                                            z-index: 1;
+                                            animation: motion07_01 .8s both alternate;
+                                            animation-delay: .8s;
+                                        }
+                                        &:nth-child(2){
+                                            left: 1.8rem;
+                                            bottom: 1.8rem;
+                                            z-index: 2;
+                                            opacity: .5;
+                                            animation: scale_ani01 .5s both alternate;
+                                            animation-delay: 1.5s;
+                                        }
+                                    }
+                                    @keyframes motion07_01 {
+                                        0%{
+                                            right: 4rem;
+                                            top: 4rem;
+                                        }
+                                        100%{
+                                            right: 1.8rem;
+                                            top: 2.2rem;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .additional-menu{
+                    width: 100%;
+                    display: flex;
+                    border-top: 1px solid $subC;
+                    > a{
+                        width: 50%;
+                        padding: 1.8rem 7.2rem;
+                        @include flexbox(row, flex-end, center);
+                        &:not(:last-child){border-right: 1px solid $subC;}
+                        &:last-child{
+                            justify-content: flex-start;
+                            img{margin-right: 4rem;}
+                        }
+                        img{
+                            display: block;
+                            margin-left: 4rem;
+                        }
+                        span{
+                            font-weight: bold;
+                            line-height: 3.8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#footer{
+    padding: 8rem 0;
+    background: $white;
+    .footer-wrap{
+        width: calc(100% - 40px);
+        max-width: 1440px;
+        margin: 0 auto;
+        @include flexbox(row, space-between, center);
+        .ft-nav{
+            @include flexbox(row, flex-start, center);
+            > li{
+                padding: 0 1.4rem;
+                position: relative;
+                &:not(:last-child){
+                    &::after{
+                        content: '';
+                        width: 2px;
+                        height: 100%;
+                        display: block;
+                        background: #D6E2FF;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                    }
+                }
+                > a{width: 100%;}
+            }
+        }
+        .copyright{
+            font-size: 1.4rem;
+            color: #999;
+        }
+    }
+}
