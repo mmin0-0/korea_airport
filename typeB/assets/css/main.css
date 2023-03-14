@@ -7,7 +7,7 @@ body.fixed {
   width: 100vw;
   height: 100vh;
   z-index: 95;
-  background: rgb(0, 0, 0);
+  background: rgb(34, 34, 34);
   overflow: hidden;
 }
 
@@ -426,7 +426,7 @@ section:not(#sectionPin) {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding: 32rem 0 16rem;
+  padding: 16rem 13.5% 16rem 0;
 }
 .content-bottom .esg-wrap .wrap-inner {
   display: -webkit-box;

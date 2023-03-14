@@ -170,7 +170,7 @@ $(document).ready(function() {
                 trigger: ".content-bottom",
                 scrub: 1,
                 start: "top 100%",
-                end: "bottom 250%",
+                end: "bottom 284%",
                 // markers: true,
             }
 
@@ -178,7 +178,7 @@ $(document).ready(function() {
 
         tlEsg.to(kas, {y:0, duration:1, opacity:1}, "group1")
         .to(kasTxt, {y:0, duration:1, opacity:1}, "group2")
-        .to(kas, {y:-400, duration:1, opacity:0}, "group3")
+        .to(kas, {y:0, duration:1, opacity:0}, "group3")
     }
     esgIntroStart();
     
