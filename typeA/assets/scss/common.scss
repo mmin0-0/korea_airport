@@ -17,8 +17,8 @@
 
 html{
     font-size: 10px;
-    @include notebook_junction{font-size: 7.5px;}
-    @include tablet{font-size: 10px;}
+    @media (max-width: 1150px) {font-size: 7.5px;}
+    @include tablet_junction{font-size: 10px;}
 }
 
 body{
@@ -113,16 +113,16 @@ body{
         height: 10rem;
         overflow: hidden;
         transition: height .5s;
-        @include notebook_junction{
+        @include tablet_junction{
             height: 6.4rem;
         }
         &.on{
             height: 49rem;
-            // @include notebook_junction{
+            // @include tablet_junction{
             //     height: 100%;
             // }
         }
-        @include notebook_junction{
+        @include tablet_junction{
             overflow: visible;
         }
         .hd-top{
@@ -130,8 +130,8 @@ body{
             height: 10rem;
             background: $white;
             border-bottom: 1px solid $subC;
-            @include notebook_junction{
-                height: 100%;
+            @include tablet_junction{
+                height: 6.4rem;
             }
             &.on{
                 .hd-inner{
@@ -179,8 +179,14 @@ body{
                 @include flexbox(row, space-between, center);
                 .nav-sub-menu{
                     @include flexbox(row, flex-start, center);
-                    gap: 2rem;
-                    // position: absolute;
+                    @include tablet_junction{
+                        gap: 2rem;
+                        position: absolute;
+                        top: 50%;
+                        right: 3rem;
+                        transform: translateY(-50%);
+                        z-index: 10;
+                    }
                     .lang{
                         @include flexbox(column, center, center);
                         img{
@@ -188,6 +194,10 @@ body{
                             height: 5.6rem;
                             display: block;
                             margin: 0 auto;
+                            @include tablet_junction{
+                                width: 4rem;
+                                height: 4rem;
+                            }
                         }
                         .lang-wrap{
                             display: none;
@@ -200,10 +210,9 @@ body{
                         display: none;
                         width: 2.4rem;
                         height: 2.4rem;
-                        border: 1px solid blue;
                         position: relative;
                         cursor: pointer;
-                        @include notebook_junction{display: block;}
+                        @include tablet_junction{display: block;}
                         &.on{
                             span{
                                 &:nth-child(1), &:nth-child(4){
@@ -223,8 +232,8 @@ body{
                             background: $black;
                             transition: all .35s;
                             &:nth-child(1){top: 0;}
-                            &:nth-child(2), &:nth-child(3){top: 7px;}
-                            &:nth-child(4){top: 14px;}
+                            &:nth-child(2), &:nth-child(3){top: 10px;}
+                            &:nth-child(4){top: 20px;}
                         }
                     }
                 }
@@ -234,25 +243,40 @@ body{
                     height: 100%;
                     position: relative;
                     z-index: 10;
-                    @include notebook_junction{
+                    @include tablet_junction{
                         width: 90%;
                         max-width: 100%;
                         height: 100vh;
                         position: absolute;
                         top: 0;
-                        right: 0;
+                        right: -100%;
                         background: $white;
+                        border-top: 1px solid $subC;
                         margin-top: 6.4rem;
+                        transition: right .35s;
                         @include flexbox(row, flex-start, flex-start);
+                        &.on{right: 0;}
+                        &::before{
+                            content: '';
+                            display: block;
+                            width: 100%;
+                            height: 6.4rem;
+                            background: $white;
+                            position: absolute;
+                            top: -6.6rem;
+                            right: 0;
+                            z-index: 0;
+                        }
                     }
                     .depth1-list{
                         @include flexbox(row, center, center);
                         height: 100%;
                         width: 100%;
                         gap: 2vw;
-                        @include notebook_junction{
+                        @include tablet_junction{
                             width: 50%;
                             padding: 2rem;
+                            gap: 1.6rem;
                             @include flexbox(column, flex-start, flex-start);
                         }
                         > li{ 
@@ -260,10 +284,18 @@ body{
                             width: calc(100% / 7);
                             height: 100%;
                             position: relative;
-                            @include notebook_junction{width: 100%;}
+                            @include tablet_junction{
+                                width: 100%;
+                                height: auto;
+                                opacity: .5;
+                            }
                             &.on{
+                                opacity: 1;
                                 .depth1{
-                                    img{display: none;}
+                                    img{
+                                        display: none;
+                                        @include tablet_junction{display: block;}
+                                    }
                                     span{
                                         opacity: 1;
                                         visibility: visible;
@@ -274,7 +306,7 @@ body{
                                 width: 100%;
                                 height: 100%;
                                 @include flexbox(column, center, center);
-                                @include notebook_junction{
+                                @include tablet_junction{
                                     @include flexbox(row, flex-start, center);
                                     gap: 1.4rem;
                                 }
@@ -284,7 +316,7 @@ body{
                                     display: block;
                                     margin: 0 auto;
                                     transition: all .35s;
-                                    @include notebook_junction{
+                                    @include tablet_junction{
                                         margin: 0;
                                     }
                                 }
@@ -293,7 +325,7 @@ body{
                                     line-height: 3.4rem;
                                     font-weight: bold;
                                     transition: all .35s;
-                                    @include notebook_junction{
+                                    @include tablet_junction{
                                         display: block;
                                     }
                                 }
@@ -302,7 +334,7 @@ body{
                     }
                     .depth2-list-wrap{
                         margin-top: 5.4rem;
-                        @include notebook_junction{
+                        @include tablet_junction{
                             margin-top: 0;
                             width: 50%;
                             height: 100%;
@@ -311,13 +343,20 @@ body{
                         }
                         > div{
                             display: none;
-                            // @include notebook_junction{display: block;}
                             &.on{display: flex;}
+                            @include tablet_junction{
+                                flex-direction: column;
+                                gap: 1.6rem;
+                            }
                             .depth2-list{
                                 max-width: 24rem;
                                 width: calc(100% / 3);
                                 gap: 2.4rem;
                                 @include flexbox(column, flex-start, flex-start);
+                                @include tablet_junction{
+                                    width: 100%;
+                                    gap: 1.6rem;
+                                }
                                 > li{  
                                     .depth2{
                                         width: 100%;
@@ -333,6 +372,7 @@ body{
                                             top: 50%;
                                             left: 0;
                                             transform: translateY(-50%);
+                                            @include tablet_junction{display: none;}
                                         }
                                     }
                                 }
@@ -345,10 +385,11 @@ body{
         .hd-bottom{
             width: 100%;
             height: 390px;
-            // height: 0;
-            // overflow: hidden;
             background: $white;
             border-bottom: 1px solid $subC;
+            @include tablet_junction{
+                display: none;
+            }
             .hd-inner{
                 width: 100%;
                 height: 100%;
