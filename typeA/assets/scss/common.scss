@@ -30,11 +30,11 @@ body{
     overflow-x: hidden;
 }
 
-.d-pc{display: block;}
-.d-mb{display: none;}
+.d-pc{display: block !important;}
+.d-mb{display: none !important;}
 @include tablet_junction{
-    .d-pc{display: none;}
-    .d-mb{display: block;}
+    .d-pc{display: none !important;}
+    .d-mb{display: block !important;}
 }
 
 .mb-cont{
@@ -784,6 +784,9 @@ body{
         max-width: 1440px;
         margin: 0 auto;
         @include flexbox(row, space-between, center);
+        @include tablet_junction{
+            flex-direction: column;
+        }
         .ft-nav{
             @include flexbox(row, flex-start, center);
             > li{

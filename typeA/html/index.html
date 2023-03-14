@@ -56,9 +56,12 @@
             </section>
             <section id="countNum">
                 <div class="con-box">
-                    <div class="sec-tit" data-aos="fade-up" data-aos-duration="1000">
+                    <div class="sec-tit d-pc" data-aos="fade-up" data-aos-duration="1000">
                         KAS는 고객 만족을 위한 최고의 서비스를 제공하며, <br>
                         최고를 추구하는 KAS에는 제한이 없습니다.
+                    </div>
+                    <div class="sec-tit d-mb" data-aos="fade-up" data-aos-duration="1000">
+                        KAS는 고객 만족을 위한 <br>최고의 서비스를 제공합니다.
                     </div>
                     <div class="sec-cont">
                         <ul class="main-about-list">
@@ -194,13 +197,17 @@
                             </li>
                         </ul>
                     </div>
+                    <div class="sec-tit d-mb" data-aos="fade-up" data-aos-duration="1000">
+                        최고를 추구하는 KAS에는 <br>제한이 없습니다.
+                    </div>
                 </div>
             </section>
             <section id="business">
                 <div class="swiper business-swiper">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
-                            <img src="/typeA/assets/images/main/business_img01.png" alt="" class="bg-img">
+                            <img src="/typeA/assets/images/main/business_img01.png" alt="" class="bg-img d-pc">
+                            <img src="/typeA/assets/images/main/business_mb_img01.png" alt="" class="bg-img d-mb">
                             <div class="business-info">
                                 <div>
                                     <div class="business-tit">
@@ -215,7 +222,8 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="/typeA/assets/images/main/business_img02.png" alt="" class="bg-img">
+                            <img src="/typeA/assets/images/main/business_img02.png" alt="" class="bg-img d-pc">
+                            <img src="/typeA/assets/images/main/business_mb_img02.png" alt="" class="bg-img d-mb">
                             <div class="business-info">
                                 <div>
                                     <div class="business-tit">
@@ -230,7 +238,8 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="/typeA/assets/images/main/business_img03.png" alt="" class="bg-img">
+                            <img src="/typeA/assets/images/main/business_img03.png" alt="" class="bg-img d-pc">
+                            <img src="/typeA/assets/images/main/business_mb_img03.png" alt="" class="bg-img d-mb">
                             <div class="business-info">
                                 <div>
                                     <div class="business-tit">
@@ -245,7 +254,8 @@
                             </div>
                         </div>
                         <div class="swiper-slide">
-                            <img src="/typeA/assets/images/main/business_img04.png" alt="" class="bg-img">
+                            <img src="/typeA/assets/images/main/business_img04.png" alt="" class="bg-img d-pc">
+                            <img src="/typeA/assets/images/main/business_mb_img04.png" alt="" class="bg-img d-mb">
                             <div class="business-info">
                                 <div>
                                     <div class="business-tit">
@@ -289,7 +299,31 @@
                         </div>
                     </div>
                     <div class="sec-cont" data-aos="fade-up" data-aos-duration="2000">
-                        <!-- <div class="swiper esg-swiper">
+                        <div class="esg-list">
+                            <ul>
+                                <li class="on">
+                                    <a href="javascript:void(0)">
+                                        <img src="/typeA/assets/images/icon/esg_icon01.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="/typeA/assets/images/icon/esg_icon02.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="/typeA/assets/images/icon/esg_icon03.png" alt="">
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0)">
+                                        <img src="/typeA/assets/images/icon/esg_icon04.png" alt="">
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="swiper esg-swiper d-mb">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide">
                                     <img src="/typeA/assets/images/main/esg_bg01.png" alt="">
@@ -316,29 +350,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> -->
-                        <ul class="esg-list">
-                            <li class="on">
-                                <a href="javascript:void(0)">
-                                    <img src="/typeA/assets/images/icon/esg_icon01.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="/typeA/assets/images/icon/esg_icon02.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="/typeA/assets/images/icon/esg_icon03.png" alt="">
-                                </a>
-                            </li>
-                            <li>
-                                <a href="javascript:void(0)">
-                                    <img src="/typeA/assets/images/icon/esg_icon04.png" alt="">
-                                </a>
-                            </li>
-                        </ul>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -449,41 +461,6 @@
         <div id="footer"></div>
     </div>
     <script>
-
-        function esgAni(){
-            var idx = 0;
-            var box = $('.esg-list > li');
-            var boxInfo = $('.esg-tit-list > div');
-            function time(){
-                boxInfo.removeClass('on');
-                box.removeClass('on');
-        
-                boxInfo.eq(idx).addClass('on');
-                box.eq(idx).addClass('on');
-                idx++;
-                if(idx >= box.length) idx= 0;
-            }
-
-            var interval = setInterval(time, 3500);
-            box.mouseover(function(){
-                clearInterval(interval);
-            });
-
-            box.mouseleave(function(){
-                interval = setInterval(time, 3500);
-            });
-
-            box.click(function(){
-                let boxIndex = $(this).index();
-                box.removeClass('on');
-                boxInfo.removeClass('on');
-
-                $(this).addClass('on');
-                boxInfo.eq(boxIndex).addClass('on');
-            });
-        }
-        esgAni();
-
         AOS.init({
             once: true
         });
@@ -536,23 +513,55 @@
         },
     });
 
-    /* esg slide */
-    // var esgSwiper = new Swiper(".esg-swiper", {
-    //     slidesPerView: 4,
-    //     // spaceBetween: 120,
-    //     centeredSlides: true,
-    //     slideToClickedSlide : true,
-    //     // slidesOffsetBefore : 0,
-    //     // slidesOffsetAfter : 0, 
-    //     // loop : false,
-    //     // loopAdditionalSlides : 1,
-    //     observer: true,	
-    //     observeParents: true,
-    //     autoplay: {
-    //         delay: 2500,
-    //         disableOnInteraction: false,
-    //     },
-    // });
+    /* esg list */
+    function esgAni(){
+        var idx = 0;
+        var box = $('.esg-list ul > li');
+        var boxInfo = $('.esg-tit-list > div');
+        function time(){
+            boxInfo.removeClass('on');
+            box.removeClass('on');
+    
+            boxInfo.eq(idx).addClass('on');
+            box.eq(idx).addClass('on');
+            idx++;
+            if(idx >= box.length) idx= 0;
+        }
+        var interval = setInterval(time, 3500);
+        box.mouseover(function(){
+            clearInterval(interval);
+        });
+
+        box.mouseleave(function(){
+            interval = setInterval(time, 3500);
+        });
+
+        box.click(function(){
+            let boxIndex = $(this).index();
+            box.removeClass('on');
+            boxInfo.removeClass('on');
+            $(this).addClass('on');
+            boxInfo.eq(boxIndex).addClass('on');
+        });
+    }esgAni();
+
+    var esgSwiper = new Swiper(".esg-swiper", {
+        slidesPerView: 2.5,
+        // slidesPerView: 'auto',
+        spaceBetween: 30,
+        centeredSlides: true,
+        slideToClickedSlide : true,
+        // slidesOffsetBefore : 0,
+        // slidesOffsetAfter : 0, 
+        loop : true,
+        loopAdditionalSlides : 1,
+        observer: true,	
+        observeParents: true,
+        // autoplay: {
+        //     delay: 2500,
+        //     disableOnInteraction: false,
+        // },
+    });
     </script>
 </body>
 </html>
