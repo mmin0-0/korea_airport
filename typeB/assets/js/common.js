@@ -155,16 +155,40 @@ $(document).ready(function() {
 
       // .fromTo('.footer-inner',{width: "90%", duration: 1},{width: "100%", duration: 1});
 
-      ScrollTrigger.create({
-        trigger: "#footer",
-        start: "top 80%",
-        end: "bottom",
-        toggleClass: {targets: '#footer', className: 'on'}
-      });
+    function esgIntroStart() {
+
+        const kas = $('.esg-intro')
+        const kasTxt = $('.esg-intro .txt-wrap')
+
+        var tlEsg = gsap.timeline({
+            
+            scrollTrigger: {
+                trigger: ".content-bottom",
+                scrub: 1,
+                start: "top 100%",
+                end: "bottom 250%",
+                // markers: true,
+            }
+
+        });
+
+        tlEsg.to(kas, {y:0, duration:1, opacity:1}, "group1")
+        .to(kasTxt, {y:0, duration:1, opacity:1}, "group2")
+        .to(kas, {y:-400, duration:1, opacity:0}, "group3")
+    }
+    esgIntroStart();
+    
+
+    ScrollTrigger.create({
+    trigger: "#footer",
+    start: "top 80%",
+    end: "bottom",
+    toggleClass: {targets: '#footer', className: 'on'}
+    });
     
       // ScrollTrigger.addEventListener("refresh", () => scroller.update()); //locomotive-scroll
     
-      ScrollTrigger.refresh();
+    ScrollTrigger.refresh();
     });
 
     
