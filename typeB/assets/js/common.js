@@ -195,13 +195,27 @@ $(document).ready(function() {
     ScrollTrigger.refresh();
     });
 
-    $(window).on('scroll',function() {
-        if($(window).scrollTop()) {
-            $('#header').addClass('on');
+    // $(window).on('scroll',function() {
+    //     if($(window).scrollTop()) {
+    //         $('#header').addClass('on');
+    //     } else {
+    //         $('#header').removeClass('on');
+    //     }
+    // })
+
+    function vh(v) {
+        var h = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
+        return (v * h) / 100;
+    }
+
+    $(window).on("scroll", function() {
+        if($(window).scrollTop() > vh(100)) {
+            $("#header").addClass("on");
         } else {
-            $('#header').removeClass('on');
+            //remove the background property so it comes transparent again (defined in your css)
+           $("#header").removeClass("on");
         }
-    })
+    });
 
     
 });
