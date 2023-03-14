@@ -7,7 +7,7 @@ body.fixed {
   width: 100vw;
   height: 100vh;
   z-index: 95;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(34, 34, 34);
   overflow: hidden;
 }
 
@@ -107,6 +107,7 @@ body.fixed {
   background: url(../../assets/images/common/hero_bg_white.png) no-repeat center bottom/100%;
   background-attachment: fixed;
   background-size: cover;
+  background-color: #FFF;
   opacity: 1;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
@@ -305,6 +306,7 @@ section:not(#sectionPin) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 .pin-wrap .slide-list.slide.slide01 .img-wrap {
   max-width: 73.8rem;
@@ -318,6 +320,7 @@ section:not(#sectionPin) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 .pin-wrap .slide-list.slide.slide02 .img-wrap {
   max-width: 91.9rem;
@@ -331,6 +334,7 @@ section:not(#sectionPin) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 .pin-wrap .slide-list.slide.slide03 .img-wrap {
   max-width: 75.7rem;
@@ -344,6 +348,7 @@ section:not(#sectionPin) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-color: #FFF;
 }
 .pin-wrap .slide-list.slide.slide04 .img-wrap {
   max-width: 84.1rem;
@@ -362,6 +367,8 @@ section:not(#sectionPin) {
   opacity: 1;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  background-color: #FFF;
+  padding-bottom: 19rem;
 }
 .content-bottom .esg-intro {
   width: 100vw;
@@ -419,7 +426,7 @@ section:not(#sectionPin) {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding: 32rem 0 16rem;
+  padding: 16rem 13.5% 16rem 0;
 }
 .content-bottom .esg-wrap .wrap-inner {
   display: -webkit-box;

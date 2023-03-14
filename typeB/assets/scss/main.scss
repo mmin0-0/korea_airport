@@ -8,6 +8,7 @@
         background: url(../../assets/images/common/hero_bg_white.png) no-repeat center bottom/ 100%;
         background-attachment: fixed;
         background-size: cover;
+        background-color: $white;
         opacity: 1;
         transition: all 0.3s;
         &.fixed {
@@ -257,6 +258,7 @@ position: relative;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+                background-color: $white;
                 .img-wrap {
                     // width: 38.4375vw;
                     max-width: 73.8rem;
@@ -272,7 +274,8 @@ position: relative;
                 background: url(../../assets/images/common/cargo_bg.png);
                 background-size: cover;
                 background-position: center;
-                background-repeat: no-repeat;     
+                background-repeat: no-repeat;
+                background-color: $white;     
                 .img-wrap {
                     // width: 47.8645vw;
                     max-width: 91.9rem;
@@ -289,6 +292,7 @@ position: relative;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+                background-color: $white;
                 .img-wrap {
                     // width: 39.42vw;
                     max-width: 75.7rem;
@@ -305,6 +309,7 @@ position: relative;
                 background-size: cover;
                 background-position: center;
                 background-repeat: no-repeat;
+                background-color: $white;
                 .img-wrap {
                     // width: 43.8vw;
                     max-width: 84.1rem;
@@ -327,6 +332,8 @@ position: relative;
     height: auto;
     opacity: 1;
     transition: all 0.3s;
+    background-color: $white;
+    padding-bottom: 19rem;
     .esg-intro {
         width: 100vw;
         min-height: 100vh;
@@ -375,7 +382,7 @@ position: relative;
         margin: 0 auto;
         display: flex;
         position: relative;
-        padding: 32rem 0 16rem;
+        padding: 16rem 13.5% 16rem 0;
         .wrap-inner {
             display:flex;
             align-items: flex-start;
