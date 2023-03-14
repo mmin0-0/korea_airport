@@ -32,7 +32,7 @@ body{
 
 .d-pc{display: block;}
 .d-mb{display: none;}
-@include tablet{
+@include tablet_junction{
     .d-pc{display: none;}
     .d-mb{display: block;}
 }
@@ -107,6 +107,24 @@ body{
     &.on{
         height: 100vh;
         background: rgba(0,0,0,0.5);
+        .header-wrap{
+            .hd-top{
+                @include tablet_junction{
+                    &::after{
+                        opacity: 1;
+                        visibility: visible;
+                        z-index: 1;
+                    }
+                }
+                .hd-inner{
+                    .nav-sub-menu{
+                            .lang{
+                                .lang-wrap{display: block;}
+                            }
+                    }
+                }
+            }
+        }
     }
     .header-wrap{
         // height: 49rem;
@@ -114,16 +132,9 @@ body{
         height: 10rem;
         overflow: hidden;
         transition: height .5s;
+        &.on{height: 49rem;}
         @include tablet_junction{
             height: 6.4rem;
-        }
-        &.on{
-            height: 49rem;
-            // @include tablet_junction{
-            //     height: 100%;
-            // }
-        }
-        @include tablet_junction{
             overflow: visible;
         }
         .hd-top{
@@ -131,6 +142,24 @@ body{
             height: 10rem;
             background: $white;
             border-bottom: 1px solid $subC;
+            position: relative;
+            @include tablet_junction{
+                border-bottom: 0;
+            }
+            &::after{
+                content: '';
+                opacity: 0;
+                visibility: hidden;
+                z-index: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0,0,0,0.5);
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                transition: all .35s;
+            }
             @include tablet_junction{
                 height: 6.4rem;
             }
@@ -178,18 +207,23 @@ body{
                 padding: 1.2rem 3rem;
                 transition: all .35s;
                 @include flexbox(row, space-between, center);
+                @include tablet_junction{padding: 1.2rem 2rem;}
                 .nav-sub-menu{
                     @include flexbox(row, flex-start, center);
                     @include tablet_junction{
                         gap: 2rem;
                         position: absolute;
                         top: 50%;
-                        right: 3rem;
+                        right: 2rem;
                         transform: translateY(-50%);
                         z-index: 10;
                     }
                     .lang{
                         @include flexbox(column, center, center);
+                        @include tablet_junction{
+                            flex-direction: row-reverse;
+                            gap: 0.8rem;
+                        }
                         img{
                             width: 5.6rem;
                             height: 5.6rem;
@@ -202,8 +236,33 @@ body{
                         }
                         .lang-wrap{
                             display: none;
+                            @include tablet_junction{
+                                // display: block;
+                                padding: 0.8rem 0.4rem;
+                                border-radius: 30px;
+                                box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+                            }
                             a{
                                 line-height: 3.4rem;
+                                padding: 0 1.2rem;
+                                font-weight: bold;
+                                color: #999;
+                                &.on{color: #000;}
+                                @include tablet_junction{
+                                    position: relative;
+                                    &:not(:last-child){
+                                        &::after{
+                                            content: '';
+                                            // display: inline-block;
+                                            position: absolute;
+                                            right: 0;
+                                            top: 0;
+                                            width: 1px;
+                                            height: 100%;
+                                            background: $subC;
+                                        }
+                                    }
+                                }
                             }
                         }
                     }
@@ -213,7 +272,11 @@ body{
                         height: 2.4rem;
                         position: relative;
                         cursor: pointer;
-                        @include tablet_junction{display: block;}
+                        pointer-events: none;
+                        @include tablet_junction{
+                            display: block;
+                            pointer-events: auto;
+                        }
                         &.on{
                             span{
                                 &:nth-child(1), &:nth-child(4){
@@ -255,7 +318,6 @@ body{
                         border-top: 1px solid $subC;
                         margin-top: 6.4rem;
                         transition: right .35s;
-                        @include flexbox(row, flex-start, flex-start);
                         &.on{right: 0;}
                         &::before{
                             content: '';
@@ -264,9 +326,16 @@ body{
                             height: 6.4rem;
                             background: $white;
                             position: absolute;
-                            top: -6.6rem;
+                            top: -6.5rem;
                             right: 0;
                             z-index: 0;
+                        }
+                    }
+                    .nav-inner{
+                        width: 100%;
+                        height: 100%;
+                        @include tablet_junction{
+                            @include flexbox(row, flex-start, flex-start);
                         }
                     }
                     .depth1-list{
@@ -319,6 +388,8 @@ body{
                                     transition: all .35s;
                                     @include tablet_junction{
                                         margin: 0;
+                                        width: 4rem;
+                                        height: 4rem;
                                     }
                                 }
                                 span{
